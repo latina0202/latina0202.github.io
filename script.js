@@ -22,9 +22,9 @@
 
   // -------- Typing animation --------
   const phrases = [
-    'Data Engineer',
-    'Machine Learning Enthusiast',
-    'Collaborative Leader',
+    'Product Scientist',
+    'AI/Machine Learning Enthusiast',
+    'Impactful Leader',
     'Adaptive and Quick Learner'
   ];
 
