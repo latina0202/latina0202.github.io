@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💻 Sucheta Nandy</title>
+  <link rel="icon" type="image/png" href="images/favourite.png">
+  <meta name="description" content="Sucheta Nandy — MSE in Data Science, University of Pennsylvania. Data pipelines, ML models, and production engineering." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="light">
+  <!-- HEADER -->
+  <header class="nav glass">
+    <div class="brand">
+      <div class="logo">SN</div>
+      <div class="brand-text">
+        <div class="name">Sucheta Nandy</div>
+        <div class="subtitle">MSE in Data Science — University of Pennsylvania</div>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="https://drive.google.com/file/d/1rsQaLVqge7SFm-Q0oacmscIK-x6yI1tZ/view?usp=sharing">Resume</a>
+    </nav>
+
+    <div class="controls">
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button id="menuToggle" class="mobile-only" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="#resume">Resume</a>
+  </div>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <div class="eyebrow">Hello, I am</div>
+          <h1 class="title">
+            <span class="static">Sucheta Nandy</span>
+            <span class="typing" id="typing"></span>
+          </h1>
+
+          <p class="lead">
+            I build scalable machine learning systems and data pipelines that power decisions at scale. Currently pursuing an MSE in Data Science at the University of Pennsylvania.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn primary">See Projects</a>
+            <a href="#contact" class="btn outline">Get in touch</a>
+          </div>
+
+          <div class="meta">
+            <span>Based in Philadelphia, PA, USA</span>
+            <span class="dot">•</span>
+            <span>Open to Internships & Collaborations</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="portrait-frame glass">
+            <img src="images/nycpic.jpg" alt="Sucheta Nandy" class="portrait-photo">
+          </div>
+        </div>
+      </div>
+
+      <div class="floating">
+        <div class="blob b1"></div>
+        <div class="blob b2"></div>
+        <div class="blob b3"></div>
+        <div class="spotlight"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container fade-up">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+    I'm a Master's student in Data Science at the University of Pennsylvania, with a B.Tech in Computer Science &amp; Engineering (2022) and three years of industry experience as a Systems Engineer at Tata Consultancy Services. That mix of production engineering and graduate-level ML research is what drives my work. I care just as much about a model's real-world reliability as its F1 score.
+  </p>
+  <p>
+    My sweet spot is the full pipeline: cleaning messy real-world data, building and evaluating classification and NLP models, and deploying them on cloud infrastructure (I hold GCP Professional Data Engineer and Associate Cloud Engineer certifications, plus Azure AZ-900). At Penn, I've gone deep on everything from logistic regression and decision trees built from scratch to neural networks in PyTorch, always with an eye on reproducibility and rigorous evaluation.
+  </p>
+  <p>
+    When I'm not tuning hyperparameters, you'll find me hunting for sneaker drops or nerding out over car specs - two hobbies that, like ML, reward patience and attention to detail.
+  </p>
+          <a class="btn outline" href="#projects">View selected projects</a>
+        </div>
+        <div class="about-stats glass">
+          <div>
+            <div class="stat">3</div>
+            <div class="stat-label">Years Industry Experience</div>
+          </div>
+          <div>
+            <div class="stat">B.Tech</div>
+            <div class="stat-label">Computer Science, 2022</div>
+          </div>
+          <div>
+            <div class="stat">Master of Science in Engineering</div>
+            <div class="stat-label">Data Science, University of Pennsylvania</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container fade-up">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects-grid">
+        <!-- Loan Approval -->
+        <article class="project-card fade-up">
+          <div class="card-top">
+            <div class="card-title">Uber Booking Status Prediction </div>
+            <div class="card-badge">ML</div>
+          </div>
+          <p class="card-desc">
+            Analyzed 150,000+ Uber ride bookings and built an end-to-end supervised classification pipeline in Python to predict booking outcomes using Logistic Regression, Random Forest, and XGBoost. Improved baseline performance by 22% through feature engineering, SMOTE-based class imbalance handling, and hyperparameter tuning, achieving 99.7% test accuracy with an optimized XGBoost model.
+          </p>
+          <div class="card-tech">
+            <span>Python</span><span>XGBoost</span><span>Pandas, NumPy</span><span>Matplotlib or Plotly (EDA/visuals)</span>
+          </div>
+          <!-- <div class="card-actions">
+            <a href="https://github.com/sucheta-nandy/Loan-Approval-Prediction" target="_blank" class="btn small outline">Code</a>
+          </div> -->
+        </article>
+
+        <!-- Genomic NLP -->
+        <article class="project-card fade-up">
+          <div class="card-top">
+            <div class="card-title">Genomic NLP Pipeline</div>
+            <div class="card-badge">ML/NLP</div>
+          </div>
+          <p class="card-desc">
+            A genomic text processing pipeline using NLP to extract meaningful biological insights from large genomic datasets.
+          </p>
+          <div class="card-tech">
+            <span>Python</span><span>numpy</span><span>spacy</span><span>scikit-learn</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://github.com/sucheta-nandy/genomic-nlp-pipeline" target="_blank" class="btn small outline">Code</a>
+          </div>
+        </article>
+
+        <!-- To-do App -->
+        <article class="project-card fade-up">
+          <div class="card-top">
+            <div class="card-title">To-do App</div>
+            <div class="card-badge">Frontend</div>
+          </div>
+          <p class="card-desc">
+            A responsive To do list app with local persistence and deploy pipeline to Netlify. Used for UX experiments and portfolio demos.
+          </p>
+          <div class="card-tech">
+            <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Netlify</span>
+          </div>
+          <div class="card-actions">
+            <a href="https://mystifying-to-do-list.netlify.app" target="_blank" class="btn small">Visit</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills section fade-up">
+      <div class="container">
+        <div class="section-title">Skills & Expertise</div>
+        <div class="skills-grid">
+          <div class="skill-category glass fade-up">
+            <h3>Technical Skills</h3>
+<ul>
+  <li><strong>Programming Languages:</strong> Python, SQL, C, C++, Java</li>
+  <li><strong>ML &amp; Data Science:</strong> PyTorch, scikit-learn, XGBoost, Pandas, NumPy, Matplotlib, Plotly</li>
+  <li><strong>NLP:</strong> spaCy, NLTK, Hugging Face Transformers</li>
+  <li><strong>Big Data &amp; Streaming:</strong> Apache Kafka</li>
+  <li><strong>Cloud &amp; DevOps:</strong> GCP (Professional Data Engineer, Associate Cloud Engineer), Azure (AZ-900), Git, Unix/Linux</li>
+  <li><strong>Databases:</strong> Oracle SQL, PostgreSQL</li>
+</ul>
+</div>
+
+          <div class="skill-category glass fade-up">
+            <h3>Soft Skills</h3>
+<ul>
+  <li><strong>Cross-functional Communication:</strong> Translating technical findings into actionable insights for non-technical stakeholders.</li>
+  <li><strong>Analytical Problem-Solving:</strong> Breaking down ambiguous, open-ended problems into structured, testable approaches.</li>
+  <li><strong>Project Ownership:</strong> Driving projects end-to-end from scoping and prototyping through deployment and handoff.</li>
+  <li><strong>Collaboration &amp; Mentoring:</strong> Working effectively in teams and helping peers ramp up on new tools and concepts.</li>
+  <li><strong>Learning Agility:</strong> Quickly picking up new frameworks, languages, and domain knowledge as projects demand.</li>
+</ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section fade-up">
+      <div class="container">
+        <div class="section-title">Contact Me</div>
+        <div class="contact-grid">
+          <div class="contact-card glass fade-up">
+            <div class="small">Resume</div>
+            <a href="https://drive.google.com/file/d/1rsQaLVqge7SFm-Q0oacmscIK-x6yI1tZ/view?usp=sharing" target="_blank" class="btn">View Resume</a>
+          </div>
+
+          <div class="contact-card glass fade-up">
+            <div class="small">GitHub</div>
+            <a href="https://github.com/sucheta-nandy" target="_blank" class="btn">Profile</a>
+          </div>
+
+          <div class="contact-card glass fade-up">
+            <div class="small">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/suchetanandy" target="_blank" class="btn">Profile</a>
+          </div>
+
+          <div class="contact-card glass fade-up">
+            <div class="small">Instagram</div>
+            <a href="https://www.instagram.com/sucheta_nandy" target="_blank" class="btn">Profile</a>
+          </div>
+
+          <div class="contact-card glass fade-up">
+            <div class="small">Location</div>
+            <div>Philadelphia, USA</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<footer class="footer">
+  <div>Designed and developed by Sucheta Nandy • © <span id="year"></span></div>
+</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
