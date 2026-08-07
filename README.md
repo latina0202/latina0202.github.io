@@ -16,3 +16,5 @@ Data Science applications (Fall 2027).
   4. AIESEC Global Talent Program
 - **Skills** — technical + product/business
 - **Contact** — resume, email, LinkedIn, GitHub
+
+bac
