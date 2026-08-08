@@ -454,3 +454,10 @@ body[data-theme="light"] .blob {
   .t-row::before{ left:18px; }
   .t-row.reverse .t-year{ text-align:left; }
 }
+
+/* Smaller thumbnail images specifically in Work Experience timeline */
+.exp-timeline .t-media img{
+  max-width:260px;
+  margin:0 auto;
+  aspect-ratio:4/3;
+}
