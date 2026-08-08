@@ -378,3 +378,79 @@ body[data-theme="light"] .blob {
   margin-top:14px;
   flex-wrap:wrap;
 }
+
+/* Shared vertical timeline (used by Experience section + can reuse on aiesec-impact.html) */
+.timeline{
+  position:relative;
+  max-width:1000px;
+  margin:40px auto 0;
+  padding:0 20px 20px;
+}
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#2f6fed;
+  transform:translateX(-50%);
+}
+.t-row{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:56px;
+}
+.t-row::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:14px;
+  height:14px;
+  background:#fff;
+  border:3px solid #2f6fed;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  z-index:2;
+}
+.t-year{
+  font-size:clamp(20px,3vw,30px);
+  font-weight:800;
+  color:#2f6fed;
+  line-height:1;
+}
+.t-row.reverse .t-year{ text-align:right; }
+.t-media img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:14px;
+  border:2px solid #2f6fed;
+  display:block;
+}
+
+/* Experience-specific card under each image */
+.exp-card{
+  margin-top:12px;
+  background:rgba(47,111,237,0.05);
+  border-radius:12px;
+  padding:16px 18px;
+}
+.exp-title{ font-weight:800; font-size:17px; }
+.exp-company{ font-size:14px; color:var(--muted,#5b6472); margin-bottom:8px; }
+.exp-highlights{ margin:0; padding-left:18px; }
+.exp-highlights li{ font-size:14px; margin-bottom:6px; line-height:1.5; }
+
+@media (max-width:720px){
+  .timeline::before{ left:18px; }
+  .t-row{
+    grid-template-columns:1fr;
+    padding-left:40px;
+  }
+  .t-row::before{ left:18px; }
+  .t-row.reverse .t-year{ text-align:left; }
+}
