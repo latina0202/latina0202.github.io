@@ -462,24 +462,24 @@ body[data-theme="light"] .blob {
   aspect-ratio:4/3;
 }
 
-/* Force the hero portrait to show on mobile, overriding any hidden rule from the base template */
+/* Force the hero portrait to show on mobile/tablet widths, matching the
+   same 1024px breakpoint that the base template uses to hide it */
+@media (max-width: 1024px) {
+  .hero-right{
+    display: flex !important;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .portrait-frame{
+    width: 220px !important;
+    height: 280px !important;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 720px) {
   .hero-inner{
     display: flex !important;
     flex-direction: column !important;
-  }
-  .hero-right,
-  .portrait-frame{
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    justify-content: center;
-    margin: 24px auto 0 !important;
-    max-width: 220px;
-  }
-  .portrait-photo{
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
   }
 }
