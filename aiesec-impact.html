@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AIESEC — Impact of Twenty Somethings</title>
+<link rel="icon" type="image/png" href="images/favourite.png">
+<link rel="stylesheet" href="style.css" />
+<style>
+  .impact-hero{
+    text-align:center;
+    padding:60px 20px 30px;
+  }
+  .impact-badge{
+    display:inline-block;
+    background:#2f6fed;
+    color:#fff;
+    font-weight:800;
+    font-size:clamp(24px,4vw,40px);
+    padding:14px 36px;
+    border-radius:14px;
+    letter-spacing:.5px;
+  }
+  .impact-sub{
+    margin-top:16px;
+    font-weight:700;
+    color:var(--muted,#5b6472);
+  }
+  .impact-back{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+  }
+
+  .timeline{
+    position:relative;
+    max-width:1000px;
+    margin:50px auto;
+    padding:0 20px 60px;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:#2f6fed;
+    transform:translateX(-50%);
+  }
+  .t-row{
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    align-items:center;
+    margin-bottom:64px;
+  }
+  .t-row::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:14px;
+    height:14px;
+    background:#fff;
+    border:3px solid #2f6fed;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+  }
+  .t-year{
+    font-size:clamp(30px,5vw,54px);
+    font-weight:800;
+    color:#2f6fed;
+    line-height:1;
+  }
+  .t-row.reverse .t-year{ text-align:right; }
+  .t-media{ }
+  .t-media img{
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    border-radius:14px;
+    border:2px solid #2f6fed;
+    display:block;
+  }
+  .t-caption{
+    margin-top:10px;
+    font-style:italic;
+    font-size:14px;
+    color:var(--muted,#5b6472);
+    text-align:center;
+  }
+
+  @media (max-width:720px){
+    .timeline::before{ left:18px; }
+    .t-row, .t-row.reverse{
+      grid-template-columns:1fr;
+      padding-left:40px;
+    }
+    .t-row::before{ left:18px; }
+    .t-row.reverse .t-year{ text-align:left; }
+  }
+</style>
+</head>
+<body data-theme="light">
+
+<header class="nav glass">
+  <div class="brand">
+    <div class="logo">YN</div>
+    <div class="brand-text">
+      <div class="name">[Your Name]</div>
+      <div class="subtitle">AIESEC — Impact of Twenty Somethings</div>
+    </div>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html#projects">← Back to Portfolio</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="impact-hero">
+  <div class="impact-badge">Impact of Twenty Somethings</div>
+  <p class="impact-sub">
+    My AIESEC journey — the events, people, and programs I built over 2+ years
+    as Branch Vice President
+  </p>
+</section>
+
+<div class="timeline">
+
+  <!-- Event 1 -->
+  <div class="t-row">
+    <div class="t-year">[YYYY]</div>
+    <div>
+      <div class="t-media">
+        <img src="images/aiesec/event-1.jpg" alt="Joining AIESEC">
+      </div>
+      <div class="t-caption">[Short description: how you joined AIESEC / your first role]</div>
+    </div>
+  </div>
+
+  <!-- Event 2 -->
+  <div class="t-row reverse">
+    <div>
+      <div class="t-media">
+        <img src="images/aiesec/event-2.jpg" alt="Leading the incoming Global Volunteer program">
+      </div>
+      <div class="t-caption">
+        Leading the incoming Global Volunteer program, connecting international
+        volunteers with Vietnamese SDG4/8/12 partner organizations
+      </div>
+    </div>
+    <div class="t-year">[YYYY]</div>
+  </div>
+
+  <!-- Event 3 -->
+  <div class="t-row">
+    <div class="t-year">[YYYY]</div>
+    <div>
+      <div class="t-media">
+        <img src="images/aiesec/event-3.jpg" alt="Branch Vice President">
+      </div>
+      <div class="t-caption">
+        Appointed Branch Vice President — leading the Global Talent program area
+        and [team size]-person team
+      </div>
+    </div>
+  </div>
+
+  <!-- Event 4 -->
+  <div class="t-row reverse">
+    <div>
+      <div class="t-media">
+        <img src="images/aiesec/event-4.jpg" alt="Stabilize, Diversify, Scale growth strategy">
+      </div>
+      <div class="t-caption">
+        Built a 3-phase growth strategy — Stabilize → Diversify → Scale — to grow
+        the program sustainably
+      </div>
+    </div>
+    <div class="t-year">[YYYY]</div>
+  </div>
+
+  <!-- Event 5 -->
+  <div class="t-row">
+    <div class="t-year">Result</div>
+    <div>
+      <div class="t-media">
+        <img src="images/aiesec/event-5.jpg" alt="Program results">
+      </div>
+      <div class="t-caption">
+        Over 3 years: 190 opportunities sourced, 174 approved, 81 completed
+        exchanges — real people, real cross-cultural impact
+      </div>
+    </div>
+  </div>
+
+  <!-- Add more t-row blocks here for more events/photos -->
+
+</div>
+
+</main>
+</body>
+</html>
