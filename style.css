@@ -461,3 +461,25 @@ body[data-theme="light"] .blob {
   margin:0 auto;
   aspect-ratio:4/3;
 }
+
+/* Force the hero portrait to show on mobile, overriding any hidden rule from the base template */
+@media (max-width: 720px) {
+  .hero-inner{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hero-right,
+  .portrait-frame{
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    justify-content: center;
+    margin: 24px auto 0 !important;
+    max-width: 220px;
+  }
+  .portrait-photo{
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
