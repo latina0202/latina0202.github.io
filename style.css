@@ -414,97 +414,67 @@ body[data-theme="light"] .blob {
 .fade-up { opacity: 0; transform: translateY(10px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .is-visible { opacity: 1; transform: none; }
 
-/* Duo Portrait Stack - Larger & Prominent Dimensions */
-.portrait-stack {
+/* Duo portrait: overlapping photo-stack, full images (no cropping) — larger sizing */
+.portrait-stack{
   position: relative;
   display: inline-flex;
   align-items: flex-end;
-  padding: 10px 40px 20px 10px;
+  padding: 10px 70px 24px 10px; /* breathing room so tilted photos don't clip */
 }
 
-.portrait-frame {
+.portrait-frame{
   position: relative;
   z-index: 2;
-  width: 280px; /* Increased from 210px */
-  height: 340px !important; /* Fixed height for prominent portrait card */
-  border-radius: 18px;
+  width: 300px;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: var(--card-shadow);
   background: var(--glass-bg);
-  transform: rotate(-3deg);
+  transform: rotate(-4deg);
   transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
-  backdrop-filter: blur(8px);
 }
-
-.portrait-frame img {
+.portrait-frame img{
   display: block;
   width: 100%;
-  height: 100% !important;
-  object-fit: cover !important; /* Fills frame cleanly without squishing */
+  height: auto; /* full image, nothing cropped */
 }
-
-.portrait-frame:hover {
-  transform: rotate(-6deg) translateY(-10px);
+.portrait-frame:hover{
+  transform: rotate(-7deg) translateY(-10px);
   z-index: 4;
 }
 
-.portrait-frame-secondary {
+.portrait-frame-secondary{
   position: relative;
   z-index: 3;
-  width: 250px; /* Increased from 200px */
-  height: 310px !important;
-  margin-left: -110px; /* Adjusted overlap for larger frames */
-  margin-bottom: -10px;
-  border-radius: 18px;
+  width: 240px;
+  margin-left: -90px;
+  margin-bottom: -22px;
+  border-radius: 16px;
   overflow: hidden;
   border: 4px solid var(--bg);
   box-shadow: var(--card-shadow);
   background: var(--glass-bg);
-  transform: rotate(4deg);
+  transform: rotate(6deg);
   transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
-  backdrop-filter: blur(8px);
 }
-
-.portrait-frame-secondary img {
+.portrait-frame-secondary img{
   display: block;
   width: 100%;
-  height: 100% !important;
-  object-fit: cover !important;
+  height: auto;
 }
-
-.portrait-frame-secondary:hover {
-  transform: rotate(1deg) translateY(-12px) scale(1.02);
+.portrait-frame-secondary:hover{
+  transform: rotate(2deg) translateY(-12px) scale(1.03);
   z-index: 5;
 }
 
-/* Tablet & Mobile Responsiveness */
 @media (max-width: 1024px) {
-  .portrait-stack {
-    margin: 0 auto;
-    padding: 10px 20px 16px 10px;
-  }
-  .portrait-frame {
-    width: 210px;
-    height: 260px !important;
-  }
-  .portrait-frame-secondary {
-    width: 190px;
-    height: 240px !important;
-    margin-left: -80px;
-    margin-bottom: -6px;
-  }
+  .portrait-stack{ margin: 0 auto; padding: 10px 50px 18px 10px; }
+  .portrait-frame{ width: 210px; }
+  .portrait-frame-secondary{ width: 165px; margin-left: -60px; margin-bottom: -16px; }
 }
 
 @media (max-width: 480px) {
-  .portrait-frame {
-    width: 46vw;
-    height: 56vw !important;
-  }
-  .portrait-frame-secondary {
-    width: 42vw;
-    height: 52vw !important;
-    margin-left: -18vw;
-    margin-bottom: -4px;
-  }
+  .portrait-frame{ width: 56vw; }
+  .portrait-frame-secondary{ width: 44vw; margin-left: -16vw; margin-bottom: -14px; }
 }
