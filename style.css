@@ -484,26 +484,26 @@ body[data-theme="light"] .blob {
   }
 }
 
-/* Duo portrait: main photo + overlapping smaller "leader" photo */
-/* Duo portrait: overlapping photo-stack, full images (no cropping) */
+/* Duo portrait: overlapping photo-stack, balanced sizes & tighter gap */
 .portrait-stack{
   position: relative;
   display: inline-flex;
   align-items: flex-end;
-  padding: 10px 50px 20px 10px; /* breathing room so tilted photos don't clip */
+  padding: 10px 40px 16px 10px; /* breathing room for tilts */
 }
 
 .portrait-frame{
   position: relative;
   z-index: 2;
-  width: 230px;
+  width: 210px; /* slightly smaller primary */
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: var(--card-shadow);
   background: var(--glass-bg);
-  transform: rotate(-4deg);
+  transform: rotate(-3deg);
   transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
+  backdrop-filter: blur(8px);
 }
 .portrait-frame img{
   display: block;
@@ -511,23 +511,24 @@ body[data-theme="light"] .blob {
   height: auto; /* full image, nothing cropped */
 }
 .portrait-frame:hover{
-  transform: rotate(-7deg) translateY(-10px);
+  transform: rotate(-6deg) translateY(-8px);
   z-index: 4;
 }
 
 .portrait-frame-secondary{
   position: relative;
   z-index: 3;
-  width: 190px;
-  margin-left: -70px;
-  margin-bottom: -18px;
+  width: 200px; /* nearly same size as primary */
+  margin-left: -85px; /* tighter overlap to remove gap */
+  margin-bottom: -8px; /* subtle bottom alignment */
   border-radius: 16px;
   overflow: hidden;
   border: 4px solid var(--bg);
   box-shadow: var(--card-shadow);
   background: var(--glass-bg);
-  transform: rotate(6deg);
+  transform: rotate(4deg);
   transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
+  backdrop-filter: blur(8px);
 }
 .portrait-frame-secondary img{
   display: block;
@@ -535,18 +536,19 @@ body[data-theme="light"] .blob {
   height: auto;
 }
 .portrait-frame-secondary:hover{
-  transform: rotate(2deg) translateY(-12px) scale(1.03);
+  transform: rotate(1deg) translateY(-10px) scale(1.02);
   z-index: 5;
 }
 
+/* Tablet Breakpoint */
 @media (max-width: 1024px) {
-  .portrait-stack{ margin: 0 auto; padding: 10px 40px 16px 10px; }
-  .portrait-frame{ width: 170px; }
-  .portrait-frame-secondary{ width: 140px; margin-left: -50px; margin-bottom: -14px; }
+  .portrait-stack{ margin: 0 auto; padding: 10px 30px 14px 10px; }
+  .portrait-frame{ width: 160px; }
+  .portrait-frame-secondary{ width: 152px; margin-left: -65px; margin-bottom: -6px; }
 }
 
+/* Mobile Breakpoint */
 @media (max-width: 480px) {
-  .portrait-frame{ width: 46vw; }
-  .portrait-frame-secondary{ width: 38vw; margin-left: -14vw; margin-bottom: -12px; }
+  .portrait-frame{ width: 42vw; }
+  .portrait-frame-secondary{ width: 39vw; margin-left: -17vw; margin-bottom: -4px; }
 }
-
