@@ -485,50 +485,67 @@ body[data-theme="light"] .blob {
 }
 
 /* Duo portrait: main photo + overlapping smaller "leader" photo */
+/* Duo portrait: overlapping photo-stack, full images (no cropping) */
 .portrait-stack{
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  padding: 10px 50px 20px 10px; /* breathing room so tilted photos don't clip */
 }
-.portrait-stack .portrait-frame,
-.portrait-stack .portrait-frame-secondary{
-  width: 170px;
-  height: 420px;
-  border-radius: 18px;
+
+.portrait-frame{
+  position: relative;
+  z-index: 2;
+  width: 230px;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
   box-shadow: var(--card-shadow);
-  transition: transform 0.4s cubic-bezier(.2,.9,.2,1), box-shadow 0.3s;
+  background: var(--glass-bg);
+  transform: rotate(-4deg);
+  transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
 }
-.portrait-stack .portrait-frame img,
-.portrait-stack .portrait-frame-secondary img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.portrait-frame img{
   display: block;
+  width: 100%;
+  height: auto; /* full image, nothing cropped */
 }
-.portrait-stack .portrait-frame:hover,
-.portrait-stack .portrait-frame-secondary:hover{
-  transform: translateY(-8px) scale(1.02);
+.portrait-frame:hover{
+  transform: rotate(-7deg) translateY(-10px);
+  z-index: 4;
+}
+
+.portrait-frame-secondary{
+  position: relative;
+  z-index: 3;
+  width: 190px;
+  margin-left: -70px;
+  margin-bottom: -18px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 4px solid var(--bg);
+  box-shadow: var(--card-shadow);
+  background: var(--glass-bg);
+  transform: rotate(6deg);
+  transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
+}
+.portrait-frame-secondary img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.portrait-frame-secondary:hover{
+  transform: rotate(2deg) translateY(-12px) scale(1.03);
+  z-index: 5;
 }
 
 @media (max-width: 1024px) {
-  .portrait-stack{
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .portrait-stack .portrait-frame,
-  .portrait-stack .portrait-frame-secondary{
-    width: 130px;
-    height: 280px;
-  }
+  .portrait-stack{ margin: 0 auto; padding: 10px 40px 16px 10px; }
+  .portrait-frame{ width: 170px; }
+  .portrait-frame-secondary{ width: 140px; margin-left: -50px; margin-bottom: -14px; }
 }
 
 @media (max-width: 480px) {
-  .portrait-stack .portrait-frame,
-  .portrait-stack .portrait-frame-secondary{
-    width: 42vw;
-    height: 56vw;
-  }
+  .portrait-frame{ width: 46vw; }
+  .portrait-frame-secondary{ width: 38vw; margin-left: -14vw; margin-bottom: -12px; }
 }
