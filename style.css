@@ -414,6 +414,21 @@ body[data-theme="light"] .blob {
   flex: 1 1 50%;
 }
 
+/* Revert to stacked layout: image on top, text card below (not side-by-side) */
+.exp-content{
+  flex-direction: column;
+}
+.exp-content .t-media,
+.exp-content .exp-card{
+  flex: 1 1 auto;
+  width: 100%;
+}
+.exp-content .t-media img{
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 24px; }
 .skill-category {
