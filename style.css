@@ -288,6 +288,7 @@ body[data-theme="light"] .blob {
 }
 
 /* Work Experience Timeline */
+/* Shared vertical timeline (used by Experience section + can reuse on aiesec-impact.html) */
 .timeline{
   position:relative;
   max-width:1000px;
@@ -341,6 +342,7 @@ body[data-theme="light"] .blob {
   display:block;
 }
 
+/* Experience-specific card under each image */
 .exp-card{
   margin-top:12px;
   background:rgba(47,111,237,0.05);
@@ -352,10 +354,56 @@ body[data-theme="light"] .blob {
 .exp-highlights{ margin:0; padding-left:18px; }
 .exp-highlights li{ font-size:14px; margin-bottom:6px; line-height:1.5; }
 
+@media (max-width:720px){
+  .timeline::before{ left:18px; }
+  .t-row{
+    grid-template-columns:1fr;
+    padding-left:40px;
+  }
+  .t-row::before{ left:18px; }
+  .t-row.reverse .t-year{ text-align:left; }
+}
+
+/* Smaller thumbnail images specifically in Work Experience timeline */
 .exp-timeline .t-media img{
   max-width:260px;
   margin:0 auto;
   aspect-ratio:4/3;
+}
+
+/* Image and description card side-by-side, stretched to equal height */
+.exp-content{
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+.exp-content .t-media{
+  flex: 0 0 260px;
+}
+.exp-content .t-media img{
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;   /* let flex stretch decide the height, not a fixed ratio */
+  object-fit: cover;
+  margin: 0;
+}
+.exp-content .exp-card{
+  flex: 1;
+  margin-top: 0;
+}
+
+@media (max-width: 900px){
+  .exp-content{
+    flex-direction: column;
+  }
+  .exp-content .t-media{
+    flex: none;
+  }
+  .exp-content .t-media img{
+    height: auto;
+    aspect-ratio: 4/3;
+  }
 }
 
 /* Skills */
