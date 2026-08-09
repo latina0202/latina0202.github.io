@@ -462,40 +462,27 @@ body[data-theme="light"] .blob {
   aspect-ratio:4/3;
 }
 
-/* Force the hero portrait to show on mobile/tablet widths, matching the
-   same 1024px breakpoint that the base template uses to hide it */
-@media (max-width: 1024px) {
-  .hero-right{
-    display: flex !important;
-    justify-content: center;
-    margin-top: 24px;
-  }
-  .portrait-frame{
-    width: 220px !important;
-    height: 280px !important;
-    margin: 0 auto;
-  }
+/* Hero Layout Alignment */
+.hero-right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 720px) {
-  .hero-inner{
-    display: flex !important;
-    flex-direction: column !important;
-  }
-}
-
-/* Duo portrait: overlapping photo-stack, balanced sizes & tighter gap */
-.portrait-stack{
+/* Duo Portrait Stack */
+.portrait-stack {
   position: relative;
   display: inline-flex;
   align-items: flex-end;
-  padding: 10px 40px 16px 10px; /* breathing room for tilts */
+  padding: 10px 40px 16px 10px;
 }
 
-.portrait-frame{
+.portrait-frame {
   position: relative;
   z-index: 2;
-  width: 210px; /* slightly smaller primary */
+  width: 210px;
+  height: auto !important; /* overrides any old height */
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
@@ -505,22 +492,26 @@ body[data-theme="light"] .blob {
   transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
   backdrop-filter: blur(8px);
 }
-.portrait-frame img{
+
+.portrait-frame img {
   display: block;
   width: 100%;
-  height: auto; /* full image, nothing cropped */
+  height: auto !important;
+  object-fit: contain;
 }
-.portrait-frame:hover{
+
+.portrait-frame:hover {
   transform: rotate(-6deg) translateY(-8px);
   z-index: 4;
 }
 
-.portrait-frame-secondary{
+.portrait-frame-secondary {
   position: relative;
   z-index: 3;
-  width: 200px; /* nearly same size as primary */
-  margin-left: -85px; /* tighter overlap to remove gap */
-  margin-bottom: -8px; /* subtle bottom alignment */
+  width: 200px;
+  height: auto !important;
+  margin-left: -85px;
+  margin-bottom: -8px;
   border-radius: 16px;
   overflow: hidden;
   border: 4px solid var(--bg);
@@ -530,25 +521,36 @@ body[data-theme="light"] .blob {
   transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
   backdrop-filter: blur(8px);
 }
-.portrait-frame-secondary img{
+
+.portrait-frame-secondary img {
   display: block;
   width: 100%;
-  height: auto;
+  height: auto !important;
+  object-fit: contain;
 }
-.portrait-frame-secondary:hover{
+
+.portrait-frame-secondary:hover {
   transform: rotate(1deg) translateY(-10px) scale(1.02);
   z-index: 5;
 }
 
-/* Tablet Breakpoint */
+/* Responsiveness for Hero Portrait */
 @media (max-width: 1024px) {
-  .portrait-stack{ margin: 0 auto; padding: 10px 30px 14px 10px; }
-  .portrait-frame{ width: 160px; }
-  .portrait-frame-secondary{ width: 152px; margin-left: -65px; margin-bottom: -6px; }
+  .hero-right {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 24px;
+    width: 100%;
+  }
+  .portrait-stack {
+    margin: 0 auto;
+    padding: 10px 30px 14px 10px;
+  }
+  .portrait-frame { width: 160px; }
+  .portrait-frame-secondary { width: 152px; margin-left: -65px; margin-bottom: -6px; }
 }
 
-/* Mobile Breakpoint */
 @media (max-width: 480px) {
-  .portrait-frame{ width: 42vw; }
-  .portrait-frame-secondary{ width: 39vw; margin-left: -17vw; margin-bottom: -4px; }
+  .portrait-frame { width: 42vw; }
+  .portrait-frame-secondary { width: 39vw; margin-left: -17vw; margin-bottom: -4px; }
 }
