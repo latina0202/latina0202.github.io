@@ -7,10 +7,7 @@
 <link rel="icon" type="image/png" href="images/favourite.png">
 <link rel="stylesheet" href="style.css" />
 <style>
-  .impact-hero{
-    text-align:center;
-    padding:60px 20px 30px;
-  }
+  .impact-hero{ text-align:center; padding:60px 20px 30px; }
   .impact-badge{
     display:inline-block;
     background:#2f6fed;
@@ -21,16 +18,7 @@
     border-radius:14px;
     letter-spacing:.5px;
   }
-  .impact-sub{
-    margin-top:16px;
-    font-weight:700;
-    color:var(--muted,#5b6472);
-  }
-  .impact-back{
-    display:block;
-    text-align:center;
-    margin-top:10px;
-  }
+  .impact-sub{ margin-top:16px; font-weight:700; color:var(--muted,#5b6472); }
 
   .timeline{
     position:relative;
@@ -41,10 +29,7 @@
   .timeline::before{
     content:"";
     position:absolute;
-    left:50%;
-    top:0;
-    bottom:0;
-    width:2px;
+    left:50%; top:0; bottom:0; width:2px;
     background:#2f6fed;
     transform:translateX(-50%);
   }
@@ -59,10 +44,8 @@
   .t-row::before{
     content:"";
     position:absolute;
-    left:50%;
-    top:50%;
-    width:14px;
-    height:14px;
+    left:50%; top:50%;
+    width:14px; height:14px;
     background:#fff;
     border:3px solid #2f6fed;
     border-radius:50%;
@@ -76,15 +59,25 @@
     line-height:1;
   }
   .t-row.reverse .t-year{ text-align:right; }
-  .t-media{ }
-  .t-media img{
+
+  /* Flexible gallery: works cleanly with 1, 2, or 3 photos */
+  .t-gallery{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap:8px;
+  }
+  .t-gallery img{
     width:100%;
-    aspect-ratio:4/3;
+    aspect-ratio:1/1;
     object-fit:cover;
-    border-radius:14px;
+    border-radius:12px;
     border:2px solid #2f6fed;
     display:block;
   }
+  /* When there's only one photo, let it use the classic 4:3 frame instead of a square */
+  .t-gallery.single{ grid-template-columns:1fr; }
+  .t-gallery.single img{ aspect-ratio:4/3; }
+
   .t-caption{
     margin-top:10px;
     font-style:italic;
@@ -101,6 +94,7 @@
     }
     .t-row::before{ left:18px; }
     .t-row.reverse .t-year{ text-align:left; }
+    .t-gallery{ grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); }
   }
 </style>
 </head>
@@ -110,7 +104,7 @@
   <div class="brand">
     <div class="logo">YN</div>
     <div class="brand-text">
-      <div class="name">[Your Name]</div>
+      <div class="name">Ngoc Duong</div>
       <div class="subtitle">AIESEC — Impact of Twenty Somethings</div>
     </div>
   </div>
@@ -131,22 +125,25 @@
 
 <div class="timeline">
 
-  <!-- Event 1 -->
+  <!-- Milestone 1 — 2 photos -->
   <div class="t-row">
     <div class="t-year">[YYYY]</div>
     <div>
-      <div class="t-media">
-        <img src="images/aiesec/event-1.jpg" alt="Joining AIESEC">
+      <div class="t-gallery">
+        <img src="images/aiesec/m1-a.jpg" alt="Joining AIESEC">
+        <img src="images/aiesec/m1-b.jpg" alt="Joining AIESEC 2">
       </div>
       <div class="t-caption">[Short description: how you joined AIESEC / your first role]</div>
     </div>
   </div>
 
-  <!-- Event 2 -->
+  <!-- Milestone 2 — 3 photos -->
   <div class="t-row reverse">
     <div>
-      <div class="t-media">
-        <img src="images/aiesec/event-2.jpg" alt="Leading the incoming Global Volunteer program">
+      <div class="t-gallery">
+        <img src="images/aiesec/m2-a.jpg" alt="Global Volunteer program">
+        <img src="images/aiesec/m2-b.jpg" alt="Global Volunteer program 2">
+        <img src="images/aiesec/m2-c.jpg" alt="Global Volunteer program 3">
       </div>
       <div class="t-caption">
         Leading the incoming Global Volunteer program, connecting international
@@ -156,12 +153,12 @@
     <div class="t-year">[YYYY]</div>
   </div>
 
-  <!-- Event 3 -->
+  <!-- Milestone 3 — 1 photo -->
   <div class="t-row">
     <div class="t-year">[YYYY]</div>
     <div>
-      <div class="t-media">
-        <img src="images/aiesec/event-3.jpg" alt="Branch Vice President">
+      <div class="t-gallery single">
+        <img src="images/aiesec/m3-a.jpg" alt="Branch Vice President">
       </div>
       <div class="t-caption">
         Appointed Branch Vice President — leading the Global Talent program area
@@ -170,11 +167,12 @@
     </div>
   </div>
 
-  <!-- Event 4 -->
+  <!-- Milestone 4 — 2 photos -->
   <div class="t-row reverse">
     <div>
-      <div class="t-media">
-        <img src="images/aiesec/event-4.jpg" alt="Stabilize, Diversify, Scale growth strategy">
+      <div class="t-gallery">
+        <img src="images/aiesec/m4-a.jpg" alt="Growth strategy">
+        <img src="images/aiesec/m4-b.jpg" alt="Growth strategy 2">
       </div>
       <div class="t-caption">
         Built a 3-phase growth strategy — Stabilize → Diversify → Scale — to grow
@@ -184,12 +182,14 @@
     <div class="t-year">[YYYY]</div>
   </div>
 
-  <!-- Event 5 -->
+  <!-- Milestone 5 — 3 photos -->
   <div class="t-row">
     <div class="t-year">Result</div>
     <div>
-      <div class="t-media">
-        <img src="images/aiesec/event-5.jpg" alt="Program results">
+      <div class="t-gallery">
+        <img src="images/aiesec/m5-a.jpg" alt="Program results">
+        <img src="images/aiesec/m5-b.jpg" alt="Program results 2">
+        <img src="images/aiesec/m5-c.jpg" alt="Program results 3">
       </div>
       <div class="t-caption">
         Over 3 years: 190 opportunities sourced, 174 approved, 81 completed
@@ -198,7 +198,9 @@
     </div>
   </div>
 
-  <!-- Add more t-row blocks here for more events/photos -->
+  <!-- To add a milestone: copy a whole t-row block. To add/remove photos in
+       any milestone: just add/remove <img> lines inside its .t-gallery —
+       1, 2, or 3 all lay out cleanly automatically. -->
 
 </div>
 
