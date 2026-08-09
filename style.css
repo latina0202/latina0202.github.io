@@ -414,20 +414,20 @@ body[data-theme="light"] .blob {
 .fade-up { opacity: 0; transform: translateY(10px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .is-visible { opacity: 1; transform: none; }
 
-/* Duo Portrait Stack */
+/* Duo Portrait Stack - Larger & Prominent Dimensions */
 .portrait-stack {
   position: relative;
   display: inline-flex;
   align-items: flex-end;
-  padding: 10px 40px 16px 10px;
+  padding: 10px 40px 20px 10px;
 }
 
 .portrait-frame {
   position: relative;
   z-index: 2;
-  width: 210px;
-  height: auto !important;
-  border-radius: 16px;
+  width: 280px; /* Increased from 210px */
+  height: 340px !important; /* Fixed height for prominent portrait card */
+  border-radius: 18px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
   box-shadow: var(--card-shadow);
@@ -440,23 +440,23 @@ body[data-theme="light"] .blob {
 .portrait-frame img {
   display: block;
   width: 100%;
-  height: auto !important;
-  object-fit: contain;
+  height: 100% !important;
+  object-fit: cover !important; /* Fills frame cleanly without squishing */
 }
 
 .portrait-frame:hover {
-  transform: rotate(-6deg) translateY(-8px);
+  transform: rotate(-6deg) translateY(-10px);
   z-index: 4;
 }
 
 .portrait-frame-secondary {
   position: relative;
   z-index: 3;
-  width: 200px;
-  height: auto !important;
-  margin-left: -85px;
-  margin-bottom: -8px;
-  border-radius: 16px;
+  width: 250px; /* Increased from 200px */
+  height: 310px !important;
+  margin-left: -110px; /* Adjusted overlap for larger frames */
+  margin-bottom: -10px;
+  border-radius: 18px;
   overflow: hidden;
   border: 4px solid var(--bg);
   box-shadow: var(--card-shadow);
@@ -469,67 +469,42 @@ body[data-theme="light"] .blob {
 .portrait-frame-secondary img {
   display: block;
   width: 100%;
-  height: auto !important;
-  object-fit: contain;
+  height: 100% !important;
+  object-fit: cover !important;
 }
 
 .portrait-frame-secondary:hover {
-  transform: rotate(1deg) translateY(-10px) scale(1.02);
+  transform: rotate(1deg) translateY(-12px) scale(1.02);
   z-index: 5;
 }
 
-/* Responsiveness */
+/* Tablet & Mobile Responsiveness */
 @media (max-width: 1024px) {
-  .about-grid { grid-template-columns: 1fr; gap: 18px; }
-  .lead { max-width: 100%; }
-  .hero-inner { flex-direction: column !important; align-items: flex-start; }
-  .hero-right {
-    display: flex !important;
-    justify-content: center;
-    margin-top: 24px;
-    width: 100%;
-  }
   .portrait-stack {
     margin: 0 auto;
-    padding: 10px 30px 14px 10px;
+    padding: 10px 20px 16px 10px;
   }
-  .portrait-frame { width: 160px; }
-  .portrait-frame-secondary { width: 152px; margin-left: -65px; margin-bottom: -6px; }
-}
-
-@media (max-width: 720px) {
-  .timeline::before{ left:18px; }
-  .t-row{
-    grid-template-columns:1fr;
-    padding-left:40px;
+  .portrait-frame {
+    width: 210px;
+    height: 260px !important;
   }
-  .t-row::before{ left:18px; }
-  .t-row.reverse .t-year{ text-align:left; }
-}
-
-@media (max-width: 640px) {
-  .nav-links { display: none; }
-  .mobile-only { display: inline-flex; }
-  .mobile-menu { display: none; }
-  .title { font-size: 28px; }
+  .portrait-frame-secondary {
+    width: 190px;
+    height: 240px !important;
+    margin-left: -80px;
+    margin-bottom: -6px;
+  }
 }
 
 @media (max-width: 480px) {
-  .portrait-frame { width: 42vw; }
-  .portrait-frame-secondary { width: 39vw; margin-left: -17vw; margin-bottom: -4px; }
+  .portrait-frame {
+    width: 46vw;
+    height: 56vw !important;
+  }
+  .portrait-frame-secondary {
+    width: 42vw;
+    height: 52vw !important;
+    margin-left: -18vw;
+    margin-bottom: -4px;
+  }
 }
-
-/* Mobile menu */
-.mobile-menu {
-  position: fixed;
-  left: 12px; right: 12px; top: 74px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  padding: 12px; border-radius: 12px;
-  display: none; flex-direction: column; gap: 8px; z-index: 80;
-}
-.mobile-menu a {
-  padding: 10px; border-radius: 10px; color: var(--fg); text-decoration: none;
-}
-
-.muted { color: var(--muted); }
