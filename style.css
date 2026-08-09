@@ -483,3 +483,41 @@ body[data-theme="light"] .blob {
     flex-direction: column !important;
   }
 }
+
+/* Duo portrait: main photo + overlapping smaller "leader" photo */
+.portrait-stack{
+  position: relative;
+  display: inline-block;
+}
+.portrait-frame-secondary{
+  position: absolute;
+  right: -22px;
+  bottom: -22px;
+  width: 42%;
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 4px solid var(--bg);
+  box-shadow: var(--card-shadow);
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(.2,.9,.2,1);
+}
+.portrait-frame-secondary img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.portrait-frame-secondary:hover{
+  transform: translateY(-6px) scale(1.04);
+}
+
+@media (max-width: 1024px) {
+  .portrait-stack{ margin: 0 auto; }
+  .portrait-frame-secondary{
+    right: -14px;
+    bottom: -14px;
+    width: 46%;
+    border-width: 3px;
+  }
+}
