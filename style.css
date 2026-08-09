@@ -406,6 +406,14 @@ body[data-theme="light"] .blob {
   }
 }
 
+/* Photo and text column now equal width (was a fixed 260px photo before) */
+.exp-content .t-media{
+  flex: 1 1 50%;   /* was: flex: 0 0 260px; */
+}
+.exp-content .exp-card{
+  flex: 1 1 50%;
+}
+
 /* Skills */
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 24px; }
 .skill-category {
