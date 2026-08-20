@@ -7,14 +7,10 @@ Data Science applications (Fall 2027).
 ## What's on the site
 - **About** — background summary (Sea Group, Home Credit, ABeam, MSBA goal)
 - **Experience** — Sea Group, Home Credit Vietnam, ABeam Consulting
-- **Leadership** — AIESEC Branch Vice President
-- **Projects** — 4 cards, each with a "Details" pop-up (full write-up) plus
-  Website/Demo and Code links:
+- **Projects** — 4 cards, each with Website/Demo and/or Code links:
   1. RFM + K-Means Customer Clustering
-  2. Song Popularity Prediction
-  3. Seller Cash Loan Cohort Dashboard
+  2. Music Genre Classification: Audio vs. Lyrics
+  3. Cash Loan product launch via MoMo mini-app
   4. AIESEC Global Talent Program
 - **Skills** — technical + product/business
 - **Contact** — resume, email, LinkedIn, GitHub
-
-bac
