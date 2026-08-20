@@ -78,6 +78,19 @@
   .t-gallery.single{ grid-template-columns:1fr; }
   .t-gallery.single img{ aspect-ratio:4/3; }
 
+  /* Placeholder shown until real photos are added for a milestone */
+  .t-photo{
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:12px;
+    border:2px dashed #2f6fed;
+    background: linear-gradient(135deg, rgba(47,111,237,0.12), rgba(47,111,237,0.04));
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:10px;
+    font-size:12px; font-weight:700; color:#2f6fed;
+  }
+  .t-gallery.single .t-photo{ aspect-ratio:4/3; }
+
   .t-caption{
     margin-top:10px;
     font-style:italic;
@@ -130,8 +143,8 @@
     <div class="t-year">[YYYY]</div>
     <div>
       <div class="t-gallery">
-        <img src="images/aiesec/m1-a.jpg" alt="Joining AIESEC">
-        <img src="images/aiesec/m1-b.jpg" alt="Joining AIESEC 2">
+        <div class="t-photo">Photo coming soon</div>
+        <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">[Short description: how you joined AIESEC / your first role]</div>
     </div>
@@ -141,9 +154,9 @@
   <div class="t-row reverse">
     <div>
       <div class="t-gallery">
-        <img src="images/aiesec/m2-a.jpg" alt="Global Volunteer program">
-        <img src="images/aiesec/m2-b.jpg" alt="Global Volunteer program 2">
-        <img src="images/aiesec/m2-c.jpg" alt="Global Volunteer program 3">
+        <div class="t-photo">Photo coming soon</div>
+        <div class="t-photo">Photo coming soon</div>
+        <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">
         Leading the incoming Global Volunteer program, connecting international
@@ -158,7 +171,7 @@
     <div class="t-year">[YYYY]</div>
     <div>
       <div class="t-gallery single">
-        <img src="images/aiesec/m3-a.jpg" alt="Branch Vice President">
+        <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">
         Appointed Branch Vice President — leading the Global Talent program area
@@ -171,8 +184,8 @@
   <div class="t-row reverse">
     <div>
       <div class="t-gallery">
-        <img src="images/aiesec/m4-a.jpg" alt="Growth strategy">
-        <img src="images/aiesec/m4-b.jpg" alt="Growth strategy 2">
+        <div class="t-photo">Photo coming soon</div>
+        <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">
         Built a 3-phase growth strategy — Stabilize → Diversify → Scale — to grow
@@ -187,9 +200,9 @@
     <div class="t-year">Result</div>
     <div>
       <div class="t-gallery">
-        <img src="images/aiesec/m5-a.jpg" alt="Program results">
-        <img src="images/aiesec/m5-b.jpg" alt="Program results 2">
-        <img src="images/aiesec/m5-c.jpg" alt="Program results 3">
+        <div class="t-photo">Photo coming soon</div>
+        <div class="t-photo">Photo coming soon</div>
+        <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">
         Over 3 years: 190 opportunities sourced, 174 approved, 81 completed
@@ -198,9 +211,10 @@
     </div>
   </div>
 
-  <!-- To add a milestone: copy a whole t-row block. To add/remove photos in
-       any milestone: just add/remove <img> lines inside its .t-gallery —
-       1, 2, or 3 all lay out cleanly automatically. -->
+  <!-- To add a milestone: copy a whole t-row block. To swap in a real photo,
+       replace a <div class="t-photo">...</div> with
+       <img src="images/aiesec/FILENAME.jpg" alt="..."> — 1, 2, or 3 images
+       per .t-gallery all lay out cleanly automatically. -->
 
 </div>
 
