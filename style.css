@@ -506,7 +506,7 @@ body[data-theme="light"] .blob {
 .portrait-frame{
   position: relative;
   z-index: 2;
-  width: 300px;
+  width: 380px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--glass-border);
@@ -528,9 +528,9 @@ body[data-theme="light"] .blob {
 .portrait-frame-secondary{
   position: relative;
   z-index: 3;
-  width: 240px;
-  margin-left: -90px;
-  margin-bottom: -22px;
+  width: 300px;
+  margin-left: -110px;
+  margin-bottom: -26px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--bg);
@@ -558,4 +558,12 @@ body[data-theme="light"] .blob {
 @media (max-width: 480px) {
   .portrait-frame{ width: 56vw; }
   .portrait-frame-secondary{ width: 44vw; margin-left: -16vw; margin-bottom: -14px; }
+}
+
+/* Extra room on wide desktop monitors: the hero has plenty of space to spare */
+@media (min-width: 1440px) {
+  .hero-inner{ max-width: 1360px; gap: 56px; }
+  .portrait-stack{ padding: 10px 90px 28px 10px; }
+  .portrait-frame{ width: 440px; }
+  .portrait-frame-secondary{ width: 340px; margin-left: -130px; margin-bottom: -30px; }
 }
