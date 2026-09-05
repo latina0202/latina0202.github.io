@@ -22,10 +22,10 @@
 
   // -------- Typing animation --------
   const phrases = [
-    'Product Analyst',
-    'AI/Machine Learning Enthusiast',
-    'Impactful Leader',
-    'Adaptive and Quick Learner'
+    'owning BNPL growth at ShopeePay',
+    'managing a $3M/month lifecycle budget',
+    'building cohort heatmap dashboards',
+    'applying for Fall 2027 MS programs'
   ];
 
   const typingEl = document.getElementById('typing');
