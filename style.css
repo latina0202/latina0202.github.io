@@ -139,27 +139,37 @@ h1, h2, h3, h4 {
 
 .section { padding: 96px 0; }
 
-/* Section colour drift.
-   Each section carries a vertical gradient whose end colour is the next
-   section's start colour, so the joins blend instead of showing a seam.
-   The whole range spans about 4% saturation — enough to sense movement
-   through the page, not enough to read as colour. The tint tracks the
-   narrative: coolest at the technical work, warm at the personal section. */
-.tint-1 { background: linear-gradient(180deg, #F6F7F8 0%, #F4F6FB 100%); }
-.tint-2 { background: linear-gradient(180deg, #F4F6FB 0%, #F1F4FC 100%); }
-.tint-3 { background: linear-gradient(180deg, #F1F4FC 0%, #EEF2FD 100%); }
-.tint-4 { background: linear-gradient(180deg, #EEF2FD 0%, #EDF1FD 100%); }
-.tint-5 { background: linear-gradient(180deg, #EDF1FD 0%, #F4F5F9 100%); }
-.tint-6 { background: linear-gradient(180deg, #F4F5F9 0%, #FAF6F3 100%); }
-.tint-7 { background: linear-gradient(180deg, #FAF6F3 0%, #F6F7F8 100%); }
+/* Colour drift — one continuous ramp across the whole page.
+   Per-section gradients meet at matching colours but change slope at each
+   join, and the eye reads that kink as a seam. A single gradient on <main>
+   drifts at a constant rate the whole way down, so there is nothing to
+   catch on. The range spans about 4% saturation: cool through the
+   technical sections, warm at the personal one, neutral at both ends. */
+main {
+  background: linear-gradient(
+    180deg,
+    #F6F7F8 0%,
+    #F4F6FB 14%,
+    #F0F3FC 34%,
+    #EDF1FD 52%,
+    #F1F3F9 68%,
+    #F8F5F1 86%,
+    #F6F7F8 100%
+  );
+}
 
-body[data-theme="dark"] .tint-1 { background: linear-gradient(180deg, #0B0D11 0%, #0C0F16 100%); }
-body[data-theme="dark"] .tint-2 { background: linear-gradient(180deg, #0C0F16 0%, #0D111A 100%); }
-body[data-theme="dark"] .tint-3 { background: linear-gradient(180deg, #0D111A 0%, #0E131E 100%); }
-body[data-theme="dark"] .tint-4 { background: linear-gradient(180deg, #0E131E 0%, #0F1421 100%); }
-body[data-theme="dark"] .tint-5 { background: linear-gradient(180deg, #0F1421 0%, #0C0F15 100%); }
-body[data-theme="dark"] .tint-6 { background: linear-gradient(180deg, #0C0F15 0%, #130F0D 100%); }
-body[data-theme="dark"] .tint-7 { background: linear-gradient(180deg, #130F0D 0%, #0B0D11 100%); }
+body[data-theme="dark"] main {
+  background: linear-gradient(
+    180deg,
+    #0B0D11 0%,
+    #0C0F16 14%,
+    #0D111A 34%,
+    #0E131F 52%,
+    #0C0F15 68%,
+    #120F0D 86%,
+    #0B0D11 100%
+  );
+}
 
 @media (max-width: 720px) {
   .section { padding: 64px 0; }
