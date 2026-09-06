@@ -3,33 +3,36 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>💻 Ngoc Duong </title>
-<meta name="description" content="Ngoc Duong - Product Growth, BNPL & Analytics, Sea Group. Applying to MS Business Analytics/Data Science programs for Fall 2027." />
+<title>Ngoc Duong — Product Growth Analyst</title>
+<meta name="description" content="Ngoc Duong - Product Growth Analyst at Sea Group. BNPL strategy, lifecycle budget, and the analytics underneath both." />
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 <link rel="canonical" href="https://latina0202.github.io/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Ngoc Duong — Product Growth Analyst" />
-<meta property="og:description" content="Product Growth, BNPL & Analytics, Sea Group. Applying to MS Business Analytics/Data Science programs for Fall 2027." />
+<meta property="og:description" content="BNPL strategy, lifecycle budget, and the analytics underneath both — at ShopeePay and SPaylater." />
 <meta property="og:url" content="https://latina0202.github.io/" />
 <meta property="og:image" content="https://latina0202.github.io/images/wave-speaker.jpg" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ngoc Duong — Product Growth Analyst" />
-<meta name="twitter:description" content="Product Growth, BNPL & Analytics, Sea Group. Applying to MS Business Analytics/Data Science programs for Fall 2027." />
+<meta name="twitter:description" content="BNPL strategy, lifecycle budget, and the analytics underneath both — at ShopeePay and SPaylater." />
 <meta name="twitter:image" content="https://latina0202.github.io/images/wave-speaker.jpg" />
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css" />
 </head>
 <body data-theme="light">
 
 <!-- HEADER -->
-<header class="nav glass">
+<header class="nav">
   <div class="brand">
     <div class="logo">ND</div>
     <div class="brand-text">
       <div class="name">Ngoc Duong</div>
-      <div class="subtitle">Product Growth Analyst - Sea Group (ShopeePay)</div>
+      <div class="subtitle">Product Growth Analyst · Sea Group</div>
     </div>
   </div>
   <nav class="nav-links">
@@ -37,11 +40,12 @@
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#beyond">Beyond</a>
     <a href="#contact">Contact</a>
-    <a href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing">Resume</a>
+    <a class="nav-cta" href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
   </nav>
   <div class="controls">
-    <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <button id="themeToggle" aria-label="Toggle colour theme">🌙</button>
     <button id="menuToggle" class="mobile-only" aria-label="Open menu">☰</button>
   </div>
 </header>
@@ -52,331 +56,416 @@
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
+  <a href="#beyond">Beyond work</a>
   <a href="#contact">Contact</a>
+  <a href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
 </div>
 
 <main>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-inner">
+  <div class="container hero-inner">
     <div class="hero-left">
-      <div class="eyebrow">Hello, I am</div>
-      <h1 class="title">
-        <span class="static">Ngoc Duong</span>
-        <span class="typing" id="typing"></span>
-      </h1>
-      <p class="lead">
-        I work on product growth and BNPL strategy at Sea Group, and build analytics
-        projects on the side. Currently applying to MS Data Science programs for
-        Fall 2027 to move deeper into data-driven product work.
+      <span class="eyebrow">Product Growth Analyst · Sea Group</span>
+      <h1 class="hero-title">I build growth systems for <span class="accent">credit products</span></h1>
+      <div class="hero-now">Currently: <span class="typing" id="typing"></span></div>
+      <p class="hero-lead">
+        BNPL strategy, lifecycle budget, and the analytics underneath both — at
+        ShopeePay and SPaylater.
       </p>
       <div class="hero-ctas">
-        <a href="#experience" class="btn primary">See Experience</a>
-        <a href="#contact" class="btn outline">Get in touch</a>
+        <a href="#experience" class="btn primary">See experience</a>
+        <a href="#projects" class="btn outline">View projects</a>
       </div>
-      <div class="meta">
-        <span>Based in Ho Chi Minh City, Vietnam</span>
-        <span class="dot">•</span>
+      <div class="hero-meta">
+        <span>Ho Chi Minh City, Vietnam</span>
+        <span class="dot">/</span>
         <span>Open to opportunities in the Bay Area</span>
       </div>
     </div>
-    <!-- ADD THIS HERO-RIGHT WRAPPER -->
-    <div class="hero-right">
-      <div class="portrait-stack">
-        <div class="portrait-frame glass">
-          <img src="images/wave-speaker.jpg" alt="Ngoc Duong">
-        </div>
-        <div class="portrait-frame-secondary glass">
-          <img src="images/taxua.jpg" alt="Ngoc Duong as a leader">
-        </div>
-      </div>
+    <div class="hero-media">
+      <figure class="tall"><img src="images/wave-speaker.jpg" alt="Ngoc Duong presenting" loading="eager"></figure>
+      <figure class="wide"><img src="images/taxua.jpg" alt="Ngoc Duong hiking in Ta Xua" loading="lazy"></figure>
     </div>
-  </div>
-</section>
-
-  <div class="floating">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-    <div class="spotlight"></div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section container fade-up">
-  <h2 class="section-title">About</h2>
-  <div class="about-grid">
-    <div class="about-text">
-      <p>
-        I'm a Product Growth Analyst at Sea Group, working on ShopeePay and SPaylater
-        (BNPL product). My work spans BNPL product strategy, customer life cycle budget management, and
-        developing new credit products for e-commerce sellers.
-      </p>
-      <p>
-        Before Sea Group, I was a Strategic Growth Specialist at Home Credit Vietnam, and
-        started my career as a Tech Consultant on the SAP track at ABeam Consulting.
-        Alongside my product work, I build my own analytics projects — clustering, regression
-        modeling, and cohort dashboards — to keep my technical skills sharp.
-      </p>
-      <p>
-        I'm applying to MS Business Analytics/ Data Science programs for Fall 2027, aiming
-        to combine my product and analytics background toward data-driven roles at
-        Bay Area tech companies.
-      </p>
-      <a class="btn outline" href="#projects">Explore key projects</a>
-    </div>
-    <div class="about-stats glass">
-      <div>
-        <div class="stat">04</div>
-        <div class="stat-label">Years in Product/ Growth Analysis</div>
+<section id="about" class="section">
+  <div class="container fade-up">
+    <span class="eyebrow">About</span>
+    <h2 class="section-title">Where the money goes, and how we know it worked</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm a Product Growth Analyst at <strong>Sea Group</strong>, on ShopeePay and
+          SPaylater. Most of my job is deciding where credit and incentive money goes —
+          which sellers see which offer, at what price, and how we'd know if it worked.
+        </p>
+        <p>
+          Before that, Strategic Growth Specialist at <strong>Home Credit Vietnam</strong>, and
+          a tech consultant on the SAP track at <strong>ABeam</strong>. On the side I build my own
+          analytics projects — clustering, regression, cohort dashboards — because I'd rather
+          build the dashboard than wait for one.
+        </p>
       </div>
-      <div>
-        <div class="stat">Fintech</div>
-        <div class="stat-label">Strong experience in Fintech/ Ecommerce Products</div>
-      </div>
-      <div>
-        <div class="stat">Master of Analytics/ Data Science</div>
-        <div class="stat-label">Applying - Fall 2027</div>
-      </div>
+      <aside class="about-aside">
+        <h3>At a glance</h3>
+        <ul class="about-list">
+          <li>
+            <span class="tag">Now</span>
+            <span><b>Product Growth Analyst</b>Sea Group — ShopeePay &amp; SPaylater</span>
+          </li>
+          <li>
+            <span class="tag">Domain</span>
+            <span><b>Fintech &amp; e-commerce</b>BNPL, credit products, lifecycle marketing</span>
+          </li>
+          <li>
+            <span class="tag">Stack</span>
+            <span><b>Python, SQL, Chart.js</b>Pandas, scikit-learn, cohort dashboards</span>
+          </li>
+          <li>
+            <span class="tag">Based</span>
+            <span><b>Ho Chi Minh City</b>Open to Bay Area opportunities</span>
+          </li>
+        </ul>
+      </aside>
     </div>
   </div>
 </section>
-  
-<!-- WORK EXPERIENCE -->
-<section id="experience" class="section container fade-up">
-  <h2 class="section-title">Work Experience</h2>
-  <div class="timeline exp-timeline">
 
-    <!-- Sea Group -->
-    <div class="t-row">
-      <div class="t-year">April 2026 - Present</div>
-      <div class="exp-content">
-        <div class="t-media">
-          <div class="media-placeholder">Sea Group<br>ShopeePay · SPaylater</div>
-        </div>
-        <div class="exp-card">
-          <div class="exp-title">Product Growth Analyst</div>
-          <div class="exp-company">Sea Group - ShopeePay/ SPaylater(BNPL)</div>
-          <ul class="exp-highlights">
-            <li>Own BNPL product growth strategy and new credit product development for e-commerce sellers</li>
-            <li>Manage the monthly customer life cycle budget (~$3M/month) - own voucher scheme design (discount rate, MBS, cap parameters) and build interactive Chart.js dashboards for budget burn, treatment performance, and cohort analysis</li>
-            <li>Led QR network expansion strategy for SPL within Vietnam's VNPayQR/VietQR landscape</li>
-            <li>Designed a 4-part push notification campaign for a seller cash loan dynamic pricing rollout, transitioning ~1,500 sellers from a fixed 35% EIR to a dynamic 25–35% EIR model</li>
-            <li>Built a cohort heatmap dashboard analyzing time-to-disburse across a ~115K whitelisted seller base which helps design drop-off follow up strategy</li>
-          </ul>
-        </div>
-      </div>
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container fade-up">
+    <span class="eyebrow">Experience</span>
+    <h2 class="section-title">Where I've worked</h2>
+    <p class="section-dek">
+      Four roles across fintech, consulting and programme leadership. Open any for detail.
+    </p>
+
+    <div class="arc">
+      <span class="arc-node">Consulting</span>
+      <span class="arc-arrow">→</span>
+      <span class="arc-node">Lending growth</span>
+      <span class="arc-arrow">→</span>
+      <span class="arc-node now">BNPL platform</span>
     </div>
 
-    <!-- Home Credit Vietnam -->
-    <div class="t-row reverse">
-      <div class="exp-content">
-        <div class="t-media">
-          <img src="images/homecredit.jpg" alt="Home Credit Vietnam">
-        </div>
-        <div class="exp-card">
-          <div class="exp-title">Strategic Growth Specialist</div>
-          <div class="exp-company">Home Credit Vietnam</div>
-          <ul class="exp-highlights">
-            <li>Top 2 out of 3,000+ applicants, Young Talent Program</li>
-            <li>Architected a data-driven digital sales roadmap for the Home Credit
-              App then launched 20+ performance features against P&L targets and coordinated
-              Data, Risk, and CRM squads to deliver a 1.7x YoY in-app sales volume increase
-              for the Cash Loan product</li>
-            <li>Led go-to-market plan for high-margin Cash Loan product via an embedded mini-app
-              on MoMo (Vietnam's leading e-wallet platform) - a new business model driving partner
-              integration, user flow design that scaled digital sales volume 8x YoY.</li>
+    <div class="rail">
+
+      <!-- Sea Group -->
+      <details class="rail-item is-now">
+        <summary>
+          <div class="rail-when">2026 — now</div>
+          <div class="rail-dot"><i></i></div>
+          <div>
+            <div class="rail-role">Product Growth Analyst</div>
+            <div class="rail-org">Sea Group — ShopeePay &amp; SPaylater (BNPL)</div>
+            <div class="rail-owned">BNPL growth strategy and the monthly lifecycle budget behind 115,000 sellers.</div>
+          </div>
+          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+        </summary>
+        <div class="rail-detail">
+          <ul class="exp-points">
+            <li>Every month I decide how roughly <strong>$3M</strong> of voucher budget is spent — the rates, basket minimums and caps behind who sees which offer. I built the burn and treatment dashboards in Chart.js to answer <em>is this working?</em> faster.</li>
+            <li>I own BNPL growth strategy for e-commerce sellers, including credit products still in development.</li>
+            <li>Moving seller cash loans from a flat 35% EIR to dynamic 25–35% pricing risked confusion more than price. I designed a four-part notification sequence to explain it before it landed, for ~1,500 sellers.</li>
+            <li>Sellers were approved and then never drew down. I built a time-to-disburse cohort heatmap across the 115,000-seller base; the drop-off cluster it exposed became the follow-up trigger.</li>
+            <li>Led QR network expansion for SPaylater across VNPayQR and VietQR.</li>
           </ul>
         </div>
-      </div>
-      <div class="t-year">Aug 2024 - Mar 2026</div>
-    </div>
+      </details>
 
-    <!-- ABeam Consulting -->
-    <div class="t-row">
-      <div class="t-year">Mar 2024 - July 2024</div>
-      <div class="exp-content">
-        <div class="t-media">
-          <img src="images/abeam.jpg" alt="ABeam Consulting">
-        </div>
-        <div class="exp-card">
-          <div class="exp-title">Tech Consultant Trainee (SAP Track)</div>
-          <div class="exp-company">ABeam Consulting</div>
-          <ul class="exp-highlights">
-            <li>Analyzed legacy business processes for two manufacturing clients,
-              mapping data flows to SAP best-practice models and facilitating stakeholder
-              workshops to improve procurement data accuracy and efficiency.</li>
+      <!-- Home Credit -->
+      <details class="rail-item">
+        <summary>
+          <div class="rail-when">2024 — 2026</div>
+          <div class="rail-dot"><i></i></div>
+          <div>
+            <div class="rail-role">Strategic Growth Specialist</div>
+            <div class="rail-org">Home Credit Vietnam</div>
+            <div class="rail-owned">Built the app's digital sales roadmap, and launched lending inside MoMo.</div>
+          </div>
+          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+        </summary>
+        <div class="rail-detail">
+          <div class="rail-thumb"><img src="images/homecredit.jpg" alt="Home Credit Vietnam team" loading="lazy"></div>
+          <ul class="exp-points">
+            <li>Joined as one of two picks from 3,000+ applicants to the Young Talent Program.</li>
+            <li>I built the app's digital sales roadmap and shipped 20+ features against P&amp;L targets, pulling Data, Risk and CRM into one plan. In-app sales finished the year at <strong>1.7×</strong>.</li>
+            <li>MoMo was a channel with no playbook — credit offered to wallet users who hadn't asked for it. I designed the flow around that reluctance rather than our funnel; within a year it carried <strong>eight times</strong> the digital volume.</li>
           </ul>
         </div>
-      </div>
-    </div>
+      </details>
 
-    <!-- AIESEC -->
-    <div class="t-row reverse">
-      <div class="exp-content">
-        <div class="t-media">
-          <img src="images/AIESEC1.JPG" alt="AIESEC - Ho Chi Minh City, Vietnam">
-        </div>
-        <div class="exp-card">
-          <div class="exp-title">Branch Vice President</div>
-          <div class="exp-company">AIESEC - Ho Chi Minh City, Vietnam</div>
-          <ul class="exp-highlights">
-            <li>Conceptualized and launched a remote-workforce B2B solution for Vietnamese SMEs post-COVID-19, using market analysis to secure 5+ enterprise clients within 6 months</li>
-            <li>Drove a 2-year planning, execution, and growth roadmap by leading 200+ client meetings, matching client requirements against an overseas talent pool spanning 60+ countries, achieving 80% YoY sales growth</li>
-            <li>Led a 20-member department, mentoring individual members through onboarding and performance evaluation to build team culture - achieving 100% member retention and a 90% Net Promoter Score</li>
+      <!-- ABeam -->
+      <details class="rail-item">
+        <summary>
+          <div class="rail-when">2024</div>
+          <div class="rail-dot"><i></i></div>
+          <div>
+            <div class="rail-role">Tech Consultant Trainee — SAP Track</div>
+            <div class="rail-org">ABeam Consulting</div>
+            <div class="rail-owned">Mapped legacy manufacturing processes onto SAP data models.</div>
+          </div>
+          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+        </summary>
+        <div class="rail-detail">
+          <div class="rail-thumb"><img src="images/abeam.jpg" alt="ABeam Consulting onboarding" loading="lazy"></div>
+          <ul class="exp-points">
+            <li>Mapped two manufacturing clients' legacy processes and data flows onto SAP best-practice models.</li>
+            <li>Ran the stakeholder workshops that cleaned up procurement data.</li>
           </ul>
         </div>
-      </div>
-      <div class="t-year">Jan 2022 - Jan 2024</div>
-    </div>
+      </details>
 
+      <!-- AIESEC -->
+      <details class="rail-item">
+        <summary>
+          <div class="rail-when">2022 — 2024</div>
+          <div class="rail-dot"><i></i></div>
+          <div>
+            <div class="rail-role">Branch Vice President</div>
+            <div class="rail-org">AIESEC — Ho Chi Minh City, Vietnam</div>
+            <div class="rail-owned">A 20-person department and a B2B exchange programme across 60+ countries.</div>
+          </div>
+          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+        </summary>
+        <div class="rail-detail">
+          <div class="rail-thumb"><img src="images/AIESEC1.JPG" alt="AIESEC Ho Chi Minh City team" loading="lazy"></div>
+          <ul class="exp-points">
+            <li>Post-COVID, Vietnamese SMEs needed people they couldn't hire locally. I built a remote-workforce B2B offer around that and signed five enterprise clients in six months.</li>
+            <li>Across ~200 client meetings I matched company needs against a talent pool of 60+ countries. Sales grew <strong>80%</strong> year on year.</li>
+            <li>I led a 20-person department — onboarding, reviews, culture. Nobody left that year; team NPS finished at 90.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section container fade-up">
-  <h2 class="section-title">Key Projects</h2>
-  <div class="showcase-grid">
+<section id="projects" class="section">
+  <div class="container fade-up">
+    <span class="eyebrow">Projects</span>
+    <h2 class="section-title">Selected work</h2>
+    <p class="section-dek">
+      Analytics I built on my own time, and launches I led at work.
+    </p>
 
-    <article class="project-card project-card-lg fade-up">
-      <div class="card-thumb">
-        <div class="media-placeholder">RFM + K-Means<br>Customer Clustering</div>
-      </div>
-      <div class="card-top">
-        <div class="card-title">RFM + K-Means Customer Clustering</div>
-        <div class="card-badge">Analytics</div>
-      </div>
-      <p class="card-desc">
-        Built an RFM (Recency, Frequency, Monetary) segmentation model with K-Means
-        clustering to group customers by behavior, as a technical portfolio project.
-      </p>
-      <div class="card-tech"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
-      <div class="card-actions">
-        <span class="small" style="color:var(--muted); font-size:13px;">Write-up & code coming soon</span>
-      </div>
-    </article>
+    <div class="project-grid">
 
-    <article class="project-card project-card-lg fade-up">
-      <div class="card-thumb">
-        <img src="images/spotify.jpg" alt="Music Genre Classification preview">
-      </div>
-      <div class="card-top">
-        <div class="card-title">Music Genre Classification: Audio vs. Lyrics</div>
-        <div class="card-badge">ML</div>
-      </div>
-      <p class="card-desc">
-        Compared audio features and song lyrics as predictors of genre across 15,405 Spotify
-        tracks spanning 6 genres; a multimodal fusion model combining both modalities reached
-        58.9% accuracy, beating single-modality baselines by 7-9 points.
-      </p>
-      <div class="card-tech"><span>Python</span><span>scikit-learn</span><span>Multimodal ML</span></div>
-      <div class="card-actions">
-        <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" class="btn small outline">Project Code</a>
-      </div>
-    </article>
+      <article class="project-card">
+        <div class="card-thumb">
+          <img src="images/spotify.jpg" alt="Music genre classification project" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="eyebrow">Machine learning</span>
+          <h3 class="card-title">Audio vs. lyrics: what predicts genre</h3>
+          <p class="card-desc">
+            Does a song's <em>sound</em> or its <em>words</em> better predict genre? I compared audio
+            features against lyrics across 15,405 Spotify tracks in six genres, then fused both to see
+            if the combination beat either alone.
+          </p>
+          <div class="card-figures">
+            <div><div class="fv">58.9%</div><div class="fl">Fusion accuracy</div></div>
+            <div><div class="fv">+7–9pt</div><div class="fl">Over each single-modality baseline</div></div>
+          </div>
+          <div class="card-tech"><span>Python</span><span>scikit-learn</span><span>Multimodal ML</span></div>
+          <div class="card-actions">
+            <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" rel="noopener" class="btn small outline">View code</a>
+          </div>
+        </div>
+      </article>
 
-    <article class="project-card project-card-lg fade-up">
-      <div class="card-thumb">
-        <img src="images/momo.jpg" alt="Seller Cash Loan Cohort Dashboard preview">
-      </div>
-      <div class="card-top">
-        <div class="card-title">Cash Loan product via an embedded mini-app on MoMo</div>
-        <div class="card-badge">Product Launching</div>
-      </div>
-      <p class="card-desc">
-        Led go-to-market plan for high-margin Cash Loan product via an embedded mini-app on MoMo 
-        (Vietnam's leading e-wallet platform) - a new business model driving partner integration, 
-        user flow design that scaled digital sales volume 8x YoY.
-      </p>
-      <div class="card-tech"><span>SQL</span><span>Cohort Analysis</span><span>Dashboarding</span></div>
-      <div class="card-actions">
-        <a href="https://www.momo.vn/tai-chinh-sieu-toc-homecredit" target="_blank" class="btn small">Website/Demo</a>
-      </div>
-    </article>
+      <article class="project-card">
+        <div class="card-thumb">
+          <img src="images/momo.jpg" alt="Cash loan mini-app on MoMo" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="eyebrow">Product launch</span>
+          <h3 class="card-title">Cash loan, embedded in MoMo</h3>
+          <p class="card-desc">
+            A cash loan inside Vietnam's largest e-wallet, offered to people who weren't looking for
+            credit. I designed the launch around that reluctance — partner integration, approval steps,
+            and what we said at each one. It carried eight times the digital volume within a year.
+          </p>
+          <div class="card-tech"><span>SQL</span><span>Cohort analysis</span><span>Go-to-market</span></div>
+          <div class="card-actions">
+            <a href="https://www.momo.vn/tai-chinh-sieu-toc-homecredit" target="_blank" rel="noopener" class="btn small outline">See it live</a>
+          </div>
+        </div>
+      </article>
 
-    <article class="project-card project-card-lg fade-up">
-      <div class="card-thumb">
-        <img src="images/global-talent.jpg" alt="AIESEC Global Talent preview">
-      </div>
-      <div class="card-top">
-        <div class="card-title">AIESEC - Global Talent Program</div>
-        <div class="card-badge">Leadership</div>
-      </div>
-      <p class="card-desc">
-        Over two years leading the Global Talent exchange program, I directed a 20-member department to architect 
-        a three-year product roadmap that facilitated international career opportunities for youth across 50 nations. 
-        By cultivating strategic B2B partnerships with Vietnamese SME and startup ecosystems, alongside international 
-        networks spanning over 100 countries, the initiative successfully established Vietnam as a competitive global 
-        working hub while delivering transformative cultural exchange experiences for foreign talent.
-      </p>
-      <div class="card-tech"><span>Program Leadership</span><span>Global Exchange</span><span>Team Management</span></div>
-      <div class="card-actions">
-        <a href="https://www.aiesec.vn/global-talent/home" target="_blank" class="btn small">Product Website</a>
-        <a href="aiesec-impact.html" target="_blank" class="btn small outline">Impact of twenty somethings</a>
-      </div>
-    </article>
+      <article class="project-card">
+        <div class="card-thumb">
+          <img src="images/global-talent.jpg" alt="AIESEC Global Talent programme" loading="lazy">
+        </div>
+        <div class="card-body">
+          <span class="eyebrow">Programme leadership</span>
+          <h3 class="card-title">AIESEC Global Talent</h3>
+          <p class="card-desc">
+            Two years running the Global Talent exchange programme: a 20-person department, a
+            three-year roadmap, and SME partnerships that placed young people into roles across
+            50 countries.
+          </p>
+          <div class="card-tech"><span>Programme leadership</span><span>B2B partnerships</span><span>Team management</span></div>
+          <div class="card-actions">
+            <a href="https://www.aiesec.vn/global-talent/home" target="_blank" rel="noopener" class="btn small outline">Programme site</a>
+            <a href="aiesec-impact.html" class="btn small outline">Impact story</a>
+          </div>
+        </div>
+      </article>
 
+      <article class="project-card">
+        <div class="card-thumb">
+          <div class="media-placeholder">RFM + K-MEANS<br>CUSTOMER CLUSTERING</div>
+        </div>
+        <div class="card-body">
+          <span class="eyebrow">Analytics</span>
+          <h3 class="card-title">RFM + K-Means segmentation</h3>
+          <p class="card-desc">
+            RFM segmentation with K-Means clustering, grouping customers by behaviour for
+            lifecycle targeting.
+          </p>
+          <div class="card-tech"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
+          <div class="card-note">Write-up and code coming soon</div>
+        </div>
+      </article>
+
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="skills section fade-up">
-  <div class="container">
-    <div class="section-title">Skills & Expertise</div>
+<section id="skills" class="section">
+  <div class="container fade-up">
+    <span class="eyebrow">Capabilities</span>
+    <h2 class="section-title">Skills &amp; expertise</h2>
     <div class="skills-grid">
-      <div class="skill-category glass fade-up">
-        <h3>Technical Skills</h3>
+      <div class="skill-category">
+        <h3>Technical</h3>
         <ul>
-          <li><strong>Programming & Analysis:</strong> Python, SQL</li>
-          <li><strong>Data & ML:</strong> Pandas, scikit-learn, K-Means clustering, regression modeling</li>
-          <li><strong>Dashboarding:</strong> Chart.js, cohort/heatmap dashboards</li>
-          <li><strong>Product Analytics:</strong> BNPL/credit product metrics, CRM budget analytics</li>
+          <li><strong>Programming &amp; analysis</strong>Python, SQL</li>
+          <li><strong>Data &amp; ML</strong>Pandas, scikit-learn, K-Means clustering, regression modelling</li>
+          <li><strong>Dashboarding</strong>Chart.js, cohort and heatmap dashboards</li>
+          <li><strong>Product analytics</strong>BNPL and credit product metrics, CRM budget analytics</li>
         </ul>
       </div>
-      <div class="skill-category glass fade-up">
-        <h3>Product & Business Skills</h3>
+      <div class="skill-category">
+        <h3>Product &amp; business</h3>
         <ul>
-          <li><strong>Product Growth Strategy:</strong> BNPL strategy, new credit product development</li>
-          <li><strong>Budget Ownership:</strong> Monthly CRM voucher budget management</li>
-          <li><strong>Cross-functional Leadership:</strong> AIESEC Branch Vice President, team leadership</li>
-          <li><strong>Consulting Fundamentals:</strong> SAP-track tech consulting background (ABeam)</li>
+          <li><strong>Growth strategy</strong>BNPL strategy, new credit product development</li>
+          <li><strong>Budget ownership</strong>Monthly CRM voucher budget management</li>
+          <li><strong>Cross-functional leadership</strong>Coordinating Data, Risk and CRM squads</li>
+          <li><strong>Consulting fundamentals</strong>SAP-track tech consulting background</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEYOND WORK -->
+<section id="beyond" class="section">
+  <div class="container fade-up">
+    <span class="eyebrow">Beyond work</span>
+    <h2 class="section-title">Away from the dashboards</h2>
+    <p class="section-dek">
+      What takes up the rest of my time.
+    </p>
+
+    <div class="beyond-grid">
+
+      <div class="beyond-card">
+        <div class="beyond-media">
+          <!-- Replace this frame with:
+               <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ngoc Duong playing guitar"
+                       allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
+                       allowfullscreen loading="lazy"></iframe>
+               Upload the clip to YouTube as *unlisted* — it stays out of search
+               and off your channel, but anyone with the link can watch. -->
+          <div class="frame">
+            <span class="icon">🎸</span>
+            <span class="label">GUITAR VIDEO<br>unlisted YouTube embed goes here</span>
+          </div>
+        </div>
+        <div class="beyond-body">
+          <h3>Guitar</h3>
+          <p>Been playing for years. Thirty seconds of it, if you're curious.</p>
+        </div>
+      </div>
+
+      <div class="beyond-card">
+        <div class="beyond-media">
+          <img src="images/taxua.jpg" alt="Above the clouds at Ta Xua" loading="lazy">
+        </div>
+        <div class="beyond-body">
+          <h3>The mountains</h3>
+          <p>Ta Xua, above the cloud line. I hike when the weekend allows.</p>
+        </div>
+      </div>
+
+      <div class="beyond-card">
+        <div class="beyond-media">
+          <!-- Replace with: <img src="images/YOUR_PHOTO.jpg" alt="..." loading="lazy"> -->
+          <div class="frame">
+            <span class="icon">🖼</span>
+            <span class="label">PHOTO<br>volunteering / community</span>
+          </div>
+        </div>
+        <div class="beyond-body">
+          <h3>Volunteering</h3>
+          <p>Still close to the AIESEC community I spent two years building.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact section fade-up">
-  <div class="container">
-    <div class="section-title">Let's Connect</div>
+<section id="contact" class="section">
+  <div class="container fade-up">
+    <span class="eyebrow">Contact</span>
+    <h2 class="section-title">Let's connect</h2>
+    <p class="section-dek">
+      Ho Chi Minh City. Open to Bay Area opportunities.
+    </p>
     <div class="contact-grid">
-      <div class="contact-card glass fade-up">
+      <div class="contact-card">
         <div class="small">Email</div>
-        <a href="mailto:duonghuynhngoc307@gmail.com" class="btn">Email Me</a>
+        <div class="value">duonghuynhngoc307<wbr>@gmail.com</div>
+        <a href="mailto:duonghuynhngoc307@gmail.com" class="btn small primary">Email me</a>
       </div>
-      <div class="contact-card glass fade-up">
+      <div class="contact-card">
         <div class="small">LinkedIn</div>
-        <a href="https://www.linkedin.com/in/ngoc-duong-824b2b208/" target="_blank" class="btn">Profile</a>
+        <div class="value">Ngoc Duong</div>
+        <a href="https://www.linkedin.com/in/ngoc-duong-824b2b208/" target="_blank" rel="noopener" class="btn small outline">View profile</a>
       </div>
-      <div class="contact-card glass fade-up">
+      <div class="contact-card">
         <div class="small">GitHub</div>
-        <a href="https://github.com/latina0202" target="_blank" class="btn">Profile</a>
+        <div class="value">latina0202</div>
+        <a href="https://github.com/latina0202" target="_blank" rel="noopener" class="btn small outline">View profile</a>
       </div>
-      <div class="contact-card glass fade-up">
-        <div class="small">Location</div>
-        <div>Ho Chi Minh City, Vietnam</div>
+      <div class="contact-card">
+        <div class="small">Resume</div>
+        <div class="value">PDF, one page</div>
+        <a href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener" class="btn small outline">Open resume</a>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div>Developed by Ngoc Duong • © <span id="year"></span></div>
-</footer>
-
 </main>
+
+<footer class="footer">
+  <div class="container">
+    <div>Designed and built by Ngoc Duong</div>
+    <div class="mono">© <span id="year"></span> · Ho Chi Minh City</div>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>

@@ -5,20 +5,22 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>AIESEC — Impact of Twenty Somethings</title>
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css" />
 <style>
-  .impact-hero{ text-align:center; padding:60px 20px 30px; }
+  .impact-hero{ text-align:center; padding:140px 20px 40px; max-width:800px; margin:0 auto; }
   .impact-badge{
-    display:inline-block;
-    background:#2f6fed;
-    color:#fff;
+    display:block;
+    font-family:'Archivo',system-ui,sans-serif;
     font-weight:800;
-    font-size:clamp(24px,4vw,40px);
-    padding:14px 36px;
-    border-radius:14px;
-    letter-spacing:.5px;
+    font-size:clamp(30px,5vw,52px);
+    letter-spacing:-.03em;
+    line-height:1.05;
+    color:var(--ink);
   }
-  .impact-sub{ margin-top:16px; font-weight:700; color:var(--muted,#5b6472); }
+  .impact-sub{ margin-top:16px; font-size:17px; color:var(--muted); }
 
   .timeline{
     position:relative;
@@ -30,7 +32,7 @@
     content:"";
     position:absolute;
     left:50%; top:0; bottom:0; width:2px;
-    background:#2f6fed;
+    background:var(--accent);
     transform:translateX(-50%);
   }
   .t-row{
@@ -46,8 +48,8 @@
     position:absolute;
     left:50%; top:50%;
     width:14px; height:14px;
-    background:#fff;
-    border:3px solid #2f6fed;
+    background:var(--bg);
+    border:3px solid var(--accent);
     border-radius:50%;
     transform:translate(-50%,-50%);
     z-index:2;
@@ -55,7 +57,7 @@
   .t-year{
     font-size:clamp(30px,5vw,54px);
     font-weight:800;
-    color:#2f6fed;
+    color:var(--accent);
     line-height:1;
   }
   .t-row.reverse .t-year{ text-align:right; }
@@ -71,7 +73,7 @@
     aspect-ratio:1/1;
     object-fit:cover;
     border-radius:12px;
-    border:2px solid #2f6fed;
+    border:2px solid var(--accent);
     display:block;
   }
   /* When there's only one photo, let it use the classic 4:3 frame instead of a square */
@@ -83,11 +85,11 @@
     width:100%;
     aspect-ratio:1/1;
     border-radius:12px;
-    border:2px dashed #2f6fed;
+    border:2px dashed var(--accent);
     background: linear-gradient(135deg, rgba(47,111,237,0.12), rgba(47,111,237,0.04));
     display:flex; align-items:center; justify-content:center;
     text-align:center; padding:10px;
-    font-size:12px; font-weight:700; color:#2f6fed;
+    font-size:12px; font-weight:700; color:var(--accent);
   }
   .t-gallery.single .t-photo{ aspect-ratio:4/3; }
 
@@ -95,7 +97,7 @@
     margin-top:10px;
     font-style:italic;
     font-size:14px;
-    color:var(--muted,#5b6472);
+    color:var(--muted);
     text-align:center;
   }
 
@@ -113,9 +115,9 @@
 </head>
 <body data-theme="light">
 
-<header class="nav glass">
+<header class="nav">
   <div class="brand">
-    <div class="logo">YN</div>
+    <div class="logo">ND</div>
     <div class="brand-text">
       <div class="name">Ngoc Duong</div>
       <div class="subtitle">AIESEC — Impact of Twenty Somethings</div>
