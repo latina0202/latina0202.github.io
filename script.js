@@ -1,9 +1,10 @@
 (() => {
   // -------- Theme handling --------
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // Light-first: the system preference is deliberately ignored so every visitor
+  // lands in light. Dark only applies when someone chooses it here, and that
+  // choice persists across visits.
   const saved = localStorage.getItem('site-theme');
-  const initial = saved || (prefersDark ? 'dark' : 'light');
-  document.body.setAttribute('data-theme', initial);
+  document.body.setAttribute('data-theme', saved === 'dark' ? 'dark' : 'light');
 
   const themeToggle = document.getElementById('themeToggle');
   function updateToggleIcon() {
