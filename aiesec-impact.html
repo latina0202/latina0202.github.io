@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>AIESEC — Impact of Twenty Somethings</title>
+<title>AIESEC - Impact of Twenty Somethings</title>
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css" />
 <style>
   .impact-hero{ text-align:center; padding:140px 20px 40px; max-width:800px; margin:0 auto; }
@@ -32,7 +32,7 @@
     content:"";
     position:absolute;
     left:50%; top:0; bottom:0; width:2px;
-    background:var(--accent);
+    background:var(--chip);
     transform:translateX(-50%);
   }
   .t-row{
@@ -48,8 +48,8 @@
     position:absolute;
     left:50%; top:50%;
     width:14px; height:14px;
-    background:var(--bg);
-    border:3px solid var(--accent);
+    background:var(--l0);
+    border:3px solid var(--chip);
     border-radius:50%;
     transform:translate(-50%,-50%);
     z-index:2;
@@ -57,7 +57,7 @@
   .t-year{
     font-size:clamp(30px,5vw,54px);
     font-weight:800;
-    color:var(--accent);
+    color:var(--chip);
     line-height:1;
   }
   .t-row.reverse .t-year{ text-align:right; }
@@ -73,7 +73,7 @@
     aspect-ratio:1/1;
     object-fit:cover;
     border-radius:12px;
-    border:2px solid var(--accent);
+    border:2px solid var(--chip);
     display:block;
   }
   /* When there's only one photo, let it use the classic 4:3 frame instead of a square */
@@ -85,11 +85,11 @@
     width:100%;
     aspect-ratio:1/1;
     border-radius:12px;
-    border:2px dashed var(--accent);
-    background: linear-gradient(135deg, rgba(47,111,237,0.12), rgba(47,111,237,0.04));
+    border:2px dashed var(--chip);
+    background: var(--l2);
     display:flex; align-items:center; justify-content:center;
     text-align:center; padding:10px;
-    font-size:12px; font-weight:700; color:var(--accent);
+    font-size:12px; font-weight:700; color:var(--chip);
   }
   .t-gallery.single .t-photo{ aspect-ratio:4/3; }
 
@@ -117,10 +117,22 @@
 
 <header class="nav">
   <div class="brand">
-    <div class="logo">ND</div>
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none">
+        <rect x="5"  y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="10" y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".55"/>
+        <rect x="15" y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="5"  y="10" width="4" height="4" rx="1" fill="currentColor" opacity=".55"/>
+        <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" opacity=".80"/>
+        <rect x="15" y="10" width="4" height="4" rx="1" fill="var(--chip)"/>
+        <rect x="5"  y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="10" y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".45"/>
+        <rect x="15" y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+      </svg>
+    </div>
     <div class="brand-text">
       <div class="name">Ngoc Duong</div>
-      <div class="subtitle">AIESEC — Impact of Twenty Somethings</div>
+      <div class="subtitle">AIESEC - Impact of Twenty Somethings</div>
     </div>
   </div>
   <nav class="nav-links">
@@ -133,14 +145,14 @@
 <section class="impact-hero">
   <div class="impact-badge">Impact of Twenty Somethings</div>
   <p class="impact-sub">
-    My AIESEC journey — the events, people, and programs I built over 2+ years
+    My AIESEC journey - the events, people, and programs I built over 2+ years
     as Branch Vice President
   </p>
 </section>
 
 <div class="timeline">
 
-  <!-- Milestone 1 — 2 photos -->
+  <!-- Milestone 1 - 2 photos -->
   <div class="t-row">
     <div class="t-year">[YYYY]</div>
     <div>
@@ -152,7 +164,7 @@
     </div>
   </div>
 
-  <!-- Milestone 2 — 3 photos -->
+  <!-- Milestone 2 - 3 photos -->
   <div class="t-row reverse">
     <div>
       <div class="t-gallery">
@@ -168,7 +180,7 @@
     <div class="t-year">[YYYY]</div>
   </div>
 
-  <!-- Milestone 3 — 1 photo -->
+  <!-- Milestone 3 - 1 photo -->
   <div class="t-row">
     <div class="t-year">[YYYY]</div>
     <div>
@@ -176,13 +188,13 @@
         <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">
-        Appointed Branch Vice President — leading the Global Talent program area
+        Appointed Branch Vice President - leading the Global Talent program area
         and [team size]-person team
       </div>
     </div>
   </div>
 
-  <!-- Milestone 4 — 2 photos -->
+  <!-- Milestone 4 - 2 photos -->
   <div class="t-row reverse">
     <div>
       <div class="t-gallery">
@@ -190,14 +202,14 @@
         <div class="t-photo">Photo coming soon</div>
       </div>
       <div class="t-caption">
-        Built a 3-phase growth strategy — Stabilize → Diversify → Scale — to grow
+        Built a 3-phase growth strategy - Stabilize → Diversify → Scale - to grow
         the program sustainably
       </div>
     </div>
     <div class="t-year">[YYYY]</div>
   </div>
 
-  <!-- Milestone 5 — 3 photos -->
+  <!-- Milestone 5 - 3 photos -->
   <div class="t-row">
     <div class="t-year">Result</div>
     <div>
@@ -208,14 +220,14 @@
       </div>
       <div class="t-caption">
         Over 3 years: 190 opportunities sourced, 174 approved, 81 completed
-        exchanges — real people, real cross-cultural impact
+        exchanges - real people, real cross-cultural impact
       </div>
     </div>
   </div>
 
   <!-- To add a milestone: copy a whole t-row block. To swap in a real photo,
        replace a <div class="t-photo">...</div> with
-       <img src="images/aiesec/FILENAME.jpg" alt="..."> — 1, 2, or 3 images
+       <img src="images/aiesec/FILENAME.jpg" alt="..."> - 1, 2, or 3 images
        per .t-gallery all lay out cleanly automatically. -->
 
 </div>
