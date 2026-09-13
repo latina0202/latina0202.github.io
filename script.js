@@ -8,35 +8,31 @@
 
   const themeToggle = document.getElementById('themeToggle');
   function updateToggleIcon() {
-    const t = document.body.getAttribute('data-theme');
-    themeToggle.textContent = t === 'dark' ? '☀️' : '🌙';
+    themeToggle.textContent = document.body.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
   }
   updateToggleIcon();
 
   themeToggle.addEventListener('click', () => {
-    const current = document.body.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
+    const next = document.body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     document.body.setAttribute('data-theme', next);
     localStorage.setItem('site-theme', next);
     updateToggleIcon();
   });
 
-  // -------- Typing animation --------
+  // -------- Typing line under the headline --------
   const phrases = [
     'owning BNPL growth at ShopeePay',
     'managing a $3M/month lifecycle budget',
     'building cohort heatmap dashboards',
-    'applying for Fall 2027 MS programs'
+    'shipping credit products for sellers'
   ];
 
   const typingEl = document.getElementById('typing');
-  let phIndex = 0;
-  let charIndex = 0;
-  let deleting = false;
+  let phIndex = 0, charIndex = 0, deleting = false;
 
   const TYPING_SPEED = 60;
   const DELETING_SPEED = 30;
-  const DELAY_AFTER = 1000;
+  const DELAY_AFTER = 1600;
 
   function tick() {
     const current = phrases[phIndex];
@@ -60,42 +56,31 @@
     setTimeout(tick, deleting ? DELETING_SPEED : TYPING_SPEED);
   }
 
-  setTimeout(tick, 600);
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setTimeout(tick, 600);
+  } else {
+    typingEl.textContent = phrases[0];
+  }
 
-  // -------- IntersectionObserver for fade-up elements --------
-  const observerOptions = { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.05 };
+  // -------- Scroll progress in the nav --------
+  // Section reveals are handled in CSS (animation-timeline: view()), so the
+  // only thing left for JS is telling you how far through the page you are.
+  const progress = document.getElementById('navProgress');
+  let ticking = false;
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
+  function updateProgress() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    progress.style.width = Math.min(100, Math.max(0, pct)) + '%';
+    ticking = false;
+  }
 
-  // Observe all fade-up sections
-  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  window.addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(updateProgress); }
+  }, { passive: true });
+  updateProgress();
 
-  // Observe skill categories
-  document.querySelectorAll('.skill-category').forEach((cat, i) => {
-    cat.style.transitionDelay = `${0.06 * i}s`;
-    io.observe(cat);
-  });
-
-  // Observe contact cards (your missing part)
-  document.querySelectorAll('.contact-card').forEach((card, i) => {
-    card.style.transitionDelay = `${0.06 * i}s`;
-    io.observe(card);
-  });
-
-  // Also observe project cards if they exist
-  document.querySelectorAll('.project-card').forEach((card, i) => {
-    card.style.transitionDelay = `${0.06 * i}s`;
-    io.observe(card);
-  });
-
-  // -------- Mobile menu toggle --------
+  // -------- Mobile menu --------
   const menuToggle = document.getElementById('menuToggle');
   const mobileMenu = document.getElementById('mobileMenu');
 

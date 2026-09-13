@@ -21,15 +21,28 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css" />
 </head>
 <body data-theme="light">
 
 <!-- HEADER -->
 <header class="nav">
+  <div class="nav-progress" id="navProgress"></div>
   <div class="brand">
-    <div class="logo">ND</div>
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none">
+        <rect x="5"  y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="10" y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".55"/>
+        <rect x="15" y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="5"  y="10" width="4" height="4" rx="1" fill="currentColor" opacity=".55"/>
+        <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" opacity=".80"/>
+        <rect x="15" y="10" width="4" height="4" rx="1" fill="var(--chip)"/>
+        <rect x="5"  y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="10" y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".45"/>
+        <rect x="15" y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+      </svg>
+    </div>
     <div class="brand-text">
       <div class="name">Ngoc Duong</div>
       <div class="subtitle">Product Growth Analyst · Sea Group</div>
@@ -42,9 +55,9 @@
     <a href="#skills">Skills</a>
     <a href="#beyond">Beyond</a>
     <a href="#contact">Contact</a>
-    <a class="nav-cta" href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
   </nav>
   <div class="controls">
+    <a class="btn btn-primary btn-sm" href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
     <button id="themeToggle" aria-label="Toggle colour theme">🌙</button>
     <button id="menuToggle" class="mobile-only" aria-label="Open menu">☰</button>
   </div>
@@ -64,80 +77,75 @@
 <main>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-left">
+<section class="hero" id="s-hero">
+  <div class="container hero-grid rise">
+    <div>
       <span class="eyebrow">Product Growth Analyst · Sea Group</span>
-      <h1 class="hero-title">I build growth systems for <span class="accent">credit products</span></h1>
+      <h1>I build growth systems for <span class="swipe">credit products</span></h1>
       <div class="hero-now">Currently: <span class="typing" id="typing"></span></div>
       <p class="hero-lead">
-        BNPL strategy, lifecycle budget, and the analytics underneath both — at
+        BNPL strategy, lifecycle budget, and the analytics underneath both - at
         ShopeePay and SPaylater.
       </p>
-      <div class="hero-ctas">
-        <a href="#experience" class="btn primary">See experience</a>
-        <a href="#projects" class="btn outline">View projects</a>
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-primary">See experience</a>
+        <a href="#projects" class="btn btn-ghost">View projects</a>
       </div>
       <div class="hero-meta">
-        <span>Ho Chi Minh City, Vietnam</span>
-        <span class="dot">/</span>
-        <span>Open to opportunities in the Bay Area</span>
+        <span>Ho Chi Minh City, Vietnam</span><i>/</i><span>Open to opportunities in the Bay Area</span>
       </div>
     </div>
     <div class="hero-media">
-      <figure class="tall"><img src="images/wave-speaker.jpg" alt="Ngoc Duong presenting" loading="eager"></figure>
-      <figure class="wide"><img src="images/taxua.jpg" alt="Ngoc Duong hiking in Ta Xua" loading="lazy"></figure>
+      <figure>
+        <div class="shot land"><img src="images/wave-speaker.jpg" alt="Ngoc Duong presenting" loading="eager"></div>
+      </figure>
+      <figure>
+        <div class="shot port"><img src="images/taxua.jpg" alt="Ngoc Duong hiking at Ta Xua" loading="lazy"></div>
+      </figure>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section">
-  <div class="container fade-up">
+<section id="about" class="section s-l1">
+  <div class="container rise">
     <span class="eyebrow">About</span>
-    <h2 class="section-title">Where the money goes, and how we know it worked</h2>
-    <div class="about-grid">
-      <div class="about-text">
+    <h2 class="section-title">I build products, and the proof they work</h2>
+    <div class="about">
+      <div>
         <p>
-          I'm a Product Growth Analyst at <strong>Sea Group</strong>, on ShopeePay and
-          SPaylater. Most of my job is deciding where credit and incentive money goes —
-          which sellers see which offer, at what price, and how we'd know if it worked.
+          I'm a Product Growth Analyst at <b>Sea Group</b>, on ShopeePay and SPaylater.
+          I build credit products for e-commerce sellers - what gets offered, to whom,
+          at what price, and how we'd know afterwards whether it was worth building.
         </p>
         <p>
-          Before that, Strategic Growth Specialist at <strong>Home Credit Vietnam</strong>, and
-          a tech consultant on the SAP track at <strong>ABeam</strong>. On the side I build my own
-          analytics projects — clustering, regression, cohort dashboards — because I'd rather
-          build the dashboard than wait for one.
+          Before that, Strategic Growth Specialist at <b>Home Credit Vietnam</b>, and a
+          tech consultant on the SAP track at <b>ABeam</b>. On the side I build my own
+          analytics projects - clustering, regression, cohort dashboards - because I'd
+          rather build the dashboard than wait for one.
+        </p>
+        <p>
+          Away from the job I play guitar, hike when a weekend allows, and still spend
+          time with the AIESEC community I helped build. All three reward showing up
+          repeatedly, which is probably the thing I'm actually good at.
         </p>
       </div>
-      <aside class="about-aside">
+      <aside class="aside">
         <h3>At a glance</h3>
-        <ul class="about-list">
-          <li>
-            <span class="tag">Now</span>
-            <span><b>Product Growth Analyst</b>Sea Group — ShopeePay &amp; SPaylater</span>
-          </li>
-          <li>
-            <span class="tag">Domain</span>
-            <span><b>Fintech &amp; e-commerce</b>BNPL, credit products, lifecycle marketing</span>
-          </li>
-          <li>
-            <span class="tag">Stack</span>
-            <span><b>Python, SQL, Chart.js</b>Pandas, scikit-learn, cohort dashboards</span>
-          </li>
-          <li>
-            <span class="tag">Based</span>
-            <span><b>Ho Chi Minh City</b>Open to Bay Area opportunities</span>
-          </li>
-        </ul>
+        <dl>
+          <div class="row"><dt>Now</dt><dd><b>Product Growth Analyst</b><span>Sea Group — ShopeePay &amp; SPaylater</span></dd></div>
+          <div class="row"><dt>Domain</dt><dd><b>Fintech &amp; e-commerce</b><span>BNPL, credit products, lifecycle marketing</span></dd></div>
+          <div class="row"><dt>Stack</dt><dd><b>Python, SQL, Chart.js</b><span>Pandas, scikit-learn, cohort dashboards</span></dd></div>
+          <div class="row"><dt>Based</dt><dd><b>Ho Chi Minh City</b><span>Open to Bay Area opportunities</span></dd></div>
+        </dl>
       </aside>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
-  <div class="container fade-up">
+<section id="experience" class="section s-l0">
+  <div class="container rise">
     <span class="eyebrow">Experience</span>
     <h2 class="section-title">Where I've worked</h2>
     <p class="section-dek">
@@ -145,100 +153,106 @@
     </p>
 
     <div class="arc">
-      <span class="arc-node">Consulting</span>
-      <span class="arc-arrow">→</span>
-      <span class="arc-node">Lending growth</span>
-      <span class="arc-arrow">→</span>
-      <span class="arc-node now">BNPL platform</span>
+      <span class="node">Consulting</span><i>→</i>
+      <span class="node">Lending growth</span><i>→</i>
+      <span class="node now">BNPL platform</span>
     </div>
 
     <div class="rail">
 
       <!-- Sea Group -->
-      <details class="rail-item is-now">
+      <details class="item now" open>
         <summary>
-          <div class="rail-when">2026 — now</div>
-          <div class="rail-dot"><i></i></div>
+          <div class="when">2026 - now</div>
+          <div class="pip"><i></i></div>
           <div>
-            <div class="rail-role">Product Growth Analyst</div>
-            <div class="rail-org">Sea Group — ShopeePay &amp; SPaylater (BNPL)</div>
-            <div class="rail-owned">BNPL growth strategy and the monthly lifecycle budget behind 115,000 sellers.</div>
+            <div class="role">Product Growth Analyst</div>
+            <div class="org">Sea Group — ShopeePay &amp; SPaylater (BNPL)</div>
+            <div class="owned">BNPL growth strategy and the monthly lifecycle budget behind 115,000 sellers.</div>
           </div>
-          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+          <div class="toggle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 6.25 8 10.25 12 6.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </summary>
-        <div class="rail-detail">
-          <ul class="exp-points">
-            <li>Every month I decide how roughly <strong>$3M</strong> of voucher budget is spent — the rates, basket minimums and caps behind who sees which offer. I built the burn and treatment dashboards in Chart.js to answer <em>is this working?</em> faster.</li>
+        <div class="detail">
+          <ul class="points">
+            <li>Every month I decide how roughly <b>$3M</b> of voucher budget is spent - the rates, basket minimums and caps behind who sees which offer. I built the burn and treatment dashboards in Chart.js to answer <em>is this working?</em> faster.</li>
             <li>I own BNPL growth strategy for e-commerce sellers, including credit products still in development.</li>
-            <li>Moving seller cash loans from a flat 35% EIR to dynamic 25–35% pricing risked confusion more than price. I designed a four-part notification sequence to explain it before it landed, for ~1,500 sellers.</li>
-            <li>Sellers were approved and then never drew down. I built a time-to-disburse cohort heatmap across the 115,000-seller base; the drop-off cluster it exposed became the follow-up trigger.</li>
+            <li>Moving seller cash loans from a flat <b>35%</b> EIR to dynamic <b>25-35%</b> pricing risked confusion more than price. I designed a four-part notification sequence to explain it before it landed, for <b>~1,500</b> sellers.</li>
+            <li>Sellers were approved and then never drew down. I built a time-to-disburse cohort heatmap across the <b>115,000</b>-seller base; the drop-off cluster it exposed became the follow-up trigger.</li>
             <li>Led QR network expansion for SPaylater across VNPayQR and VietQR.</li>
           </ul>
         </div>
       </details>
 
       <!-- Home Credit -->
-      <details class="rail-item">
+      <details class="item">
         <summary>
-          <div class="rail-when">2024 — 2026</div>
-          <div class="rail-dot"><i></i></div>
+          <div class="when">2024 - 2026</div>
+          <div class="pip"><i></i></div>
           <div>
-            <div class="rail-role">Strategic Growth Specialist</div>
-            <div class="rail-org">Home Credit Vietnam</div>
-            <div class="rail-owned">Built the app's digital sales roadmap, and launched lending inside MoMo.</div>
+            <div class="role">Strategic Growth Specialist</div>
+            <div class="org">Home Credit Vietnam</div>
+            <div class="owned">Built the app's digital sales roadmap, and launched lending inside MoMo.</div>
           </div>
-          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+          <div class="toggle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 6.25 8 10.25 12 6.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </summary>
-        <div class="rail-detail">
-          <div class="rail-thumb"><img src="images/homecredit.jpg" alt="Home Credit Vietnam team" loading="lazy"></div>
-          <ul class="exp-points">
-            <li>Joined as one of two picks from 3,000+ applicants to the Young Talent Program.</li>
-            <li>I built the app's digital sales roadmap and shipped 20+ features against P&amp;L targets, pulling Data, Risk and CRM into one plan. In-app sales finished the year at <strong>1.7×</strong>.</li>
-            <li>MoMo was a channel with no playbook — credit offered to wallet users who hadn't asked for it. I designed the flow around that reluctance rather than our funnel; within a year it carried <strong>eight times</strong> the digital volume.</li>
+        <div class="detail has-shot">
+          <ul class="points">
+            <li>Joined as one of two picks from <b>3,000+</b> applicants to the Young Talent Program.</li>
+            <li>I built the app's digital sales roadmap and shipped <b>20+</b> features against P&amp;L targets, pulling Data, Risk and CRM into one plan. In-app sales finished the year at <b>1.7×</b>.</li>
+            <li>MoMo was a channel with no playbook - credit offered to wallet users who hadn't asked for it. I designed the flow around that reluctance rather than our funnel; within a year it carried <b>8×</b> the digital volume.</li>
           </ul>
+          <div class="detail-shot"><img src="images/homecredit.jpg" alt="Home Credit Vietnam team" loading="lazy"></div>
         </div>
       </details>
 
       <!-- ABeam -->
-      <details class="rail-item">
+      <details class="item">
         <summary>
-          <div class="rail-when">2024</div>
-          <div class="rail-dot"><i></i></div>
+          <div class="when">2024</div>
+          <div class="pip"><i></i></div>
           <div>
-            <div class="rail-role">Tech Consultant Trainee — SAP Track</div>
-            <div class="rail-org">ABeam Consulting</div>
-            <div class="rail-owned">Mapped legacy manufacturing processes onto SAP data models.</div>
+            <div class="role">Tech Consultant Trainee — SAP Track</div>
+            <div class="org">ABeam Consulting</div>
+            <div class="owned">Mapped legacy manufacturing processes onto SAP data models.</div>
           </div>
-          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+          <div class="toggle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 6.25 8 10.25 12 6.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </summary>
-        <div class="rail-detail">
-          <div class="rail-thumb"><img src="images/abeam.jpg" alt="ABeam Consulting onboarding" loading="lazy"></div>
-          <ul class="exp-points">
+        <div class="detail has-shot">
+          <ul class="points">
             <li>Mapped two manufacturing clients' legacy processes and data flows onto SAP best-practice models.</li>
             <li>Ran the stakeholder workshops that cleaned up procurement data.</li>
           </ul>
+          <div class="detail-shot"><img src="images/abeam.jpg" alt="ABeam Consulting onboarding" loading="lazy"></div>
         </div>
       </details>
 
       <!-- AIESEC -->
-      <details class="rail-item">
+      <details class="item">
         <summary>
-          <div class="rail-when">2022 — 2024</div>
-          <div class="rail-dot"><i></i></div>
+          <div class="when">2022 - 2024</div>
+          <div class="pip"><i></i></div>
           <div>
-            <div class="rail-role">Branch Vice President</div>
-            <div class="rail-org">AIESEC — Ho Chi Minh City, Vietnam</div>
-            <div class="rail-owned">A 20-person department and a B2B exchange programme across 60+ countries.</div>
+            <div class="role">Branch Vice President</div>
+            <div class="org">AIESEC — Ho Chi Minh City, Vietnam</div>
+            <div class="owned">A 20-person department and a B2B exchange programme across 60+ countries.</div>
           </div>
-          <div class="rail-toggle"><span class="chev">▾</span><span class="word"></span></div>
+          <div class="toggle" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M4 6.25 8 10.25 12 6.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
         </summary>
-        <div class="rail-detail">
-          <div class="rail-thumb"><img src="images/AIESEC1.JPG" alt="AIESEC Ho Chi Minh City team" loading="lazy"></div>
-          <ul class="exp-points">
+        <div class="detail has-shot">
+          <ul class="points">
             <li>Post-COVID, Vietnamese SMEs needed people they couldn't hire locally. I built a remote-workforce B2B offer around that and signed five enterprise clients in six months.</li>
-            <li>Across ~200 client meetings I matched company needs against a talent pool of 60+ countries. Sales grew <strong>80%</strong> year on year.</li>
-            <li>I led a 20-person department — onboarding, reviews, culture. Nobody left that year; team NPS finished at 90.</li>
+            <li>Across <b>~200</b> client meetings I matched company needs against a talent pool of <b>60+</b> countries. Sales grew <b>80%</b> year on year.</li>
+            <li>I led a 20-person department - onboarding, reviews, culture. Nobody left that year; team NPS finished at <b>90</b>.</li>
           </ul>
+          <div class="detail-shot"><img src="images/AIESEC1.JPG" alt="AIESEC Ho Chi Minh City team" loading="lazy"></div>
         </div>
       </details>
 
@@ -247,91 +261,81 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="container fade-up">
+<section id="projects" class="section s-l1">
+  <div class="container rise">
     <span class="eyebrow">Projects</span>
     <h2 class="section-title">Selected work</h2>
-    <p class="section-dek">
-      Analytics I built on my own time, and launches I led at work.
-    </p>
+    <p class="section-dek">Analytics I built on my own time, and launches I led at work.</p>
 
-    <div class="project-grid">
+    <div class="proj-grid">
 
-      <article class="project-card">
-        <div class="card-thumb">
-          <img src="images/spotify.jpg" alt="Music genre classification project" loading="lazy">
-        </div>
-        <div class="card-body">
+      <article class="proj">
+        <div class="thumb"><img src="images/spotify.jpg" alt="Music genre classification project" loading="lazy"></div>
+        <div class="body">
           <span class="eyebrow">Machine learning</span>
-          <h3 class="card-title">Audio vs. lyrics: what predicts genre</h3>
-          <p class="card-desc">
+          <h3>Audio vs. lyrics: what predicts genre</h3>
+          <p>
             Does a song's <em>sound</em> or its <em>words</em> better predict genre? I compared audio
-            features against lyrics across 15,405 Spotify tracks in six genres, then fused both to see
-            if the combination beat either alone.
+            features against lyrics across 15,405 Spotify tracks in six genres, then fused both to
+            see if the combination beat either alone.
           </p>
-          <div class="card-figures">
-            <div><div class="fv">58.9%</div><div class="fl">Fusion accuracy</div></div>
-            <div><div class="fv">+7–9pt</div><div class="fl">Over each single-modality baseline</div></div>
+          <div class="figs">
+            <div><div class="v">58.9%</div><div class="k">Fusion accuracy</div></div>
+            <div><div class="v">+7-9pt</div><div class="k">Over each baseline</div></div>
           </div>
-          <div class="card-tech"><span>Python</span><span>scikit-learn</span><span>Multimodal ML</span></div>
-          <div class="card-actions">
-            <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" rel="noopener" class="btn small outline">View code</a>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>Multimodal ML</span></div>
+          <div class="acts">
+            <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View code</a>
           </div>
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="card-thumb">
-          <img src="images/momo.jpg" alt="Cash loan mini-app on MoMo" loading="lazy">
-        </div>
-        <div class="card-body">
+      <article class="proj">
+        <div class="thumb"><img src="images/momo.jpg" alt="Cash loan mini-app on MoMo" loading="lazy"></div>
+        <div class="body">
           <span class="eyebrow">Product launch</span>
-          <h3 class="card-title">Cash loan, embedded in MoMo</h3>
-          <p class="card-desc">
+          <h3>Cash loan, embedded in MoMo</h3>
+          <p>
             A cash loan inside Vietnam's largest e-wallet, offered to people who weren't looking for
-            credit. I designed the launch around that reluctance — partner integration, approval steps,
-            and what we said at each one. It carried eight times the digital volume within a year.
+            credit. I designed the launch around that reluctance - partner integration, approval
+            steps, and what we said at each one. It carried eight times the digital volume within a year.
           </p>
-          <div class="card-tech"><span>SQL</span><span>Cohort analysis</span><span>Go-to-market</span></div>
-          <div class="card-actions">
-            <a href="https://www.momo.vn/tai-chinh-sieu-toc-homecredit" target="_blank" rel="noopener" class="btn small outline">See it live</a>
+          <div class="tags"><span>SQL</span><span>Cohort analysis</span><span>Go-to-market</span></div>
+          <div class="acts">
+            <a href="https://www.momo.vn/tai-chinh-sieu-toc-homecredit" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">See it live</a>
           </div>
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="card-thumb">
-          <img src="images/global-talent.jpg" alt="AIESEC Global Talent programme" loading="lazy">
-        </div>
-        <div class="card-body">
+      <article class="proj">
+        <div class="thumb"><img src="images/global-talent.jpg" alt="AIESEC Global Talent programme" loading="lazy"></div>
+        <div class="body">
           <span class="eyebrow">Programme leadership</span>
-          <h3 class="card-title">AIESEC Global Talent</h3>
-          <p class="card-desc">
+          <h3>AIESEC Global Talent</h3>
+          <p>
             Two years running the Global Talent exchange programme: a 20-person department, a
             three-year roadmap, and SME partnerships that placed young people into roles across
             50 countries.
           </p>
-          <div class="card-tech"><span>Programme leadership</span><span>B2B partnerships</span><span>Team management</span></div>
-          <div class="card-actions">
-            <a href="https://www.aiesec.vn/global-talent/home" target="_blank" rel="noopener" class="btn small outline">Programme site</a>
-            <a href="aiesec-impact.html" class="btn small outline">Impact story</a>
+          <div class="tags"><span>Programme leadership</span><span>B2B partnerships</span><span>Team management</span></div>
+          <div class="acts">
+            <a href="https://www.aiesec.vn/global-talent/home" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Programme site</a>
+            <a href="aiesec-impact.html" class="btn btn-ghost btn-sm">Impact story</a>
           </div>
         </div>
       </article>
 
-      <article class="project-card">
-        <div class="card-thumb">
-          <div class="media-placeholder">RFM + K-MEANS<br>CUSTOMER CLUSTERING</div>
-        </div>
-        <div class="card-body">
+      <article class="proj">
+        <div class="thumb"><div class="placeholder">RFM + K-means<br>customer clustering</div></div>
+        <div class="body">
           <span class="eyebrow">Analytics</span>
-          <h3 class="card-title">RFM + K-Means segmentation</h3>
-          <p class="card-desc">
+          <h3>RFM + K-Means segmentation</h3>
+          <p>
             RFM segmentation with K-Means clustering, grouping customers by behaviour for
             lifecycle targeting.
           </p>
-          <div class="card-tech"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
-          <div class="card-note">Write-up and code coming soon</div>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>Pandas</span></div>
+          <div class="note">Write-up and code coming soon</div>
         </div>
       </article>
 
@@ -340,82 +344,78 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section">
-  <div class="container fade-up">
+<section id="skills" class="section s-l0">
+  <div class="container rise">
     <span class="eyebrow">Capabilities</span>
     <h2 class="section-title">Skills &amp; expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-category">
+    <div class="skills">
+      <div class="skill">
         <h3>Technical</h3>
-        <ul>
-          <li><strong>Programming &amp; analysis</strong>Python, SQL</li>
-          <li><strong>Data &amp; ML</strong>Pandas, scikit-learn, K-Means clustering, regression modelling</li>
-          <li><strong>Dashboarding</strong>Chart.js, cohort and heatmap dashboards</li>
-          <li><strong>Product analytics</strong>BNPL and credit product metrics, CRM budget analytics</li>
-        </ul>
+        <dl>
+          <div class="row"><dt>Programming &amp; analysis</dt><dd>Python, SQL</dd></div>
+          <div class="row"><dt>Data &amp; ML</dt><dd>Pandas, scikit-learn, K-Means clustering, regression modelling</dd></div>
+          <div class="row"><dt>Dashboarding</dt><dd>Chart.js, cohort and heatmap dashboards</dd></div>
+          <div class="row"><dt>Product analytics</dt><dd>BNPL and credit product metrics, CRM budget analytics</dd></div>
+        </dl>
       </div>
-      <div class="skill-category">
+      <div class="skill">
         <h3>Product &amp; business</h3>
-        <ul>
-          <li><strong>Growth strategy</strong>BNPL strategy, new credit product development</li>
-          <li><strong>Budget ownership</strong>Monthly CRM voucher budget management</li>
-          <li><strong>Cross-functional leadership</strong>Coordinating Data, Risk and CRM squads</li>
-          <li><strong>Consulting fundamentals</strong>SAP-track tech consulting background</li>
-        </ul>
+        <dl>
+          <div class="row"><dt>Growth strategy</dt><dd>BNPL strategy, new credit product development</dd></div>
+          <div class="row"><dt>Budget ownership</dt><dd>Monthly CRM voucher budget management</dd></div>
+          <div class="row"><dt>Cross-functional leadership</dt><dd>Coordinating Data, Risk and CRM squads</dd></div>
+          <div class="row"><dt>Consulting fundamentals</dt><dd>SAP-track tech consulting background</dd></div>
+        </dl>
       </div>
     </div>
   </div>
 </section>
 
 <!-- BEYOND WORK -->
-<section id="beyond" class="section">
-  <div class="container fade-up">
+<section id="beyond" class="section s-l2">
+  <div class="container rise">
     <span class="eyebrow">Beyond work</span>
     <h2 class="section-title">Away from the dashboards</h2>
-    <p class="section-dek">
-      What takes up the rest of my time.
-    </p>
+    <p class="section-dek">What takes up the rest of my time.</p>
 
-    <div class="beyond-grid">
+    <div class="beyond">
 
-      <div class="beyond-card">
-        <div class="beyond-media">
-          <!-- Replace this frame with:
+      <div class="b-card">
+        <div class="b-media">
+          <!-- Replace this placeholder with:
                <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Ngoc Duong playing guitar"
                        allow="accelerometer; clipboard-write; encrypted-media; picture-in-picture"
                        allowfullscreen loading="lazy"></iframe>
-               Upload the clip to YouTube as *unlisted* — it stays out of search
+               Upload the clip to YouTube as *unlisted* - it stays out of search
                and off your channel, but anyone with the link can watch. -->
-          <div class="frame">
+          <div class="placeholder">
             <span class="icon">🎸</span>
-            <span class="label">GUITAR VIDEO<br>unlisted YouTube embed goes here</span>
+            <span>Guitar video<br>unlisted YouTube embed</span>
           </div>
         </div>
-        <div class="beyond-body">
+        <div class="body">
           <h3>Guitar</h3>
           <p>Been playing for years. Thirty seconds of it, if you're curious.</p>
         </div>
       </div>
 
-      <div class="beyond-card">
-        <div class="beyond-media">
-          <img src="images/taxua.jpg" alt="Above the clouds at Ta Xua" loading="lazy">
-        </div>
-        <div class="beyond-body">
+      <div class="b-card">
+        <div class="b-media"><img src="images/taxua.jpg" alt="Above the clouds at Ta Xua" loading="lazy"></div>
+        <div class="body">
           <h3>The mountains</h3>
           <p>Ta Xua, above the cloud line. I hike when the weekend allows.</p>
         </div>
       </div>
 
-      <div class="beyond-card">
-        <div class="beyond-media">
+      <div class="b-card">
+        <div class="b-media">
           <!-- Replace with: <img src="images/YOUR_PHOTO.jpg" alt="..." loading="lazy"> -->
-          <div class="frame">
+          <div class="placeholder">
             <span class="icon">🖼</span>
-            <span class="label">PHOTO<br>volunteering / community</span>
+            <span>Photo<br>volunteering / community</span>
           </div>
         </div>
-        <div class="beyond-body">
+        <div class="body">
           <h3>Volunteering</h3>
           <p>Still close to the AIESEC community I spent two years building.</p>
         </div>
@@ -426,41 +426,23 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container fade-up">
+<section id="contact" class="section s-l1">
+  <div class="container rise">
     <span class="eyebrow">Contact</span>
     <h2 class="section-title">Let's connect</h2>
-    <p class="section-dek">
-      Ho Chi Minh City. Open to Bay Area opportunities.
-    </p>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <div class="small">Email</div>
-        <div class="value">duonghuynhngoc307<wbr>@gmail.com</div>
-        <a href="mailto:duonghuynhngoc307@gmail.com" class="btn small primary">Email me</a>
-      </div>
-      <div class="contact-card">
-        <div class="small">LinkedIn</div>
-        <div class="value">Ngoc Duong</div>
-        <a href="https://www.linkedin.com/in/ngoc-duong-824b2b208/" target="_blank" rel="noopener" class="btn small outline">View profile</a>
-      </div>
-      <div class="contact-card">
-        <div class="small">GitHub</div>
-        <div class="value">latina0202</div>
-        <a href="https://github.com/latina0202" target="_blank" rel="noopener" class="btn small outline">View profile</a>
-      </div>
-      <div class="contact-card">
-        <div class="small">Resume</div>
-        <div class="value">PDF, one page</div>
-        <a href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener" class="btn small outline">Open resume</a>
-      </div>
+    <p class="section-dek">Ho Chi Minh City. Open to Bay Area opportunities.</p>
+    <div class="links">
+      <a href="mailto:duonghuynhngoc307@gmail.com"><span class="k">Email</span><span class="v">duonghuynhngoc307@gmail.com</span></a>
+      <a href="https://www.linkedin.com/in/ngoc-duong-824b2b208/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">Ngoc Duong</span></a>
+      <a href="https://github.com/latina0202" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">latina0202</span></a>
+      <a href="https://drive.google.com/file/d/1mSZfLvI3e5x0RJO_qHo3HLfmyzfqkU1X/view?usp=sharing" target="_blank" rel="noopener"><span class="k">Resume</span><span class="v">PDF, one page</span></a>
     </div>
   </div>
 </section>
 
 </main>
 
-<footer class="footer">
+<footer>
   <div class="container">
     <div>Designed and built by Ngoc Duong</div>
     <div class="mono">© <span id="year"></span> · Ho Chi Minh City</div>
