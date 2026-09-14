@@ -249,10 +249,18 @@ h1, h2, h3, h4 {
 /* ---------------------------------------------------------------- hero --- */
 
 .hero { padding: 130px 0 92px; border-bottom: 1px solid var(--line); background: var(--l0); }
-.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 52px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1fr 0.95fr; gap: 44px; align-items: center; }
 @media (max-width: 900px) { .hero { padding: 104px 0 62px; } .hero-grid { grid-template-columns: 1fr; gap: 38px; } }
 
-.hero h1 { font-size: clamp(36px, 5.4vw, 58px); line-height: 1.06; margin: 16px 0 18px; }
+.hero h1 { font-size: clamp(44px, 6.4vw, 72px); line-height: 1.02; margin: 16px 0 10px; }
+.hero-tagline {
+  font-family: 'Archivo', sans-serif;
+  font-weight: 600;
+  font-size: clamp(19px, 2.4vw, 26px);
+  letter-spacing: -0.022em;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
 
 /* the accent as a highlighter swipe, not coloured text */
 .swipe {
@@ -291,8 +299,12 @@ h1, h2, h3, h4 {
 
 /* Staggered pair: each frame matches its photo's real ratio, so nothing
    is cropped and the asymmetry reads as deliberate. */
-.hero-media { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 16px; align-items: start; }
-.hero-media figure:last-child { margin-top: 76px; }
+/* One overlapping cluster rather than two rectangles with a gap between
+   them — the pair reads as a single object and fills its column. */
+.hero-media { position: relative; padding-bottom: 10%; }
+.hero-media .f-land { width: 84%; }
+.hero-media .f-port { position: absolute; right: 0; bottom: 0; width: 46%; }
+
 .hero-media .shot {
   position: relative;
   overflow: hidden;
@@ -302,12 +314,10 @@ h1, h2, h3, h4 {
 }
 .hero-media .shot.land { aspect-ratio: 3 / 2; }   /* wave-speaker.jpg is 3:2 */
 .hero-media .shot.port { aspect-ratio: 3 / 4; }   /* taxua.jpg is 3:4       */
+/* a ring in the page colour so the top photo sits on the one beneath */
+.hero-media .f-port .shot { box-shadow: 0 0 0 6px var(--l0); }
 .hero-media .shot > * { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-media .shot img { object-fit: cover; }
-@media (max-width: 520px) {
-  .hero-media { gap: 12px; }
-  .hero-media figure:last-child { margin-top: 44px; }
-}
 
 /* --------------------------------------------------------------- about --- */
 
