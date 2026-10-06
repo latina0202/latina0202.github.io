@@ -3165,6 +3165,10 @@ function startShowreel(){
   /* the page sets scroll-behavior:smooth globally; the reel tweens the scroll
      itself, and the two fight each other, so turn the native one off here */
   document.documentElement.style.scrollBehavior = 'auto';
+  /* #showreel-dark lets an embedding page hand down its theme. Set directly
+     rather than through applyTheme, so embedding never rewrites the theme a
+     visitor chose for the demo itself. */
+  if(location.hash.indexOf('dark') > -1){ document.documentElement.setAttribute('data-theme', 'dark'); }
   S.auth = true; S.isNew = false;
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     S.ticker = 'FPT'; go('warroom'); runWarRoom('FPT', true);
@@ -3173,7 +3177,7 @@ function startShowreel(){
   }
   reelRun();
 }
-if(location.hash === '#showreel'){ window.addEventListener('load', startShowreel); }
+if(location.hash.indexOf('#showreel') === 0){ window.addEventListener('load', startShowreel); }
 </script>
 
 </body></html>
