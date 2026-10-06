@@ -17,6 +17,9 @@
     document.body.setAttribute('data-theme', next);
     localStorage.setItem('site-theme', next);
     updateToggleIcon();
+    // the embedded demo is a separate document, so it has to be told as well
+    const frame = document.querySelector('.reel iframe');
+    if (frame) frame.src = reelSrc();
   });
 
   // -------- Typing line under the headline --------
@@ -92,6 +95,52 @@
   mobileMenu && mobileMenu.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => mobileMenu.style.display = 'none')
   );
+
+  // -------- The NAVI demo, embedded and playing itself --------
+  // The poster ships in the HTML so the card is complete before any of this
+  // runs. The iframe replaces it only when the card is actually approaching
+  // the viewport, on a screen wide enough to read it, and when the visitor
+  // hasn't asked for less motion.
+  const reel = document.getElementById('naviReel');
+
+  function fitReel() {
+    if (!reel) return;
+    reel.style.setProperty('--s', (reel.clientWidth / 1100).toFixed(4));
+  }
+
+  function reelSrc() {
+    const dark = document.body.getAttribute('data-theme') === 'dark';
+    return reel.dataset.src + (dark ? '-dark' : '');
+  }
+
+  function mountReel() {
+    if (!reel || reel.querySelector('iframe')) return;
+    const frame = document.createElement('iframe');
+    frame.src = reelSrc();
+    frame.loading = 'lazy';
+    frame.tabIndex = -1;
+    frame.setAttribute('aria-hidden', 'true');
+    frame.title = 'NAVI demo, playing';
+    reel.appendChild(frame);
+    reel.insertAdjacentHTML('beforeend', '<span class="badge"><i></i>playing</span>');
+  }
+
+  if (reel) {
+    fitReel();
+    window.addEventListener('resize', fitReel, { passive: true });
+
+    const wideEnough = window.matchMedia('(min-width: 760px)').matches;
+    const stillness = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (wideEnough && !stillness && 'IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { mountReel(); io.disconnect(); }
+        });
+      }, { rootMargin: '300px' });
+      io.observe(reel);
+    }
+  }
 
   // -------- Year in footer --------
   document.getElementById('year').textContent = new Date().getFullYear();
