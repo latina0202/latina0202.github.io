@@ -103,11 +103,6 @@
   // hasn't asked for less motion.
   const reel = document.getElementById('naviReel');
 
-  function fitReel() {
-    if (!reel) return;
-    reel.style.setProperty('--s', (reel.clientWidth / 1100).toFixed(4));
-  }
-
   function reelSrc() {
     const dark = document.body.getAttribute('data-theme') === 'dark';
     return reel.dataset.src + (dark ? '-dark' : '');
@@ -126,9 +121,6 @@
   }
 
   if (reel) {
-    fitReel();
-    window.addEventListener('resize', fitReel, { passive: true });
-
     const wideEnough = window.matchMedia('(min-width: 760px)').matches;
     const stillness = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
