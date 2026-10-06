@@ -194,6 +194,27 @@ body.inApp{padding-bottom:84px;}
   .sheet{transition:none;}
 }
 #pfToast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:80;max-width:min(420px,calc(100vw - 32px));padding:13px 17px;border-radius:14px;background:var(--ink);color:var(--bg);font:500 12.5px/1.5 var(--sans);box-shadow:var(--shadowMd);text-align:center;}
+
+/* ---------- showreel: the page as a silent, self-playing frame ----------
+   navi-demo.html#showreel loops one War Room run with the demo chrome gone,
+   so the portfolio card can embed the real product instead of a recording. */
+body.showreel{padding-bottom:0;scrollbar-width:none;}
+body.showreel::-webkit-scrollbar{display:none;}
+body.showreel .devBar,
+body.showreel .fab,
+body.showreel .tabBar,
+body.showreel .coach,
+body.showreel #wrCoach,
+body.showreel #wrBanner,
+body.showreel .wrCtl,
+body.showreel .followupWrap,
+body.showreel .ctaStack,
+body.showreel .creditToast{display:none!important;}
+/* The reel moves the content with a transform instead of scrolling the window:
+   an embedded frame should not scroll, and a scrolled offscreen region never
+   gets painted in a headless capture, so the reel would be unrecordable. */
+body.showreel{overflow:hidden;height:100%;}
+body.showreel #reelStage{transition:transform .62s cubic-bezier(.4,0,.2,1);will-change:transform;}
 </style>
 <style>
 /* ===== LANDING ===== */
@@ -1296,7 +1317,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
 <!-- ============ 6. WAR ROOM ============ -->
 <div class="screen" id="s-warroom">
   <div class="appTop" data-appbar></div>
-  <div class="wrap narrow">
+  <div class="wrap narrow" id="reelStage">
     <div class="wrHead">
       <span class="kicker">WAR ROOM</span>
       <h1 id="wrTitle">Which ticker do you want analysed?</h1>
@@ -3106,6 +3127,53 @@ function toggleCredits(){
     ? 'Metering on \u2014 this is the credit system as designed: 10 analyses a month, replays free.'
     : 'Metering off \u2014 the MVP 1 decision. Nothing stands between a beta user and their first analysis.');
 }
+
+/* ---------- showreel ----------
+   One looping War Room run, scrolled so the frame follows the analysts down
+   and settles on the verdict. Reduced motion gets the finished state instead
+   of the loop, since the motion is the whole point of the loop. */
+var reelTimers = [];
+function reelTo(sel){
+  var el = document.querySelector(sel);
+  var stage = document.getElementById('reelStage');
+  if(!el || !stage) return;
+  var box = el.getBoundingClientRect(), sbox = stage.getBoundingClientRect();
+  var vh = window.innerHeight - 64;                 /* less the sticky top bar */
+  var pad = box.height < vh ? (vh - box.height) / 2 : 72;
+  var y = Math.max(0, (box.top - sbox.top) - pad);
+  stage.style.transform = 'translateY(' + (-y) + 'px)';
+}
+function reelRun(){
+  reelTimers.forEach(clearTimeout); reelTimers = [];
+  S.sessions = [];                       /* never fall into the saved-session path */
+  S.seen = {warroom:true, home:true, market:true};
+  S.ticker = 'FPT';
+  var stage = document.getElementById('reelStage');
+  if(stage) stage.style.transform = 'translateY(0px)';
+  go('warroom');
+  runWarRoom('FPT', true);
+  [[1500, '#s-warroom .stage[data-agent=\"research\"]'],
+   [3000, '#s-warroom .stage[data-agent=\"fundamental\"]'],
+   [4500, '#s-warroom .stage[data-agent=\"risk\"]'],
+   [5900, '#wrCio']].forEach(function(p){
+    reelTimers.push(setTimeout(function(){ reelTo(p[1]); }, p[0]));
+  });
+  reelTimers.push(setTimeout(reelRun, 12500));
+}
+function startShowreel(){
+  document.body.classList.add('showreel');
+  /* the page sets scroll-behavior:smooth globally; the reel tweens the scroll
+     itself, and the two fight each other, so turn the native one off here */
+  document.documentElement.style.scrollBehavior = 'auto';
+  S.auth = true; S.isNew = false;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    S.ticker = 'FPT'; go('warroom'); runWarRoom('FPT', true);
+    setTimeout(function(){ try{ wrSkipAll(); }catch(e){} }, 120);
+    return;
+  }
+  reelRun();
+}
+if(location.hash === '#showreel'){ window.addEventListener('load', startShowreel); }
 </script>
 
 </body></html>
