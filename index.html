@@ -289,13 +289,14 @@
               <li>Risk holds a veto, set by your risk profile</li>
               <li>Every verdict traces back to its evidence</li>
               <li>The same scoring runs over a whole portfolio</li>
+              <li>Too illiquid to model means no verdict, not a guess</li>
             </ul>
           </div>
         </div>
 
         <div class="lead-block">
           <b>Skills &amp; domain</b>
-          <div class="tags"><span>Product design</span><span>Multi-agent AI</span><span>Information design</span><span>Fintech</span></div>
+          <div class="tags"><span>Product design</span><span>Quant modelling</span><span>Multi-agent AI</span><span>Fintech</span></div>
         </div>
 
         <div class="acts">
@@ -303,8 +304,26 @@
         </div>
       </div>
 
-      <div class="reel" id="naviReel" data-src="navi-demo.html#showreel">
-        <img src="images/navi-poster.png" alt="NAVI's chief investment officer issuing a verdict on FPT, with the confidence level and the analysts' votes beneath it" loading="lazy">
+      <div class="lead-right">
+        <div class="reel" id="naviReel" data-src="navi-demo.html#showreel">
+          <img src="images/navi-poster.png" alt="NAVI's chief investment officer issuing a verdict on FPT, with the confidence level and the analysts' votes beneath it" loading="lazy">
+        </div>
+
+        <div class="hood">
+          <b>Under the hood</b>
+          <div class="hood-row">
+            <b>Signal</b>
+            <span>Gradient-boosted model, 91 features, 20 sessions ahead &mdash; a distribution, not a point</span>
+          </div>
+          <div class="hood-row">
+            <b>Calibration</b>
+            <span>Verdicts re-scored at 10 and 20 sessions; thin bands withheld, not rounded up</span>
+          </div>
+          <div class="hood-row">
+            <b>Risk</b>
+            <span>Expected shortfall at 95%, beta, drawdown, days-to-exit at 20% of volume</span>
+          </div>
+        </div>
       </div>
     </article>
 

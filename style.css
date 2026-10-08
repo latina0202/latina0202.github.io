@@ -600,6 +600,44 @@ h1, h2, h3, h4 {
 .proj-lead .flowstrip { margin-bottom: 18px; }
 .proj-lead .acts { margin-top: 18px; }
 
+/* The right column carries the demo and the data work behind it. Flex, so the
+   frame takes whatever height the methods list leaves - the card does not grow
+   to make room for them. */
+.lead-right { display: flex; flex-direction: column; min-width: 0; }
+.lead-right .reel { flex: 1; }
+
+.hood { margin-top: 14px; }
+.hood > b {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+.hood-row {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  gap: 12px;
+  padding: 6px 0;
+  border-top: 1px solid var(--line);
+  align-items: baseline;
+}
+.hood-row b {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--chip);
+}
+.hood-row span { font-size: 13px; line-height: 1.5; color: var(--ink-2); }
+@media (max-width: 520px) {
+  .hood-row { grid-template-columns: 1fr; gap: 3px; }
+}
+
 /* The demo, embedded and playing itself. The iframe renders at the frame's
    own size with no scaling: the product is responsive, so it lays itself out
    for the space and every word stays readable. Scaling a desktop page down to
@@ -609,7 +647,7 @@ h1, h2, h3, h4 {
   /* fills the row rather than floating in it, so the frame is as tall as the
      text beside it and shows more of the product at once */
   height: 100%;
-  min-height: 440px;
+  min-height: 400px;
   max-width: 100%;
   overflow: hidden;
   border: 1px solid var(--line-2);
