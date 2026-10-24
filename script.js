@@ -24,10 +24,10 @@
 
   // -------- Typing line under the headline --------
   const phrases = [
-    'owning BNPL growth at ShopeePay',
-    'managing a $3M/month lifecycle budget',
-    'building cohort heatmap dashboards',
-    'shipping credit products for sellers'
+    'leading growth for SPaylater at ShopeePay',
+    'deciding how to spend a $2-3M monthly promotion budget',
+    'building a cash loan for online sellers',
+    'finding which sellers are ready for credit'
   ];
 
   const typingEl = document.getElementById('typing');
