@@ -134,6 +134,21 @@
     }
   }
 
+  // -------- Click-to-play YouTube thumbs --------
+  // The link opens YouTube if JS is off; with JS the video plays in place.
+  document.querySelectorAll('a[data-yt]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + link.dataset.yt + '?autoplay=1&rel=0';
+      frame.title = link.dataset.title || 'Video';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      link.replaceWith(frame);
+      frame.focus();
+    });
+  });
+
   // -------- Year in footer --------
   document.getElementById('year').textContent = new Date().getFullYear();
 
