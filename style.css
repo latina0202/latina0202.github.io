@@ -297,13 +297,11 @@ h1, h2, h3, h4 {
 }
 .hero-meta i { font-style: normal; color: var(--line-2); }
 
-/* Staggered pair: each frame matches its photo's real ratio, so nothing
-   is cropped and the asymmetry reads as deliberate. */
-/* One overlapping cluster rather than two rectangles with a gap between
-   them — the pair reads as a single object and fills its column. */
-.hero-media { position: relative; padding-bottom: 10%; }
-.hero-media .f-land { width: 84%; }
-.hero-media .f-port { position: absolute; right: 0; bottom: 0; width: 46%; }
+/* Side-by-side pair at one height. The 3:2 and 3:4 photos are exactly 2:1
+   in width at equal height, so the columns are 2fr 1fr and the edges line up. */
+.hero-media { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; align-items: stretch; }
+.hero-media figure { margin: 0; display: flex; }
+.hero-media figure .shot { flex: 1; }
 
 .hero-media .shot {
   position: relative;
@@ -313,9 +311,7 @@ h1, h2, h3, h4 {
   border-radius: var(--r-card);
 }
 .hero-media .shot.land { aspect-ratio: 3 / 2; }   /* wave-speaker.jpg is 3:2 */
-.hero-media .shot.port { aspect-ratio: 3 / 4; }   /* taxua.jpg is 3:4       */
-/* a ring in the page colour so the top photo sits on the one beneath */
-.hero-media .f-port .shot { box-shadow: 0 0 0 6px var(--l0); }
+/* the portrait shot takes the row height set by the landscape one */
 .hero-media .shot > * { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-media .shot img { object-fit: cover; }
 
