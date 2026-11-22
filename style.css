@@ -806,6 +806,7 @@ h1, h2, h3, h4 {
   border-left: 1px solid var(--line);
 }
 .links a:first-child { border-left: 0; padding-left: 0; }
+.links a:first-child { flex: 1.7; }   /* room for the email on one line */
 .links a .k {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9.5px;
