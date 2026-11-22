@@ -530,6 +530,10 @@ h1, h2, h3, h4 {
   font-variant-numeric: tabular-nums;
 }
 .figs .k { font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+/* AIESEC in Experience: one line, then the numbers in a 2 x 2 grid */
+.xp-figs p { font-size: 15px; color: var(--ink-2); margin-bottom: 16px; max-width: 56ch; }
+.xp-figs .figs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; margin-bottom: 0; }
+.xp-figs .figs .v { font-size: 22px; color: var(--ink); }
 
 .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
 .tags span {
