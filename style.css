@@ -643,6 +643,9 @@ h1, h2, h3, h4 {
   pointer-events: none;   /* the frame is a showreel; the button opens the real thing */
 }
 .reel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+/* the whole preview opens the live product; sits above the autoplay iframe */
+.reel .reel-link { position: absolute; inset: 0; z-index: 3; }
+.reel .reel-link:focus-visible { outline: 2px solid var(--chip); outline-offset: -2px; border-radius: inherit; }
 .reel .badge {
   position: absolute; left: 11px; bottom: 11px; z-index: 2;
   display: inline-flex; align-items: center; gap: 6px;

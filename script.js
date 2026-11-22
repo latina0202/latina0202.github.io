@@ -117,7 +117,7 @@
     frame.setAttribute('aria-hidden', 'true');
     frame.title = 'NAVI demo, playing';
     reel.appendChild(frame);
-    reel.insertAdjacentHTML('beforeend', '<span class="badge"><i></i>playing</span>');
+    reel.insertAdjacentHTML('beforeend', '<span class="badge"><i></i>preview · click to open live</span>');
   }
 
   if (reel) {
