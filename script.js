@@ -24,8 +24,8 @@
 
   // -------- Typing line under the headline --------
   const phrases = [
-    'leading growth for SPaylater at ShopeePay',
-    'growing the SPaylater merchant network',
+    'leading growth for SPayLater at ShopeePay',
+    'growing the SPayLater merchant network',
     'building a cash loan for online sellers',
     'finding which sellers are ready for credit'
   ];
