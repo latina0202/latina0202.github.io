@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=20261122j" />
+<link rel="stylesheet" href="style.css?v=20261122l" />
 </head>
 <body data-theme="light">
 
@@ -414,10 +414,23 @@
       </div>
 
       <div class="b-card">
-        <div class="b-media short">
-          <iframe src="https://www.youtube-nocookie.com/embed/HJ3r1lVnC0c?rel=0&amp;playsinline=1"
-                  title="Ngoc Duong trekking in Vietnam" loading="lazy"
-                  allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        <div class="b-media slider" role="region" aria-roledescription="carousel" aria-label="Trekking photos and video">
+          <div class="track" tabindex="0">
+            <video src="images/trekking/ridge.mp4" poster="images/trekking/ridge-poster.jpg" muted loop playsinline preload="none" data-inview-play aria-label="Ngoc on a mountain ridge, arms open"></video>
+            <img src="images/trekking/above-the-clouds.jpg" alt="Ngoc on a summit above a sea of clouds, wearing a trekking medal" loading="lazy">
+            <img src="images/trekking/forest-trail.jpg" alt="Ngoc on a mossy forest trail with a trekking pole" loading="lazy">
+            <img src="images/trekking/misty-ridge.jpg" alt="Ngoc climbing a rocky ridge in the mist with other trekkers" loading="lazy">
+            <img src="images/trekking/bidoup-summit.jpg" alt="Ngoc at the Bidoup summit marker holding a Vietnamese flag" loading="lazy">
+            <img src="images/trekking/on-the-trail.jpg" alt="Ngoc smiling on a sunny trail" loading="lazy">
+            <img src="images/trekking/river-bridge.jpg" alt="Trekkers crossing a suspension bridge over a river" loading="lazy">
+          </div>
+          <button type="button" class="sl-btn prev" aria-label="Previous photo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3.5 5.5 8l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="sl-btn next" aria-label="Next photo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5 10.5 8 6 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="sl-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         </div>
         <div class="body">
           <h3>Trekking</h3>
@@ -477,6 +490,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261122i"></script>
+<script src="script.js?v=20261122k"></script>
 </body>
 </html>

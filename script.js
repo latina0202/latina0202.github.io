@@ -179,6 +179,19 @@
     update();
   });
 
+  // -------- Silent looping clips: play only while visible --------
+  const stillPref = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('video[data-inview-play]').forEach((v) => {
+    if (stillPref) { v.preload = 'metadata'; v.controls = true; return; }
+    if (!('IntersectionObserver' in window)) { v.autoplay = true; return; }
+    new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.intersectionRatio >= 0.6) { v.play().catch(() => {}); }
+        else { v.pause(); }
+      });
+    }, { threshold: [0, 0.6] }).observe(v);
+  });
+
   // -------- Year in footer --------
   document.getElementById('year').textContent = new Date().getFullYear();
 

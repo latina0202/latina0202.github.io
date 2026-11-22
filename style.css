@@ -748,7 +748,10 @@ h1, h2, h3, h4 {
   scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none;
 }
 .b-media.slider .track::-webkit-scrollbar { display: none; }
-.b-media.slider .track img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; scroll-snap-align: start; }
+.b-media.slider .track img,
+.b-media.slider .track video { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; scroll-snap-align: start; background: var(--l2); }
+/* the clip shows its whole frame, never cropped */
+.b-media.slider .track video { object-fit: contain; background: #111; }
 .b-media.slider > .sl-btn {
   inset: auto; top: 50%; width: 36px; height: 36px; transform: translateY(-50%);
   display: grid; place-items: center; padding: 0; cursor: pointer;
@@ -761,7 +764,7 @@ h1, h2, h3, h4 {
 .b-media.slider > .prev { left: 10px; }
 .b-media.slider > .next { right: 10px; }
 .b-media.slider > .sl-dots {
-  inset: auto 0 12px 0; width: auto; height: auto;
+  inset: 12px 0 auto 0; width: auto; height: auto;
   display: flex; justify-content: center; gap: 6px; pointer-events: none;
 }
 .sl-dots i { width: 6px; height: 6px; border-radius: 3px; background: rgba(255, 255, 255, 0.6); box-shadow: 0 0 3px rgba(0,0,0,.35); transition: width .2s ease, background .2s ease; }
