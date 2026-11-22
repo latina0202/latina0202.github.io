@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ember — design system
+   Ember - design system
    Ramp-derived: warm ground, ink at one weight, a single orange doing real
    work. Light-first: the system preference is ignored, dark applies only
    when someone chooses it. Structure is carried by a surface ladder and
@@ -7,7 +7,7 @@
    ========================================================================== */
 
 :root {
-  /* surface ladder — four discrete steps, ~1-2% apart */
+  /* surface ladder - four discrete steps, ~1-2% apart */
   --l0: #FBF7F4;
   --l1: #F6F1EC;
   --l2: #F0E9E2;
@@ -131,7 +131,7 @@ h1, h2, h3, h4 {
   border-bottom: 1px solid var(--line);
 }
 
-/* scroll progress — the quiet version of a position marker */
+/* scroll progress - the quiet version of a position marker */
 .nav-progress {
   position: absolute;
   top: 0; left: 0;
@@ -143,7 +143,7 @@ h1, h2, h3, h4 {
 
 .brand { display: flex; align-items: center; gap: 11px; min-width: 0; }
 
-/* Mark: a cohort grid with one cell lit — her own heatmap, in 34px */
+/* Mark: a cohort grid with one cell lit - her own heatmap, in 34px */
 .logo {
   width: 34px; height: 34px;
   border-radius: var(--r-btn);
@@ -450,7 +450,7 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   background: var(--line-2);
 }
-/* Figures ride the mono, tabular — precision without a claim */
+/* Figures ride the mono, tabular - precision without a claim */
 .points b {
   font-family: 'JetBrains Mono', monospace;
   font-weight: 500;

@@ -1,9 +1,9 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>NAVI — product demo</title><meta name="description" content="A clickable demo of NAVI: six analysts work one ticker, risk holds a veto, and every verdict traces back to its evidence."><meta name="robots" content="noindex"></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>NAVI - product demo</title><meta name="description" content="A clickable demo of NAVI: six analysts work one ticker, risk holds a veto, and every verdict traces back to its evidence."><meta name="robots" content="noindex"></head><body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* ===== TOKENS — straight from War Room V2, light-first ===== */
+/* ===== TOKENS - straight from War Room V2, light-first ===== */
 :root{
   --bg:#f7f5f0; --card:#ffffff; --card2:#fbfaf7; --card3:#f1efe8;
   --ink:#0d0c0a; --ink2:#5b5850; --ink3:#9b978c;
@@ -184,7 +184,7 @@ body.inApp{padding-bottom:84px;}
 .pinput{display:flex;gap:8px;padding:12px 18px calc(18px + env(safe-area-inset-bottom));flex:none;}
 .pinput input{flex:1;min-width:0;background:var(--card2);border:1px solid var(--line);border-radius:99px;
   padding:13px 16px;color:var(--ink);font-size:13px;}
-/* Form-style sheet footer — do NOT reuse .pinput: .pinput button forces the button into
+/* Form-style sheet footer - do NOT reuse .pinput: .pinput button forces the button into
    a 44px circle (it overrides .btnAccent through higher specificity). */
 .sheetFoot{display:flex;flex-direction:column;gap:9px;flex:none;
   padding:12px 18px calc(18px + env(safe-area-inset-bottom));border-top:1px solid var(--line);}
@@ -1046,7 +1046,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
 .cioCard .col p:last-child{margin-bottom:0;}
 .cioCard .col .ic{width:13px;height:13px;margin-top:1px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:8px;}
 
-/* ===== MVP 1: one colour per analyst — every member of the committee gets a "signature" ===== */
+/* ===== MVP 1: one colour per analyst - every member of the committee gets a "signature" ===== */
 .stage[data-agent="research"],.vote.research{--pc:var(--c2);}
 .stage[data-agent="macro"],.vote.macro{--pc:var(--c3);}
 .stage[data-agent="fundamental"],.vote.fundamental{--pc:var(--c6);}
@@ -1172,12 +1172,12 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
             <div class="vTop"><span class="vTrack">Short term · 15-30 sessions</span><span class="vWho">Chief Investment Officer</span></div>
             <h3 class="verdictBig">Hold off on a new position</h3>
             <div class="confRow"><span>Confidence</span><div class="confTrack"><i style="width:71%;"></i></div><b>71%</b></div>
-            <div class="vLong"><b>Long term</b>Keep holding — wait for the valuation to cool before adding weight.</div>
+            <div class="vLong"><b>Long term</b>Keep holding - wait for the valuation to cool before adding weight.</div>
           </div>
         </div>
       </div>
       <p style="margin-top:13px;font:500 11.5px/1.55 var(--sans);color:var(--ink3);text-align:center;">Illustrative data from a real session · the full version carries each analyst’s report, position size and stop level.</p>
-      <button class="btnAccent wFull" style="margin-top:16px;" onclick="go('signup')">Sign up free — analyse your own ticker</button>
+      <button class="btnAccent wFull" style="margin-top:16px;" onclick="go('signup')">Sign up free - analyse your own ticker</button>
     </div>
   </section>
 
@@ -1197,9 +1197,9 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
       </div>
       <div class="trustGrid">
         <div class="trustCard"><span class="trustNum">01</span><h3>The whole analysis, not just the answer</h3>
-          <p>Six analysts work in the order a real desk works — Research sets the context, three views run in parallel, the Risk Officer checks the limits, the CIO decides.</p></div>
+          <p>Six analysts work in the order a real desk works - Research sets the context, three views run in parallel, the Risk Officer checks the limits, the CIO decides.</p></div>
         <div class="trustCard"><span class="trustNum">02</span><h3>Every conclusion has a source</h3>
-          <p>Every verdict traces back to the analyst who produced the evidence — tap "Read the full report" at any step.</p></div>
+          <p>Every verdict traces back to the analyst who produced the evidence - tap "Read the full report" at any step.</p></div>
         <div class="trustCard"><span class="trustNum">03</span><h3>Accuracy you can check</h3>
           <p>Confidence carries a real track record: "Calls at this confidence were right about 71% of the time."</p></div>
         <div class="trustCard"><span class="trustNum">04</span><h3>Short and long term kept apart</h3>
@@ -1211,7 +1211,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
   <section style="text-align:center;padding:52px 0 60px;">
     <div class="wrap">
       <h2 class="sh">Ready to put NAVI to work?</h2>
-      <p class="ss" style="max-width:40ch;margin:10px auto 0;">Free during the trial — no payment card needed.</p>
+      <p class="ss" style="max-width:40ch;margin:10px auto 0;">Free during the trial - no payment card needed.</p>
       <button class="btnAccent" style="margin-top:20px;" onclick="go('signup')">Sign up free</button>
     </div>
   </section>
@@ -1361,14 +1361,14 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
     <div class="parallelWrap">
       <div class="parallelLabel" id="wrParLbl">
         <span class="forkIc"><svg viewBox="0 0 24 24"><path d="M12 3v6M12 9c0 3-4 3-4 6v3M12 9c0 3 4 3 4 6v3"/><circle cx="12" cy="3" r="1.6" fill="currentColor" stroke="none"/><circle cx="8" cy="21" r="1.6" fill="currentColor" stroke="none"/><circle cx="16" cy="21" r="1.6" fill="currentColor" stroke="none"/></svg></span>
-        <span><b>Three views run in parallel</b><span>No view influences another — fully independent, combined at the next step.</span></span>
+        <span><b>Three views run in parallel</b><span>No view influences another - fully independent, combined at the next step.</span></span>
       </div>
       <div class="stage" data-agent="macro">
         <div class="stageTop">
           <div class="av"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.4 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.4-4-8.5s1.4-6.1 4-8.5z"/></svg></div>
           <div class="stageMeta"><div class="stageName">Macro Analyst</div>
             <div class="stageRole">Rates, inflation, the economic cycle</div>
-            <div class="coreQ">Is the macro backdrop helping or hindering — and has that just changed?</div></div>
+            <div class="coreQ">Is the macro backdrop helping or hindering - and has that just changed?</div></div>
           <div class="statusTag"><div class="spinner"></div><div class="checkDot"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div></div>
         </div>
         <div class="resultCard">"Policy support for digital transformation and software exports remains a medium-term tailwind."
@@ -1405,7 +1405,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
     </div>
 
     <div class="connector" data-conn="2"><i><b></b></i></div>
-    <div class="phaseNote" data-note="2"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Three views complete — the Risk Officer checks the limits before the final decision</div>
+    <div class="phaseNote" data-note="2"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Three views complete - the Risk Officer checks the limits before the final decision</div>
 
     <div class="stage" data-agent="risk">
       <div class="stageTop">
@@ -1423,7 +1423,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
     </div>
 
     <div class="connector" data-conn="3"><i><b></b></i></div>
-    <div class="phaseNote" data-note="3"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Risk cleared — the CIO pulls it all together for the final decision</div>
+    <div class="phaseNote" data-note="3"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Risk cleared - the CIO pulls it all together for the final decision</div>
 
     <div id="wrGateSlot"></div>
 
@@ -1436,7 +1436,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
         <h2 class="wrVerdict">Hold off on a new position</h2>
         <p class="wrVerdictSub">A quality business, but today’s valuation leaves little margin of safety for a new position.</p>
         <div class="confRow"><div class="confTrack"><i style="width:71%;"></i></div><b>71%</b></div>
-        <p class="confCaption">Verdicts issued at 70–80% confidence were directionally right <b style="color:var(--ink);">68%</b> of the time (47 verdicts, re-scored after 20 sessions).
+        <p class="confCaption">Verdicts issued at 70-80% confidence were directionally right <b style="color:var(--ink);">68%</b> of the time (47 verdicts, re-scored after 20 sessions).
           <button class="linkBtn" onclick="openTrack()">See the track record ›</button></p>
       </div>
       <div class="voteCard">
@@ -1514,14 +1514,14 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
     <div id="mkCoach"></div>
     <div class="cioBrief">
       <span class="cioBriefTag">Summary · Chief Investment Officer</span>
-      <p>Technicals and macro both lean positive, but valuation sits above its three-year average — two tailwinds alongside one thing to weigh.</p>
+      <p>Technicals and macro both lean positive, but valuation sits above its three-year average - two tailwinds alongside one thing to weigh.</p>
     </div>
     <div class="flipCard"><b>This call is wrong if</b>
       <p>PMI falls below 50 for two straight months, or the State Bank shifts to tightening.</p></div>
 
     <div class="snSec">
       <h2>Market action &amp; flows</h2>
-      <p class="sub">Technical trend and what’s coming up — the signals that move the short term.</p>
+      <p class="sub">Technical trend and what’s coming up - the signals that move the short term.</p>
       <button class="regime" onclick="toggleRegime(this)" aria-expanded="false">
         <div class="regHead">
           <span class="regIc"><svg viewBox="0 0 24 24"><path d="M3 16.5l4.5-4.5 4.5 3 7.5-9"/><path d="M15 6h4.5v4.5"/></svg></span>
@@ -1534,7 +1534,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
           <span class="evTag">Source: Research Analyst</span>
           <div class="evCols">
             <div class="evCol pos"><h4>Working in favour</h4><ul>
-              <li>Market breadth improving — flows spreading beyond the leaders</li>
+              <li>Market breadth improving - flows spreading beyond the leaders</li>
               <li>Large-cap RSI has held above 55 for three weeks</li></ul></div>
             <div class="evCol neg"><h4>Worth watching</h4><ul>
               <li>Market-wide liquidity is still below its 20-session average</li>
@@ -1557,7 +1557,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
 
     <div class="snSec">
       <h2>Macro indicators</h2>
-      <p class="sub">The background — slower to move, felt over the medium and long term.</p>
+      <p class="sub">The background - slower to move, felt over the medium and long term.</p>
       <button class="regime" onclick="toggleRegime(this)" aria-expanded="false">
         <div class="regHead">
           <span class="regIc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.4 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.4-4-8.5s1.4-6.1 4-8.5z"/></svg></span>
@@ -1573,7 +1573,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
               <li>The manufacturing cycle is in Expansion (PMI improving)</li>
               <li>Monetary policy leans towards supporting growth</li></ul></div>
             <div class="evCol neg"><h4>Worth watching</h4><ul>
-              <li>CPI is nearing the top of the target band — little room left to ease further</li></ul></div>
+              <li>CPI is nearing the top of the target band - little room left to ease further</li></ul></div>
           </div>
         </div></div>
       </button>
@@ -1658,7 +1658,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
           <span class="suggestLbl">Suggestion</span>
           <p id="pfSuggest">Consider <b>trimming FPT</b> (30%, the largest holding) or <b>adding a name from another sector</b>, so the portfolio depends less on one stock.</p>
         </div>
-        <button class="btnAccent" id="pfCta" onclick="pfWarRoom('FPT')">See FPT in the War Room — add or trim, and by how much? &rarr;</button>
+        <button class="btnAccent" id="pfCta" onclick="pfWarRoom('FPT')">See FPT in the War Room - add or trim, and by how much? &rarr;</button>
       </div>
 
       <div class="ask2" style="margin-top:13px;">
@@ -1693,7 +1693,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
               <div class="hrow"><span class="tk"><i style="background:var(--c2);"></i>VCB</span><span class="pct num">20%</span><b class="pnl num up">8.4%</b></div>
               <div class="hrow"><span class="tk"><i style="background:var(--c3);"></i>VNM</span><span class="pct num">20%</span><b class="pnl num down">3.0%</b></div>
               <div class="hrow"><span class="tk"><i style="background:var(--c4);"></i>MWG</span><span class="pct num">15%</span><b class="pnl num up">11.5%</b></div>
-              <div class="hrow"><span class="tk"><i style="background:var(--cRest);"></i>Cash</span><span class="pct num">15%</span><b class="pnl num flat">&mdash;</b></div>
+              <div class="hrow"><span class="tk"><i style="background:var(--cRest);"></i>Cash</span><span class="pct num">15%</span><b class="pnl num flat">-</b></div>
             </div>
           </div>
 
@@ -1715,7 +1715,7 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
               <div class="hrow"><span class="tk"><i style="background:var(--c5);"></i>VNM</span><span class="pct num">8%</span><b class="pnl num down">3.0%</b></div>
               <div class="hrow"><span class="tk"><i style="background:var(--c6);"></i>TCB</span><span class="pct num">7%</span><b class="pnl num down">5.5%</b></div>
               <div class="hrow"><span class="tk"><i style="background:var(--c7);"></i>MBB</span><span class="pct num">6%</span><b class="pnl num up">17.1%</b></div>
-              <div class="hrow"><span class="tk"><i style="background:var(--cRest);"></i>+ 6 others</span><span class="pct num">23%</span><b class="pnl num flat">&mdash;</b></div>
+              <div class="hrow"><span class="tk"><i style="background:var(--cRest);"></i>+ 6 others</span><span class="pct num">23%</span><b class="pnl num flat">-</b></div>
             </div>
           </div>
         </div>
@@ -1741,9 +1741,9 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
 <div class="screen" id="s-spec">
   <div class="appTop" data-appbar></div>
   <div class="wrap" style="padding-top:18px;padding-bottom:40px;">
-    <span class="eyebrow">Appendix — not a product screen</span>
+    <span class="eyebrow">Appendix - not a product screen</span>
     <h1 class="sh">MVP 1 scope &amp; backend hookups</h1>
-    <p class="ss">MVP 1 scope, the states this prototype covers and the backend each one hooks into. For mapping the API — not a screen users see.</p>
+    <p class="ss">MVP 1 scope, the states this prototype covers and the backend each one hooks into. For mapping the API - not a screen users see.</p>
     <div id="specBody"></div>
   </div>
 </div>
@@ -1761,14 +1761,14 @@ table.rTable td:first-child{color:var(--ink);font-weight:600;}
 </div>
 <script>
 /* =========================================================================
-   USER STATE — every screen reads from here, so the personalisation is REAL
+   USER STATE - every screen reads from here, so the personalisation is REAL
    and not decorative text. Change one onboarding answer and the home screen,
    block order, coach marks and portfolio suggestions all change with it.
    ========================================================================= */
 var S = {
   auth:false, isNew:true, plan:'basic', email:'',
   jtbd:null,        /* stock | market | portfolio */
-  risk:'balanced',  /* conservative | balanced | active — the real RiskProfile enum */
+  risk:'balanced',  /* conservative | balanced | active - the real RiskProfile enum */
   exp:null,         /* new | mid | pro */
   credits:10, creditsOn:false, hasPortfolio:false, ticker:null,
   watchlist:[], positions:[], analysed:[], sessions:[], ledger:[], seen:{}
@@ -1864,7 +1864,7 @@ function paintAppBar(){
 
 /* ---------- coach marks: once per screen, self-dismissing ---------- */
 var COACH = {
-  warroom:{t:'How to read the War Room', p:'The analysts run in the order a real desk works. You don’t have to read all of it — scroll straight to the CIO block at the end for the conclusion, then work back up to see who said what.'},
+  warroom:{t:'How to read the War Room', p:'The analysts run in the order a real desk works. You don’t have to read all of it - scroll straight to the CIO block at the end for the conclusion, then work back up to see who said what.'},
   home:{t:'Everything here is ordered by the goal you picked', p:'Change the goal and the blocks reorder. Tap "change" on the line above to try it.'},
   market:{t:'How to read this screen', p:'The orange block at the top is the CIO’s summary. The purple block below it says what would flip the call. Tap each regime to see the evidence.'}
 };
@@ -1880,30 +1880,30 @@ function dismissCoach(key, hostId){ S.seen[key]=true; document.getElementById(ho
 
 /* ---------- the six layers (used on the landing page) ---------- */
 var TANG = [
-  {n:'01', title:'Give you the information', gate:'free', delta:'The starting point — processed data, no judgement attached',
+  {n:'01', title:'Give you the information', gate:'free', delta:'The starting point - processed data, no judgement attached',
    ask:'How did FPT trade today, and is anything notable?',
    give:'Data cleaned and gathered in one place. At this layer NAVI doesn’t say right or wrong.',
    metrics:['Price &amp; liquidity','RSI <b>61</b>','MA50 / MA200','Foreign net buying','Sector P/E'], who:'Research · Technicals'},
-  {n:'02', title:'Analyse and explain it', gate:'free', delta:'+ Why — evidence from several angles',
-   ask:'Why is this ticker strong — and what’s the worry?',
+  {n:'02', title:'Analyse and explain it', gate:'free', delta:'+ Why - evidence from several angles',
+   ask:'Why is this ticker strong - and what’s the worry?',
    give:'Each analyst brings their own evidence and view. Not yet merged into one conclusion.',
    metrics:['Fundamental score <b>78</b>/100','Technical score <b>74</b>/100','ROE <b>24%</b>','P(buy) <b>58%</b>','Macro context'], who:'Macro · Valuation · Technicals'},
-  {n:'03', title:'Weigh it up and decide', gate:'free', delta:'+ Verdict — several views resolved into one conclusion',
+  {n:'03', title:'Weigh it up and decide', gate:'free', delta:'+ Verdict - several views resolved into one conclusion',
    ask:'So should I or shouldn’t I?',
-   give:'The CIO weighs the views that contradict each other and issues a verdict with a confidence level — short and long term kept apart.',
+   give:'The CIO weighs the views that contradict each other and issues a verdict with a confidence level - short and long term kept apart.',
    metrics:['Short-term verdict','Long-term verdict','Confidence level <b>71%</b>','Track record','Where they disagree'], who:'Chief Investment Officer'},
-  {n:'04', title:'Tell you what to actually do', gate:'free', delta:'+ Action — know exactly what to do',
+  {n:'04', title:'Tell you what to actually do', gate:'free', delta:'+ Action - know exactly what to do',
    ask:'If I buy, how much, and where do I cut?',
    give:'Numbers you can place an order against, instead of just hearing "should" hay "shouldn’t".',
    metrics:['Max position size <b>12%</b>','Stop level <b>-12%</b>','Beta <b>1.1</b>','Review trigger'], who:'Risk · CIO'},
-  {n:'05', title:'Watch your whole portfolio', gate:'soon', delta:'+ Scope — from one ticker out to the whole portfolio',
+  {n:'05', title:'Watch your whole portfolio', gate:'soon', delta:'+ Scope - from one ticker out to the whole portfolio',
    ask:'Is anything wrong with my portfolio?',
    give:'NAVI watches every position you hold and raises what needs doing without waiting to be asked.',
    metrics:['Sector weight <b>22%</b>/25%','Sharpe 24T <b>0.92</b>','Alpha 24T <b>+4.2%</b>','Concentration alerts'], who:'Risk · CIO'},
-  {n:'06', title:'Act for you (with authority)', gate:'soon', delta:'+ Delegation — NAVI acts, instead of stopping at a suggestion',
+  {n:'06', title:'Act for you (with authority)', gate:'soon', delta:'+ Delegation - NAVI acts, instead of stopping at a suggestion',
    ask:'Work to my risk appetite and tell me afterwards.',
    give:'NAVI adjusts within the limits you set, and logs everything it did.',
-   metrics:[], who:'In design — no metrics to publish yet'}
+   metrics:[], who:'In design - no metrics to publish yet'}
 ];
 var GATE_LABEL = {free:'Free', pro:'Pro', soon:'Coming soon'};
 document.getElementById('lpMeterRows').innerHTML = TANG.map(function(t,i){
@@ -1928,7 +1928,7 @@ function startLpMeter(){
 }
 startLpMeter();
 
-/* A layer’s detail opens right at the hero — no scrolling to the bottom.
+/* A layer’s detail opens right at the hero - no scrolling to the bottom.
    Pause the auto-cycle while the sheet is open so content doesn’t shift under the reader. */
 var tgIdx = 0;
 function renderTang(i){
@@ -1974,7 +1974,7 @@ document.addEventListener('keydown', function(e){
 /* ---------- track record (outcome_tracker.calibration_report) ---------- */
 function openTrack(){
   tgMode = 'track'; clearInterval(lpMeterTimer);
-  var rows = [['80–100%',null,9],['70–80%',68,47],['60–70%',59,63],['50–60%',52,38]];
+  var rows = [['80-100%',null,9],['70-80%',68,47],['60-70%',59,63],['50-60%',52,38]];
   document.getElementById('tgCard').innerHTML =
     '<div class="tgTop"><span class="tgStep">Track record · 30 days</span>'+
       '<button class="tgX" onclick="closeTang()" aria-label="Close">✕</button></div>'+
@@ -1992,10 +1992,10 @@ function openTrack(){
 /* ---------- condensed demo on the landing page ---------- */
 var LP_FLOW = [
   {k:'scout', n:'Research', r:'news &amp; sector', f:'IT leading the market · sector liquidity +18%', ic:'<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>'},
-  {k:'atlas', n:'Macro', r:'rates, cycle', f:'Digital transformation policy — leans favourable', par:true, ic:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.4 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.4-4-8.5s1.4-6.1 4-8.5z"/>'},
+  {k:'atlas', n:'Macro', r:'rates, cycle', f:'Digital transformation policy - leans favourable', par:true, ic:'<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 4 5.4 4 8.5s-1.4 6.1-4 8.5c-2.6-2.4-4-5.4-4-8.5s1.4-6.1 4-8.5z"/>'},
   {k:'anchor', n:'Valuation', r:'fair value', f:'ROE 24%, low debt · score 78/100', par:true, ic:'<path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6"/>'},
   {k:'vega', n:'Technicals', r:'price signal', f:'RSI 61, price above the 50- &amp; 200-day averages · score 74/100', par:true, ic:'<path d="M5 19V10"/><path d="M12 19V5"/><path d="M19 19v-6"/>'},
-  {k:'sentinel', n:'Risk', r:'holds a veto', f:'Beta 1.1, high liquidity — within limits', ic:'<path d="M12 3l7 3v6c0 4.6-3 8.4-7 9.5-4-1.1-7-4.9-7-9.5V6l7-3z"/>'}
+  {k:'sentinel', n:'Risk', r:'holds a veto', f:'Beta 1.1, high liquidity - within limits', ic:'<path d="M12 3l7 3v6c0 4.6-3 8.4-7 9.5-4-1.1-7-4.9-7-9.5V6l7-3z"/>'}
 ];
 function fRowHtml(a){
   return '<div class="fRow" data-a="'+a.k+'"><span class="fIc"><svg viewBox="0 0 24 24">'+a.ic+'</svg></span>'+
@@ -2064,7 +2064,7 @@ function submitAccount(){
 function doLogin(){
   var em=document.getElementById('liEmail').value.trim();
   S.auth=true; S.isNew=false; S.email=em||'ngoc@navi.vn';
-  /* returning user: profile and history already exist — don’t re-run onboarding */
+  /* returning user: profile and history already exist - don’t re-run onboarding */
   if(!S.jtbd){ S.jtbd='stock'; S.exp='mid'; }
   S.analysed=['FPT','VCB','HPG']; S.ticker='FPT';
   S.sessions=[{tk:'FPT', at:'08:15', verdict:'Hold off on a new position', conf:71},
@@ -2074,7 +2074,7 @@ function doLogin(){
 }
 
 /* ---------- THREE-QUESTION ONBOARDING ----------
-   Fast (three questions, all skippable) but each one says WHY it is asked — this is
+   Fast (three questions, all skippable) but each one says WHY it is asked - this is
    the "careful onboarding" a complex financial product needs: the user understands
    what their answer changes, instead of filling in a form blind. */
 var QUIZ = [
@@ -2121,7 +2121,7 @@ function quizNext(skip){
 }
 function finishQuiz(){ qi=0; go('welcome'); }
 
-/* ---------- READY SCREEN — spell out what NAVI configured from the answers ---------- */
+/* ---------- READY SCREEN - spell out what NAVI configured from the answers ---------- */
 var JTBD_LABEL = {stock:'Look up a specific ticker', market:'See the market overview', portfolio:'Review my portfolio'};
 var RISK_LABEL = {conservative:'Conservative', balanced:'Balanced', active:'Aggressive'};
 var EXP_LABEL = {new:'Just starting', mid:'Under 2 years', pro:'Over 2 years'};
@@ -2130,7 +2130,7 @@ function paintWelcome(){
   var dest = {stock:'War Room', market:'Market overview', portfolio:'Portfolio health'}[S.jtbd||'stock'];
   document.getElementById('wcSub').textContent = S.jtbd
     ? 'Here’s what NAVI set up from your three answers.'
-    : 'You skipped the personalisation — NAVI is using defaults, changeable any time.';
+    : 'You skipped the personalisation - NAVI is using defaults, changeable any time.';
   var rows = [
     ['What leads your home screen', S.jtbd ? JTBD_LABEL[S.jtbd] : 'Default'],
     ['Appetite used for suggestions', RISK_LABEL[S.risk]],
@@ -2147,7 +2147,7 @@ function finishWelcome(){
   else { S.ticker = null; go('warroom'); }   /* do NOT pick a ticker for them */
 }
 
-/* ---------- HOME — block order follows the chosen goal ---------- */
+/* ---------- HOME - block order follows the chosen goal ---------- */
 function card(title, body, foot){
   return '<div class="card"><span class="cardLbl">'+title+'</span>'+body+(foot||'')+'</div>';
 }
@@ -2169,7 +2169,7 @@ function blkStrip(){
     '<div class="dCell"><span class="k">USD/VND<i class="stale">STALE</i></span><span class="v num">+0,42%</span></div></div>';
 }
 function blkOutcome(){
-  /* outcome_tracker re-scores every verdict after 10 and 20 sessions — no LLM call.
+  /* outcome_tracker re-scores every verdict after 10 and 20 sessions - no LLM call.
      Only shown to users with a session old enough to score. */
   var rows = [
     ['VCB','Build gradually · after 20 sessions','+4,6%','up',true],
@@ -2177,7 +2177,7 @@ function blkOutcome(){
     ['MWG','Build gradually · after 10 sessions','−1,1%','down',false]
   ];
   return card('How earlier verdicts turned out',
-    '<p style="margin-top:8px;font:400 12px/1.5 var(--sans);color:var(--ink2);">NAVI re-scores every verdict after 10 and 20 trading sessions — including the ones it got wrong.</p>' +
+    '<p style="margin-top:8px;font:400 12px/1.5 var(--sans);color:var(--ink2);">NAVI re-scores every verdict after 10 and 20 trading sessions - including the ones it got wrong.</p>' +
     '<div style="margin-top:6px;">' + rows.map(function(r){
       return '<button class="rankRow" style="width:100%;" onclick="runWarRoom(\''+r[0]+'\')">'+
         '<span class="rankTk">'+r[0]+'</span><span class="rankTxt">'+r[1]+'</span>'+
@@ -2186,7 +2186,7 @@ function blkOutcome(){
     '<button class="linkBtn" onclick="openTrack()">How often is NAVI right? See the track record ›</button>');
 }
 function blkRecent(){
-  /* "Recently viewed" as on live — tap to reopen a saved session, shown immediately */
+  /* "Recently viewed" as on live - tap to reopen a saved session, shown immediately */
   if(!S.sessions.length){
     return card('Recently viewed', '<p style="margin-top:10px;font:400 12.5px/1.55 var(--sans);color:var(--ink2);">Nothing viewed yet. Once NAVI analyses a ticker it appears here with its latest verdict.</p>');
   }
@@ -2202,12 +2202,12 @@ function openSavedFromHome(tk){ S.ticker = tk; go('warroom'); }
 function blkLearn(){
   return '<div class="learnCard"><h4>Understand NAVI in two minutes</h4>'+
     '<p>You picked "Just starting" so NAVI keeps this here: who the six analysts are, how the short-term verdict differs from the long-term one, and why NAVI always attaches a confidence level.</p>'+
-    '<button onclick="alert(\'Demo — opens a short six-screen walkthrough.\')">Take the quick tour →</button></div>';
+    '<button onclick="alert(\'Demo - opens a short six-screen walkthrough.\')">Take the quick tour →</button></div>';
 }
 function blkPulse(){
   return '<button class="pulseCard" onclick="go(\'market\')"><span><span class="cardLbl">Market pulse</span>'+
     '<span class="n num" style="color:var(--good);">68</span>'+
-    '<p>Uptrend — breadth improving, flows spreading beyond the leaders</p>'+
+    '<p>Uptrend - breadth improving, flows spreading beyond the leaders</p>'+
     '<small>updated 07:42, Sep 28 2026</small></span><span class="go">Xem snapshot ↗</span></button>';
 }
 function paintHome(){
@@ -2216,7 +2216,7 @@ function paintHome(){
   var name = S.email ? S.email.split('@')[0] : 'there';
   document.getElementById('hGreet').textContent = greet + ', ' + name;
   document.getElementById('hGreetSub').textContent = S.sessions.length
-    ? 'An earlier verdict just hit 20 sessions and has been re-scored — see below.'
+    ? 'An earlier verdict just hit 20 sessions and has been re-scored - see below.'
     : 'Start with a ticker you’re watching, or take a quick look at the market today.';
   document.getElementById('hJtbd').textContent = S.jtbd ? JTBD_LABEL[S.jtbd] : 'Default';
 
@@ -2273,7 +2273,7 @@ function wrSkipAll(){
 
 /* MVP 1 drops credits and quotas from the UI: everything runs immediately, no confirmation step.
    Keep the spend() name so existing call sites don’t change; the backend should still keep a hidden
-   fair-use ceiling to stop abuse — see MVP scope. */
+   fair-use ceiling to stop abuse - see MVP scope. */
 /* Metering was designed, built, then switched off for MVP 1 so nothing stands
    between a beta user and their first analysis. The hook stayed so it can be
    switched back on for a paid plan; the demo toggles it to show both. */
@@ -2307,7 +2307,7 @@ function showGate(){
   document.getElementById('wrBody').hidden = true;
   document.getElementById('wrMiss').innerHTML = '';
   document.getElementById('wrCredit').innerHTML = '';
-  host.innerHTML = '<div class="creditGate"><span class="ic">\u2014</span>' +
+  host.innerHTML = '<div class="creditGate"><span class="ic">-</span>' +
     '<h3>You have used all 10 analyses</h3>' +
     '<p>Your saved sessions stay open and free to reread. New analyses come back when the month rolls over, or on a paid plan.</p>' +
     '<div class="stackBtns">' +
@@ -2337,7 +2337,7 @@ function getSession(tk){ return S.sessions.filter(function(x){ return x.tk === t
    4) no action after viewing      → session auto-saves, say so they can leave easy
    5) search mid-run               → cancel the old session, start over (BRD section XVIII) */
 var COVERED = ['FPT','VCB','HPG','VNM','MWG','TCB','MBB','GAS','SSI','CMG','VGI','PNJ','DGC','VHM','REE'];
-/* A real listed ticker NAVI hasn’t built data for — liquidity too low
+/* A real listed ticker NAVI hasn’t built data for - liquidity too low
    for the quant model to run reliably. Never fabricate a result for these. */
 var UNCOVERED = ['L14','CEO','TNG','VIX','API','IDJ'];
 function resolveTicker(t){
@@ -2377,7 +2377,7 @@ function showMiss(kind, t){
       '<p class="missNote">Use the three-letter listed ticker, e.g. <b>FPT</b>, <b>VCB</b>, <b>HPG</b>. Not the company name.</p></div>';
   }
 }
-function notifyCover(t){ alert('Demo — NAVI will tell you once there’s enough data for '+t+'.'); }
+function notifyCover(t){ alert('Demo - NAVI will tell you once there’s enough data for '+t+'.'); }
 
 function paintWrBanner(){
   var host = document.getElementById('wrBanner');
@@ -2385,22 +2385,22 @@ function paintWrBanner(){
   if(S.isNew && !S.analysed.length){
     out = '<div class="wrBanner first"><span class="bIc">1</span><span class="bB">'+
       '<b>Your first analysis</b>'+
-      '<p>Six analysts go to work in turn. You don’t have to read all of it — the conclusion is in the last block, and you read back up when you want the reasoning.</p></span></div>';
+      '<p>Six analysts go to work in turn. You don’t have to read all of it - the conclusion is in the last block, and you read back up when you want the reasoning.</p></span></div>';
   }
   host.innerHTML = out;
 }
 
 /* ---------- PER-ANALYST TIMING (never shown in the UI) ----------
-   ⚠️ PLACEHOLDER NUMBERS — not measured from the real backend. Replace with measured
+   ⚠️ PLACEHOLDER NUMBERS - not measured from the real backend. Replace with measured
    latency per agent (suggest p50 for pacing, p95 to decide whether a separate waiting
    screen is needed). Three numbers needed from the backend:
-     1. research  — Research calls news sources + sector data
-     2. parallel  — Macro/Valuation/Technicals run IN PARALLEL → take the SLOWEST agent,
+     1. research  - Research calls news sources + sector data
+     2. parallel  - Macro/Valuation/Technicals run IN PARALLEL → take the SLOWEST agent,
                     not the sum of all three (the easiest thing to get wrong here)
-     3. risk      — Risk checks the limits
-     4. cio       — The CIO pulls it together
+     3. risk      - Risk checks the limits
+     4. cio       - The CIO pulls it together
    Once the real numbers land, edit this object only; everything else follows from it.
-   These drive animation pacing ONLY — per-agent timings were removed from the UI
+   These drive animation pacing ONLY - per-agent timings were removed from the UI
    after feedback: users don’t need to know how long each agent took. */
 var AGENT_MS = { research:1000, parallel:1150, risk:950, cio:500 };
 
@@ -2416,7 +2416,7 @@ function paintWrIdle(pendTk){
   document.getElementById('wrMiss').innerHTML = '';
   document.getElementById('wrBanner').innerHTML = '';
   var recent = S.sessions.length
-    ? '<div class="idleSteps"><h4>Saved session — replay free</h4>' +
+    ? '<div class="idleSteps"><h4>Saved session - replay free</h4>' +
       S.sessions.map(function(x){
         return '<button class="rankRow" style="width:100%;" onclick="openSaved(\'' + x.tk + '\')">' +
           '<span class="rankTk">' + x.tk + '</span>' +
@@ -2455,7 +2455,7 @@ function openSaved(tk){
   document.getElementById('wrBody').hidden = false;
   paintCreditBar();
   document.getElementById('wrTitle').innerHTML = 'Investment meeting on <span style="color:var(--accent);" id="wrTicker">' + tk + '</span>';
-  document.getElementById('wrLede').textContent = 'Saved result — shown immediately, no waiting for a re-run.';
+  document.getElementById('wrLede').textContent = 'Saved result - shown immediately, no waiting for a re-run.';
   document.getElementById('rpKicker').textContent = tk + ' · FULL REPORT';
   var sess = getSession(tk);
   setMinutes(sess ? sess.at : '08:15');
@@ -2510,7 +2510,7 @@ function runWarRoom(t, forced){
   paintWrBanner(); paintWrActions();
   wrReset();
 
-  /* Reduce Motion STILL runs in sequence — this is CONTENT (who does what, in what
+  /* Reduce Motion STILL runs in sequence - this is CONTENT (who does what, in what
      order), not decoration. What gets turned off is motion, handled by CSS
      in the @media block above. */
   var G = 200;  /* beat between steps so the eye can keep up */
@@ -2551,7 +2551,7 @@ function paintWrActions(){
   host.innerHTML = '<button class="btnDark" onclick="openSheet(\'cio\')">Ask NAVI more about ' + t + '</button>' +
     '<button class="btnGhost" onclick="clearPending();window.scrollTo({top:0,behavior:\'auto\'});">Analyse another ticker</button>';
   document.getElementById('wrActMeta').innerHTML =
-    'Doing nothing right now is fine — this session '+t+' saved itself, and you can come back to it from Home any time.';
+    'Doing nothing right now is fine - this session '+t+' saved itself, and you can come back to it from Home any time.';
 }
 
 /* ---------- FULL REPORT ---------- */
@@ -2627,7 +2627,7 @@ var AGENTS = {
         'Liquidity running above the sector average (volume +18%)',
         'Technical structure confirms the uptrend, price holding above the key moving averages'],
        ['Volatility is medium-high, which amplifies risk in a bad scenario',
-        'Breadth is not yet strong — the upside signal hasn’t spread evenly across the sector'])
+        'Breadth is not yet strong - the upside signal hasn’t spread evenly across the sector'])
     + statPair([['Probability of a gain','58%','next 20 sessions'],['Reward/risk','1.8x','']])
     + reveal('Signal breakdown · 9 factors',false,
         row('Trend','78/100')+row('Momentum','71/100')+row('Relative strength','68/100')+
@@ -2656,7 +2656,7 @@ var AGENTS = {
     + noteCard('What the market may be missing','Domestic digital transformation is growing faster than expected but isn’t fully reflected in the valuation.');
   }},
   macro:{label:'Rates, inflation, the economic cycle', persona:'Macro', full:'Macro Analyst', ask:'Macro Analyst', html:function(){ return ''
-    + '<p style="margin:0 0 14px;font:400 12px/1.5 var(--sans);color:var(--ink3);">Context shared by every ticker in the sector — not specific to '+S.ticker+'.</p>'
+    + '<p style="margin:0 0 14px;font:400 12px/1.5 var(--sans);color:var(--ink3);">Context shared by every ticker in the sector - not specific to '+S.ticker+'.</p>'
     + openBlock(58,['Overall valuation is cheaper than its historical average (P/E z-score -0.8)',
         'VIX is low and manufacturing PMI holds steady above 50'],
        ['CPI still needs close watching, it hasn’t fully cooled',
@@ -2735,7 +2735,7 @@ function openSheet(k){
   document.getElementById('scrim').classList.add('show');
   document.getElementById('sheet').classList.add('show');
 }
-/* floating assistant — like FloatingAssistant on live: with no ticker attached, it guides */
+/* floating assistant - like FloatingAssistant on live: with no ticker attached, it guides */
 function openAssistant(){
   if(cur==='warroom' && S.ticker && hasSession(S.ticker)){ openSheet('cio'); return; }
   S.assistGeneral = true;
@@ -2754,8 +2754,8 @@ function sendChat(){
   var i=document.getElementById('chatInput'), t=i.value.trim(); if(!t) return;
   var b=document.getElementById('sheetBody');
   b.innerHTML += '<div class="bubble user">'+t.replace(/</g,'&lt;')+'</div>'; i.value='';
-  if(S.assistGeneral){ b.innerHTML += '<div class="bubble bot">Illustrative — NAVI answers and takes you to the right screen: the War Room for a ticker, Market for the broader picture.</div>'; b.scrollTop=1e9; return; }
-  b.innerHTML += '<div class="bubble bot">This is illustrative — in the real build, the '+AGENTS[navAgent].ask+
+  if(S.assistGeneral){ b.innerHTML += '<div class="bubble bot">Illustrative - NAVI answers and takes you to the right screen: the War Room for a ticker, Market for the broader picture.</div>'; b.scrollTop=1e9; return; }
+  b.innerHTML += '<div class="bubble bot">This is illustrative - in the real build, the '+AGENTS[navAgent].ask+
     ' answers from this session’s own underlying figures.</div>';
   b.scrollTop=1e9;
 }
@@ -2763,11 +2763,11 @@ document.getElementById('chatInput').addEventListener('keydown',function(e){ if(
 document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeSheet(); });
 </script>
 <script>
-/* ---------- MARKET (Snapshot) — source: GET /market/snapshot ---------- */
+/* ---------- MARKET (Snapshot) - source: GET /market/snapshot ---------- */
 var MACRO = [
   {ic:'<path d="M3 20V13M9 20V6M15 20v-9M21 20V3"/>', lbl:'CPI year on year', val:'3,2%',
    note:'Inside the target band', spark:'M0 10 L20 8 L40 14 L60 12 L80 18 L100 16 L120 15',
-   foot:'last 3 years', more:'Measures consumer price growth against the same period last year — the headline inflation figure. Source: Macro Analyst.'},
+   foot:'last 3 years', more:'Measures consumer price growth against the same period last year - the headline inflation figure. Source: Macro Analyst.'},
   {ic:'<path d="M3 7h13M16 7l-3-3M16 7l-3 3M21 17H8M8 17l3-3M8 17l3 3"/>', lbl:'USD/VND', val:'Steady',
    note:'Moved less than 1% this quarter', spark:null,
    foot:'Not enough three-year data to draw a trend',
@@ -2775,11 +2775,11 @@ var MACRO = [
   {ic:'<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/>', lbl:'Monetary policy', val:'Cautious easing',
    note:'Prioritising growth support', spark:'M0 18 L20 20 L40 14 L60 16 L80 8 L100 10 L120 5',
    foot:'Policy rate · last 3 years',
-   more:'The State Bank’s direction on rates and money supply — easing usually supports equities. Source: Macro Analyst.'},
+   more:'The State Bank’s direction on rates and money supply - easing usually supports equities. Source: Macro Analyst.'},
   {ic:'<path d="M20 12a8 8 0 10-2.3 5.6"/><path d="M20 7v5h-5"/>', lbl:'Cycle phase', val:'Expansion',
    note:'Manufacturing and consumption both improving', spark:'M0 22 L20 18 L40 20 L60 12 L80 14 L100 6 L120 7',
    foot:'PMI · last 3 years',
-   more:'Where the economy sits in its cycle — it decides which sectors benefit. Source: Macro Analyst.'}
+   more:'Where the economy sits in its cycle - it decides which sectors benefit. Source: Macro Analyst.'}
 ];
 function paintMarket(){
   document.getElementById('mkMacro').innerHTML = MACRO.map(function(m){
@@ -2823,7 +2823,7 @@ function paintAccount(){
     document.documentElement.getAttribute('data-theme')==='dark' ? 'Dark' : 'Light';
   paintAppBar();
 }
-function acSoon(x){ alert('Demo — "'+x+'" not built in this mockup.'); }
+function acSoon(x){ alert('Demo - "'+x+'" not built in this mockup.'); }
 function doLogout(){
   S.auth=false; S.isNew=true; S.email=''; S.credits=10; S.plan='basic';
   S.jtbd=null; S.exp=null; S.risk='balanced';
@@ -2843,7 +2843,7 @@ var SCOPE = [
   ['This call is wrong if','Add','A one-line reversal condition on the Market screen','macro_regime.regime_invalidation_condition'],
   ['Portfolio (scoring, suggestions)','Defer','No daily cache yet; entering positions adds first-run friction','/portfolio/*'],
   ['Ticker watchlist + alerts when a conclusion changes','Defer','No re-run job yet; repeated LLM cost','none yet'],
-  ['Credits, the Pro plan, payments','Defer','Free in beta; the backend keeps a hidden usage ceiling','accounts.spend() — needs a decision from Quyen']
+  ['Credits, the Pro plan, payments','Defer','Free in beta; the backend keeps a hidden usage ceiling','accounts.spend() - needs a decision from Quyen']
 ];
 var SPEC_NAV = [
   ['Look up a ticker','War Room (ticker-selection state, does NOT auto-run anything)','Ticker search · Earlier verdicts | Market pulse · Recently viewed'],
@@ -2873,7 +2873,7 @@ function specTable(head, rows){
 function paintSpec(){
   document.getElementById('specBody').innerHTML =
     '<h2 class="sh" style="font-size:19px;margin-top:26px;">1 · MVP 1 scope</h2>' +
-    '<p class="ss">The three main screens keep their interface. Four "Add" all read from backend data that already exists — no new agent needed.</p>' +
+    '<p class="ss">The three main screens keep their interface. Four "Add" all read from backend data that already exists - no new agent needed.</p>' +
     specTable(['Item','Decision','Change','Backend source'], SCOPE) +
     '<h2 class="sh" style="font-size:19px;margin-top:30px;">2 · Routing after onboarding</h2>' +
     specTable(['Goal chosen','Destination screen','Home block order'], SPEC_NAV) +
@@ -2885,7 +2885,7 @@ function paintSpec(){
     '<li>Keep a hidden fair-use ceiling against abuse, for example 10 new War Room sessions per account per day. Reopening a saved session doesn’t count. Normal users never reach it.</li>' +
     '<li>Needs a new ADR in <code>05_decisions.md</code>: "MVP 1 is free, credits temporarily off".</li></ul></div>' +
     '<div class="gapCard"><h4>Missing data</h4><ul>' +
-    '<li>The VNINDEX / VN30 / HNX strip at the top of the Market screen isn’t in the snapshot payload — either source index prices or drop the strip.</li>' +
+    '<li>The VNINDEX / VN30 / HNX strip at the top of the Market screen isn’t in the snapshot payload - either source index prices or drop the strip.</li>' +
     '<li>The track record needs enough samples; if fewer than 20 verdicts have been scored, hide both the block and the sheet.</li></ul></div>';
 }
 
@@ -2907,25 +2907,25 @@ var PF_IC = {
 };
 var PF_GROUPS = [
   {ic:'ret', name:'Return against risk', pill:'good', rate:'Good', score:76, rows:[
-    ['Method','Sharpe/Sortino — return measured against the risk taken to get it'],
+    ['Method','Sharpe/Sortino - return measured against the risk taken to get it'],
     ['Sharpe (all volatility)','1.14'],
     ['Sortino (downside only)','1.62'],
     ['Deepest loss (12 months)','−18.4%'],
     ['Period','Last 12 months']]},
   {ic:'loss', name:'Loss if the market turns', pill:'mid', rate:'Average', score:55, rows:[
-    ['Method','ES 95% — expected loss in a bad scenario'],
+    ['Method','ES 95% - expected loss in a bad scenario'],
     ['Loss in a bad scenario','−6.8%'],
     ['Biggest risk contributor','FPT · 38%'],
     ['Period','95% confidence interval']],
-    na:'Historical stress tests (2008 / 2020 / VN-2022): not available — not enough confirmed historical price data to replay them.'},
+    na:'Historical stress tests (2008 / 2020 / VN-2022): not available - not enough confirmed historical price data to replay them.'},
   {ic:'div', name:'Diversification', pill:'good', rate:'Good', score:71, rows:[
-    ['Method','Correlation between holdings — how closely they move together'],
+    ['Method','Correlation between holdings - how closely they move together'],
     ['Average correlation','0.42'],
     ['Largest single weight','FPT · 30%'],
     ['Concentration alert','Below threshold']],
-    na:'Effective number of bets: not available — the formula has not been built.'},
+    na:'Effective number of bets: not available - the formula has not been built.'},
   {ic:'liq', name:'How easily you could exit', pill:'good', rate:'Excellent', score:84, rows:[
-    ['Method','Liquidity risk — how fast you could sell without moving the price'],
+    ['Method','Liquidity risk - how fast you could sell without moving the price'],
     ['Time to exit everything','~4 sessions'],
     ['Least liquid holding','MWG'],
     ['Assumption','≤20% of daily volume']]},
@@ -2933,52 +2933,52 @@ var PF_GROUPS = [
     ['Method','How often the calls proved right, over time'],
     ['Hit rate','61%'],
     ['Calibration against confidence','Inside the expected band']],
-    na:'Turnover ratio: not available — it needs data from the broad-market exposure group, which does not exist yet.'},
+    na:'Turnover ratio: not available - it needs data from the broad-market exposure group, which does not exist yet.'},
   {ic:'fac', name:'Exposure to broad market trends', pill:'na', rate:'No data yet', score:null, rows:[
-    ['Method','Factor exposure (Fama-French) — how much of the return comes from the market, company size, or your stock picking']],
-    na:'Not available — no confirmed source of factor return series for the Vietnamese market.'}
+    ['Method','Factor exposure (Fama-French) - how much of the return comes from the market, company size, or your stock picking']],
+    na:'Not available - no confirmed source of factor return series for the Vietnamese market.'}
 ];
 
 var PF_SCEN = [
-  {id:'yield', ic:'↗', chip:'I want higher returns', q:'I want higher returns and can take more risk — what should I do?'},
+  {id:'yield', ic:'↗', chip:'I want higher returns', q:'I want higher returns and can take more risk - what should I do?'},
   {id:'div',   ic:'◇', chip:'I want more spread',    q:'How do I make the portfolio depend less on a few names?'},
-  {id:'safe',  ic:'⛨', chip:'I want less risk',      q:'I want to sleep better — how do I cut the risk?'},
-  {id:'add',   ic:'+',      chip:'I am adding a name',    q:'I am thinking of buying another stock — should I?'}
+  {id:'safe',  ic:'⛨', chip:'I want less risk',      q:'I want to sleep better - how do I cut the risk?'},
+  {id:'add',   ic:'+',      chip:'I am adding a name',    q:'I am thinking of buying another stock - should I?'}
 ];
 
 var PF_ANS = {
   yield:{
-    reads:['You still hold <b>15% in cash</b> doing nothing — that is the clearest room you have.',
+    reads:['You still hold <b>15% in cash</b> doing nothing - that is the clearest room you have.',
            'Your largest holding <b>FPT at 30%</b> also contributes <b>38% of the portfolio’s risk</b>.',
-           '“Return against risk” scores <b>76</b> — what is left to gain sits on the risk side.'],
+           '“Return against risk” scores <b>76</b> - what is left to gain sits on the risk side.'],
     steps:{
       conservative:['Deploy the 15% cash <b>in tranches</b>, not all at once.',
-                    'Do not add to FPT — buy into a <b>sector you do not hold</b> yet.',
+                    'Do not add to FPT - buy into a <b>sector you do not hold</b> yet.',
                     'A Conservative appetite caps <b>single-name weight</b> tighter, so the addition gets split smaller.'],
       balanced:['Put most of the <b>15% cash</b> into a new name, keeping a little as buffer.',
-                'Do not add to FPT — it is already your largest position.',
+                'Do not add to FPT - it is already your largest position.',
                 'Pick a <b>different sector</b> so the extra return does not move in step with FPT.'],
       active:['Deploy nearly all of the <b>15% cash</b>.',
-              'An Aggressive appetite allows a <b>wider single-name cap</b> — size up on your strongest thesis.',
+              'An Aggressive appetite allows a <b>wider single-name cap</b> - size up on your strongest thesis.',
               'The cost: your <b>bad-scenario loss of −6.8%</b> gets deeper. Know that number before you act.']},
     imp:[['Return against risk','better'],['Loss if the market turns','worse'],['Diversification','better']],
     cta:'See what NAVI screened today →', fn:'pfScreener()'},
   div:{
     reads:['The portfolio holds <b>4 names plus 15% cash</b>.',
            '<b>FPT at 30%</b> is both the largest position and the <b>biggest risk contributor (38%)</b>.',
-           'Average correlation is <b>0.42</b> — the names do not move together much; the weakness is concentration in one.'],
-    steps:{all:['<b>Trim FPT</b> — the concentration is the problem, not the number of holdings.',
+           'Average correlation is <b>0.42</b> - the names do not move together much; the weakness is concentration in one.'],
+    steps:{all:['<b>Trim FPT</b> - the concentration is the problem, not the number of holdings.',
                 'Add a name from a <b>sector none of your four cover</b>.',
                 'Fund it from the <b>15% cash</b> rather than selling something that is working.']},
     imp:[['Diversification','better'],['Loss if the market turns','better'],['Return against risk','same']],
-    cta:'See FPT in the War Room — trim by how much? →', fn:"pfWarRoom('FPT')"},
+    cta:'See FPT in the War Room - trim by how much? →', fn:"pfWarRoom('FPT')"},
   safe:{
     reads:['Your bad-scenario loss is currently <b>−6.8%</b>.',
-           '<b>FPT contributes 38% of the risk</b> while holding 30% of the capital — that gap is what to fix first.',
+           '<b>FPT contributes 38% of the risk</b> while holding 30% of the capital - that gap is what to fix first.',
            'You already hold <b>15% cash</b> as a buffer.'],
     steps:{
       conservative:['Raise cash <b>above the current 15%</b>.',
-                    '<b>Trim FPT first</b> — it contributes the most risk.',
+                    '<b>Trim FPT first</b> - it contributes the most risk.',
                     'Add nothing new until the bad-scenario loss is back where you can live with it.'],
       balanced:['Bring FPT down <b>close to the single-name cap</b>.',
                 'Keep the <b>15% cash</b> as a buffer.',
@@ -2987,7 +2987,7 @@ var PF_ANS = {
               'Hold FPT but <b>know the maximum loss</b> you will accept.',
               'The specific stop level for each name is the War Room’s job.']},
     imp:[['Loss if the market turns','better'],['How easily you could exit','better'],['Return against risk','worse']],
-    cta:'See FPT in the War Room — what stop? →', fn:"pfWarRoom('FPT')"}
+    cta:'See FPT in the War Room - what stop? →', fn:"pfWarRoom('FPT')"}
 };
 
 var PF_VARIES = {yield:true, div:false, safe:true};
@@ -3056,7 +3056,7 @@ function pfRender(){
       '<span class="ansLbl">NAVI checks three things</span><ul class="ansList steps">' +
       '<li>Whether it pushes <b>single-name weight</b> past your cap.</li>' +
       '<li>Whether it adds <b>sector weight</b> where you are already heavy.</li>' +
-      '<li>All six scores <b>before and after</b> — and by how much they move.</li></ul>' +
+      '<li>All six scores <b>before and after</b> - and by how much they move.</li></ul>' +
       '<p class="ansBound">This is what <b>evaluate_addition()</b> does: compare the portfolio before and after. It needs real position data to return numbers, so this mockup does not compute them.</p></div>';
     return;
   }
@@ -3076,15 +3076,15 @@ function pfRender(){
              i[1] + '">' + t + '</span></div>';
     }).join('') + '</div>' +
     '<button class="btnAccent ansCta" style="width:100%;margin-top:16px;" onclick="' + a.fn + '">' + a.cta + '</button>' +
-    '<p class="ansBound">NAVI gives you the <b>direction</b>. The exact numbers — how much to buy, where to cut — are the CIO’s job in the War Room.</p></div>';
+    '<p class="ansBound">NAVI gives you the <b>direction</b>. The exact numbers - how much to buy, where to cut - are the CIO’s job in the War Room.</p></div>';
 }
 function pfWarRoom(tk){ S.ticker = tk; S.autoRun = false; go('warroom'); }
-function pfAdd(){ pfShowNote('Not available yet — real Portfolio Memory has to exist before positions can be added.'); }
-function pfScreener(){ pfShowNote('Demo — this opens the daily screener.'); }
+function pfAdd(){ pfShowNote('Not available yet - real Portfolio Memory has to exist before positions can be added.'); }
+function pfScreener(){ pfShowNote('Demo - this opens the daily screener.'); }
 function pfCheck(){
   var t = (document.getElementById('pfTk').value || '').trim().toUpperCase();
   if(!t){ document.getElementById('pfTk').focus(); return; }
-  pfShowNote('Demo — this calls evaluate_addition(“' + t + '”), then opens the War Room on ' + t + '.');
+  pfShowNote('Demo - this calls evaluate_addition(“' + t + '”), then opens the War Room on ' + t + '.');
 }
 function pfShowNote(msg){
   var el = document.getElementById('pfToast');
@@ -3104,14 +3104,14 @@ function pfCycle(){
   if(!isEmpty){
     var many = pfState === 'many';
     document.getElementById('pfNote').innerHTML = many
-      ? 'Your 13-name portfolio is <b>better spread</b> — the largest holding (FPT) is down to <b>22%</b>.'
+      ? 'Your 13-name portfolio is <b>better spread</b> - the largest holding (FPT) is down to <b>22%</b>.'
       : 'Your portfolio earns <b>a decent return for the risk it takes</b>, but it leans heavily on <b>FPT (30%)</b>.';
     document.getElementById('pfSuggest').innerHTML = many
-      ? 'Concentration is fine now (the largest name is only 22%) — <b>no change needed</b>.'
+      ? 'Concentration is fine now (the largest name is only 22%) - <b>no change needed</b>.'
       : 'Consider <b>trimming FPT</b> (30%, the largest holding) or <b>adding a name from another sector</b>, so the portfolio depends less on one stock.';
     document.getElementById('pfCta').textContent = many
       ? 'See FPT in the War Room →'
-      : 'See FPT in the War Room — add or trim, and by how much? →';
+      : 'See FPT in the War Room - add or trim, and by how much? →';
     pfGauge(64);
   }
   pfRender();
@@ -3124,8 +3124,8 @@ function toggleCredits(){
   document.getElementById('creditBtn').textContent = 'Credits: ' + (S.creditsOn ? 'on' : 'off');
   paintAppBar(); paintCreditBar();
   pfShowNote(S.creditsOn
-    ? 'Metering on \u2014 this is the credit system as designed: 10 analyses a month, replays free.'
-    : 'Metering off \u2014 the MVP 1 decision. Nothing stands between a beta user and their first analysis.');
+    ? 'Metering on - this is the credit system as designed: 10 analyses a month, replays free.'
+    : 'Metering off - the MVP 1 decision. Nothing stands between a beta user and their first analysis.');
 }
 
 /* ---------- showreel ----------
