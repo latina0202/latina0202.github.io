@@ -297,11 +297,18 @@ h1, h2, h3, h4 {
 }
 .hero-meta i { font-style: normal; color: var(--line-2); }
 
-/* Side-by-side pair at one height. The 3:2 and 3:4 photos are exactly 2:1
-   in width at equal height, so the columns are 2fr 1fr and the edges line up. */
-.hero-media { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; align-items: stretch; }
-.hero-media figure { margin: 0; display: flex; }
+/* Three photos, one block: the award photo is tall on the left (3:4) and
+   sets the height; the two on the right split that height evenly. */
+.hero-media {
+  display: grid; gap: 12px;
+  grid-template-columns: 1.2fr 1fr; grid-template-rows: 1fr 1fr;
+}
+.hero-media figure { margin: 0; display: flex; min-height: 0; }
 .hero-media figure .shot { flex: 1; }
+.hero-media .f-main { grid-row: 1 / span 2; }
+.hero-media .f-main .shot { aspect-ratio: 3 / 4; }
+.hero-media .f-top img { object-position: 62% 40%; }
+.hero-media .f-bottom img { object-position: 50% 72%; }
 
 .hero-media .shot {
   position: relative;
@@ -310,8 +317,6 @@ h1, h2, h3, h4 {
   border: 1px solid var(--line-2);
   border-radius: var(--r-card);
 }
-.hero-media .shot.land { aspect-ratio: 3 / 2; }   /* wave-speaker.jpg is 3:2 */
-/* the portrait shot takes the row height set by the landscape one */
 .hero-media .shot > * { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-media .shot img { object-fit: cover; }
 
