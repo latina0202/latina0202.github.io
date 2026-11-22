@@ -563,6 +563,12 @@ h1, h2, h3, h4 {
 .proj-lead h3 { font-size: clamp(21px, 2.6vw, 26px); margin: 9px 0 12px; }
 .proj-lead p { font-size: 15px; color: var(--ink-2); margin-bottom: 14px; }
 .proj-lead .tags { margin-bottom: 20px; }
+/* NAVI without a preview: text on the left, tags and link on the right */
+.proj-lead.text-only { grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); align-items: end; }
+.proj-lead.text-only p { margin-bottom: 0; max-width: 62ch; }
+.proj-lead.text-only .lead-side .tags { margin-bottom: 16px; }
+.proj-lead.text-only .acts { margin-top: 0; }
+@media (max-width: 820px) { .proj-lead.text-only { grid-template-columns: 1fr; gap: 18px; align-items: start; } }
 @media (max-width: 820px) {
   .proj-lead { grid-template-columns: 1fr; gap: 24px; padding: 22px; }
   /* stacked, there is no sibling to take height from, so set one */
