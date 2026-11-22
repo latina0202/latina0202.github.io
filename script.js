@@ -59,10 +59,12 @@
     setTimeout(tick, deleting ? DELETING_SPEED : TYPING_SPEED);
   }
 
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    setTimeout(tick, 600);
-  } else {
-    typingEl.textContent = phrases[0];
+  if (typingEl) {
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setTimeout(tick, 600);
+    } else {
+      typingEl.textContent = phrases[0];
+    }
   }
 
   // -------- Scroll progress in the nav --------
@@ -193,9 +195,11 @@
   });
 
   // -------- Resume link --------
-  // To use a new resume, upload the PDF to the repo and change this one line.
+  // The Resume page (resume.html) shows this file. To use a new resume with a
+  // different name, upload the PDF to the repo and change this one line.
   const RESUME_FILE = 'Ngoc_Duong_Huynh_Resume.pdf';
-  document.querySelectorAll('a[data-resume]').forEach((a) => { a.href = RESUME_FILE; });
+  window.RESUME_FILE = RESUME_FILE;
+  document.querySelectorAll('a[data-resume-file]').forEach((a) => { a.href = RESUME_FILE; });
 
   // -------- Year in footer --------
   document.getElementById('year').textContent = new Date().getFullYear();

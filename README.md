@@ -6,8 +6,9 @@ Personal portfolio of Ngoc Duong (Huynh Ngoc Duong).
 
 ## Update the resume
 
-Every Resume link on the site (top button, phone menu, Contact) opens
-`Ngoc_Duong_Huynh_Resume.pdf` from this repo in a new tab.
+Every Resume link on the site (top button, phone menu, Contact) opens the
+Resume page (`resume.html`), which shows `Ngoc_Duong_Huynh_Resume.pdf` from this
+repo inside the site, with Download and Full screen buttons.
 
 **Same file name (most updates):**
 
@@ -16,7 +17,7 @@ Every Resume link on the site (top button, phone menu, Contact) opens
 3. On GitHub, open this repo, click **Add file > Upload files**, drop the PDF in,
    and click **Commit changes**. It replaces the old one.
 
-The site shows the new resume within a few minutes. No code changes needed.
+The Resume page shows the new file within a few minutes. No code changes needed.
 
 **Different file name:** upload the PDF, then change the one line
 `const RESUME_FILE = '...'` in `script.js` to the new name.

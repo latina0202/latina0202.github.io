@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Resume | Ngoc Duong</title>
+<meta name="description" content="Resume of Ngoc Duong, Product Growth Analyst at Sea Group." />
+<link rel="canonical" href="https://latina0202.github.io/resume.html" />
+<meta property="og:title" content="Resume | Ngoc Duong" />
+<meta property="og:image" content="https://latina0202.github.io/images/og-cover.jpg" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ngoc Duong | Product Growth Analyst" />
+<meta property="og:description" content="From Quảng Ngãi, Vietnam. Product Growth Analyst at Sea Group, using data to understand people, and working toward data science in healthcare." />
+<meta property="og:url" content="https://latina0202.github.io/" />
+<meta property="og:image" content="https://latina0202.github.io/images/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Ngoc Duong holding the Gold Champion board for the CEO Award Project at Home Credit" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Ngoc Duong | Product Growth Analyst" />
+<meta name="twitter:description" content="From Quảng Ngãi, Vietnam. Product Growth Analyst at Sea Group, using data to understand people, and working toward data science in healthcare." />
+<meta name="twitter:image" content="https://latina0202.github.io/images/og-cover.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css?v=20261122w" />
+</head>
+<body data-theme="light" class="resume-page">
+
+<!-- HEADER -->
+<header class="nav">
+  <div class="nav-progress" id="navProgress"></div>
+  <a class="brand" href="index.html" aria-label="Back to the portfolio">
+    <div class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="19" height="19" fill="none">
+        <rect x="5"  y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="10" y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".55"/>
+        <rect x="15" y="5"  width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="5"  y="10" width="4" height="4" rx="1" fill="currentColor" opacity=".55"/>
+        <rect x="10" y="10" width="4" height="4" rx="1" fill="currentColor" opacity=".80"/>
+        <rect x="15" y="10" width="4" height="4" rx="1" fill="var(--chip)"/>
+        <rect x="5"  y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+        <rect x="10" y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".45"/>
+        <rect x="15" y="15" width="4" height="4" rx="1" fill="currentColor" opacity=".30"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <div class="name">Ngoc Duong</div>
+      <div class="subtitle">Product Growth Analyst · Sea Group</div>
+    </div>
+  </a>
+  <nav class="nav-links">
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#next">Career Inspiration</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#education">Education</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+  <div class="controls">
+    <a class="btn btn-primary btn-sm" href="resume.html" aria-current="page">Resume</a>
+    <button id="themeToggle" aria-label="Toggle colour theme">🌙</button>
+    <button id="menuToggle" class="mobile-only" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-menu">
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#next">Career Inspiration</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="index.html#education">Education</a>
+  <a href="index.html#beyond">Beyond work</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="resume.html">Resume</a>
+</div>
+
+<main>
+
+<section class="section s-l1 resume-sec">
+  <div class="container">
+    <div class="resume-head">
+      <div>
+        <a class="back-link" href="index.html">&larr; Back to portfolio</a>
+        <span class="eyebrow">Resume</span>
+        <h1 class="section-title">Ngoc Duong Huynh</h1>
+        <p class="section-dek">One page. Product growth, analytics and leadership.</p>
+      </div>
+      <div class="resume-acts">
+        <a class="btn btn-primary btn-sm" data-resume-file href="Ngoc_Duong_Huynh_Resume.pdf" download>Download PDF</a>
+        <a class="btn btn-ghost btn-sm" data-resume-file href="Ngoc_Duong_Huynh_Resume.pdf" target="_blank" rel="noopener">Open full screen</a>
+      </div>
+    </div>
+
+    <div class="resume-viewer" id="resumeViewer" aria-live="polite">
+      <p class="resume-loading">Loading resume&hellip;</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div>Designed and built by Ngoc Duong</div>
+    <div class="mono">© <span id="year"></span> · Ho Chi Minh City</div>
+  </div>
+</footer>
+
+<script src="script.js?v=20261122v"></script>
+<script>
+(() => {
+  // The file name lives in one place: RESUME_FILE in script.js.
+  const file = window.RESUME_FILE || 'Ngoc_Duong_Huynh_Resume.pdf';
+  const box = document.getElementById('resumeViewer');
+  const fallback = () => {
+    box.innerHTML = '<p class="resume-loading">The resume could not be shown here. <a data-resume-file href="' + file + '">Download the PDF</a>.</p>';
+  };
+
+  // Draw each page with PDF.js (bundled in vendor/pdfjs) so the resume looks the
+  // same in every browser, then lay the PDF's links over it so they stay clickable.
+  const s = document.createElement('script');
+  s.src = 'vendor/pdfjs/pdf.min.js';
+  s.onerror = fallback;
+  s.onload = async () => {
+    try {
+      const lib = window.pdfjsLib;
+      lib.GlobalWorkerOptions.workerSrc = 'vendor/pdfjs/pdf.worker.min.js';
+      const pdf = await lib.getDocument(file).promise;
+      box.innerHTML = '';
+      box.classList.add('drawn');
+      const dpr = Math.min(window.devicePixelRatio || 1, 3);
+      for (let n = 1; n <= pdf.numPages; n++) {
+        const page = await pdf.getPage(n);
+        const width = Math.max(box.clientWidth, 880);   // sharp at the largest size
+        const base = page.getViewport({ scale: 1 });
+        const vp = page.getViewport({ scale: width / base.width });
+        const sheet = document.createElement('div');
+        sheet.className = 'resume-sheet';
+        sheet.style.aspectRatio = base.width + ' / ' + base.height;
+        const canvas = document.createElement('canvas');
+        canvas.width = Math.round(vp.width * dpr);
+        canvas.height = Math.round(vp.height * dpr);
+        canvas.setAttribute('role', 'img');
+        canvas.setAttribute('aria-label', 'Resume page ' + n);
+        sheet.appendChild(canvas);
+        box.appendChild(sheet);
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport: page.getViewport({ scale: vp.scale * dpr }) }).promise;
+        const notes = await page.getAnnotations();
+        notes.filter((a) => a.subtype === 'Link' && a.url).forEach((a) => {
+          const [x1, y1, x2, y2] = vp.convertToViewportRectangle(a.rect);
+          const link = document.createElement('a');
+          link.href = a.url; link.target = '_blank'; link.rel = 'noopener';
+          link.className = 'resume-link';
+          link.setAttribute('aria-label', a.url);
+          Object.assign(link.style, {
+            left: (Math.min(x1, x2) / vp.width * 100) + '%',
+            top: (Math.min(y1, y2) / vp.height * 100) + '%',
+            width: (Math.abs(x2 - x1) / vp.width * 100) + '%',
+            height: (Math.abs(y2 - y1) / vp.height * 100) + '%'
+          });
+          sheet.appendChild(link);
+        });
+      }
+    } catch (e) { fallback(); }
+  };
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
