@@ -162,10 +162,12 @@
     const update = () => {
       const i = current();
       dots.forEach((d, k) => d.classList.toggle('on', k === i));
-      prev.disabled = i <= 0;
-      next.disabled = i >= count - 1;
     };
-    const go = (step) => track.scrollBy({ left: step * track.clientWidth });
+    // Loops: past the last photo goes back to the first, and the other way round.
+    const go = (step) => {
+      const target = (current() + step + count) % count;
+      track.scrollTo({ left: target * track.clientWidth });
+    };
     prev.addEventListener('click', () => go(-1));
     next.addEventListener('click', () => go(1));
     track.addEventListener('keydown', (e) => {
