@@ -192,6 +192,11 @@
     }, { threshold: [0, 0.6] }).observe(v);
   });
 
+  // -------- Resume link --------
+  // To use a new resume, upload the PDF to the repo and change this one line.
+  const RESUME_FILE = 'Ngoc_Duong_Huynh_Resume.pdf';
+  document.querySelectorAll('a[data-resume]').forEach((a) => { a.href = RESUME_FILE; });
+
   // -------- Year in footer --------
   document.getElementById('year').textContent = new Date().getFullYear();
 

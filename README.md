@@ -1,16 +1,34 @@
 # latina0202.github.io
-Personal portfolio website for Ngoc Duong - built to support MS Business Analytics /
-Data Science applications (Fall 2027).
- 
+
+Personal portfolio of Ngoc Duong (Huynh Ngoc Duong).
+
 **Live site:** https://latina0202.github.io
- 
+
+## Update the resume
+
+Every Resume link on the site (top button, phone menu, Contact) opens
+`Ngoc_Duong_Huynh_Resume.pdf` from this repo in a new tab.
+
+**Same file name (most updates):**
+
+1. Export the resume from Google Docs: File > Download > PDF.
+2. Rename the file to `Ngoc_Duong_Huynh_Resume.pdf`.
+3. On GitHub, open this repo, click **Add file > Upload files**, drop the PDF in,
+   and click **Commit changes**. It replaces the old one.
+
+The site shows the new resume within a few minutes. No code changes needed.
+
+**Different file name:** upload the PDF, then change the one line
+`const RESUME_FILE = '...'` in `script.js` to the new name.
+
 ## What's on the site
-- **About** - background summary (Sea Group, Home Credit, ABeam, MSBA goal)
-- **Experience** - Sea Group, Home Credit Vietnam, ABeam Consulting
-- **Projects** - 4 cards, each with Website/Demo and/or Code links:
-  1. RFM + K-Means Customer Clustering
-  2. Music Genre Classification: Audio vs. Lyrics
-  3. Cash Loan product launch via MoMo mini-app
-  4. AIESEC Global Talent Program
-- **Skills** - technical + product/business
-- **Contact** - resume, email, LinkedIn, GitHub
+
+- **Hero** - intro, three photos
+- **Experience** - journey timeline (AIESEC, Home Credit, Sea Group) and each role in detail
+- **Career Inspiration** - data science for healthcare, and the questions behind it
+- **Projects** - Spotify genre classification, MoMo cash loan, AIESEC video, NAVI
+- **Education** - UEH, tools, awards
+- **Beyond work** - guitar, trekking, volunteering
+- **Contact** - email, LinkedIn, GitHub, resume
+
+Plain HTML, CSS and JavaScript (`index.html`, `style.css`, `script.js`). No build step.
