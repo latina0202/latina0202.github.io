@@ -701,6 +701,9 @@ h1, h2, h3, h4 {
 .b-media > * { position: absolute; inset: 0; width: 100%; height: 100%; }
 .b-media img { object-fit: cover; }
 .b-media iframe { border: 0; display: block; }
+/* YouTube Shorts are vertical, so the Beyond cards use a portrait frame */
+.beyond .b-media { aspect-ratio: 3 / 4; }
+.b-media.short { background: #000; }
 .b-media .placeholder {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
