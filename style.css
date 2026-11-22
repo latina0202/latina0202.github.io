@@ -704,6 +704,18 @@ h1, h2, h3, h4 {
 /* YouTube Shorts are vertical, so the Beyond cards use a portrait frame */
 .beyond .b-media { aspect-ratio: 3 / 4; }
 .b-media.short { background: #000; }
+
+/* Volunteering: four photos crossfade, 4s each. Still for reduced motion. */
+.b-media.slides img { opacity: 0; animation: slide-fade 16s infinite; }
+.b-media.slides img:nth-child(1) { opacity: 1; }
+.b-media.slides img:nth-child(2) { animation-delay: 4s; }
+.b-media.slides img:nth-child(3) { animation-delay: 8s; }
+.b-media.slides img:nth-child(4) { animation-delay: 12s; }
+@keyframes slide-fade { 0% { opacity: 0; } 4% { opacity: 1; } 25% { opacity: 1; } 29% { opacity: 0; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .b-media.slides img { animation: none; }
+  .b-media.slides img:not(:first-child) { display: none; }
+}
 .b-media .placeholder {
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
