@@ -874,9 +874,9 @@ footer .mono { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
 
 a.brand { text-decoration: none; color: inherit; }
 .resume-sec { padding-top: 118px; }
-.resume-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; margin-bottom: 28px; }
-.resume-head .section-dek { margin-bottom: 0; }
-.back-link { display: block; width: fit-content; font-size: 14px; color: var(--muted); text-decoration: none; margin-bottom: 18px; }
+.resume-head { display: flex; align-items: center; justify-content: space-between; gap: 20px 32px; flex-wrap: wrap; margin-bottom: 28px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.back-link { display: block; width: fit-content; font-size: 14.5px; color: var(--muted); text-decoration: none; }
 .back-link:hover { color: var(--chip); }
 .resume-acts { display: flex; gap: 10px; flex-wrap: wrap; }
 .resume-viewer {
