@@ -298,19 +298,19 @@ h1, h2, h3, h4 {
 .hero-meta i { font-style: normal; color: var(--line-2); }
 
 /* Three photos, none cropped. Left: award photo (3:4). Right: speaking
-   photo (3:2) over the summit photo (3:4). For both sides to end at the
-   same height, the right column is (width - 1.75 x gap) / 2.5 wide. */
+   photo (3:2) over the summit photo (9:16). For both sides to end at the
+   same height, the right column is (width - 1.75 x gap) x 6/17 wide. */
 .hero-media {
   --g: 12px;
   display: grid; gap: var(--g); align-items: start;
-  grid-template-columns: minmax(0, 1fr) calc((100% - 1.75 * var(--g)) / 2.5);
+  grid-template-columns: minmax(0, 1fr) calc((100% - 1.75 * var(--g)) * 6 / 17);
 }
 .hero-media figure { margin: 0; display: flex; min-width: 0; }
 .hero-media figure .shot { flex: 1; }
 .hero-media .f-main { grid-row: 1 / span 2; }
 .hero-media .f-main .shot { aspect-ratio: 3 / 4; }
 .hero-media .f-top .shot { aspect-ratio: 3 / 2; }
-.hero-media .f-bottom .shot { aspect-ratio: 3 / 4; }
+.hero-media .f-bottom .shot { aspect-ratio: 9 / 16; }
 
 .hero-media .shot {
   position: relative;
