@@ -12,17 +12,20 @@
 <meta property="og:title" content="Ngoc Duong | Product Growth Analyst" />
 <meta property="og:description" content="From Quảng Ngãi, Vietnam. Product Growth Analyst at Sea Group, using data to understand people, and working toward data science in healthcare." />
 <meta property="og:url" content="https://latina0202.github.io/" />
-<meta property="og:image" content="https://latina0202.github.io/images/wave-speaker.jpg" />
+<meta property="og:image" content="https://latina0202.github.io/images/og-cover.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Ngoc Duong holding the Gold Champion board for the CEO Award Project at Home Credit" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Ngoc Duong | Product Growth Analyst" />
 <meta name="twitter:description" content="From Quảng Ngãi, Vietnam. Product Growth Analyst at Sea Group, using data to understand people, and working toward data science in healthcare." />
-<meta name="twitter:image" content="https://latina0202.github.io/images/wave-speaker.jpg" />
+<meta name="twitter:image" content="https://latina0202.github.io/images/og-cover.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=20261122r" />
+<link rel="stylesheet" href="style.css?v=20261122t" />
 </head>
 <body data-theme="light">
 
@@ -281,7 +284,19 @@
     <div class="proj-grid">
 
       <article class="proj">
-        <div class="thumb"><img src="images/spotify.jpg" alt="Music genre classification project" loading="lazy"></div>
+        <div class="thumb chart-thumb">
+          <svg viewBox="0 0 640 360" role="img" aria-labelledby="spotChartT spotChartD">
+            <title id="spotChartT">Genre accuracy by input</title>
+            <desc id="spotChartD">Accuracy on held-out tracks across six genres: audio features 51.7%, lyrics 48.8%, both combined 58.9%. Random guessing would score 16.7%.</desc>
+            <text class="cap" x="24" y="44">Accuracy on held-out tracks, 6 genres</text>
+            <line class="base" x1="150" y1="92" x2="150" y2="280"/>
+            <line class="chance" x1="255" y1="92" x2="255" y2="280"/>
+            <text class="chance-lab" x="255" y="306" text-anchor="middle">guessing: 16.7%</text>
+            <g class="b-audio"><title>Audio: 51.7% accuracy</title><text class="lab" x="140" y="131" text-anchor="end">Audio</text><path class="bar" d="M150,108 H471 Q475,108 475,112 V140 Q475,144 471,144 H150 Z"/><text class="val" x="485" y="131">51.7%</text></g>
+            <g class="b-lyrics"><title>Lyrics: 48.8% accuracy</title><text class="lab" x="140" y="191" text-anchor="end">Lyrics</text><path class="bar" d="M150,168 H453 Q457,168 457,172 V200 Q457,204 453,204 H150 Z"/><text class="val" x="467" y="191">48.8%</text></g>
+            <g class="b-both"><title>Both: 58.9% accuracy</title><text class="lab" x="140" y="251" text-anchor="end">Both</text><path class="bar" d="M150,228 H516 Q520,228 520,232 V260 Q520,264 516,264 H150 Z"/><text class="val" x="530" y="251">58.9%</text></g>
+          </svg>
+        </div>
         <div class="body">
           <span class="eyebrow">Machine learning</span>
           <h3>Sound or lyrics: which one predicts genre?</h3>
@@ -296,7 +311,7 @@
           </div>
           <div class="tags"><span>Python</span><span>scikit-learn</span><span>Multimodal ML</span></div>
           <div class="acts">
-            <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">View code</a>
+            <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-go">View code on GitHub</a>
           </div>
         </div>
       </article>
@@ -313,7 +328,7 @@
           </p>
           <div class="tags"><span>SQL</span><span>Cohort analysis</span><span>Go-to-market</span></div>
           <div class="acts">
-            <a href="https://www.momo.vn/tai-chinh-sieu-toc-homecredit" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">See it live</a>
+            <a href="https://www.momo.vn/tai-chinh-sieu-toc-homecredit" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-go">See it live on MoMo</a>
           </div>
         </div>
       </article>
@@ -339,7 +354,7 @@
           </p>
           <div class="tags"><span>Programme leadership</span><span>B2B partnerships</span><span>Team management</span></div>
           <div class="acts">
-            <a href="https://www.aiesec.vn/global-talent/home" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">Programme site</a>
+            <a href="https://www.aiesec.vn/global-talent/home" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-go">Visit the programme site</a>
           </div>
         </div>
       </article>
@@ -359,7 +374,7 @@
       <div class="lead-side">
         <div class="tags"><span>Product design</span><span>Front-end</span><span>Multi-agent AI</span></div>
         <div class="acts">
-          <a href="https://navifinance.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Open NAVI live</a>
+          <a href="https://navifinance.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-go">Open NAVI live</a>
         </div>
       </div>
     </article>
@@ -370,14 +385,13 @@
 <section id="education" class="section s-l0">
   <div class="container rise">
     <span class="eyebrow">Education</span>
-    <h2 class="section-title">What I studied, and what I use</h2>
+    <h2 class="section-title">What I studied, won, and use</h2>
     <p class="section-dek">My degree is in business. I built my data skills through practice: SQL and Python at work, small models on my own.</p>
     <div class="skills">
       <div class="skill">
         <h3>University of Economics Ho Chi Minh City (UEH)</h3>
         <dl>
           <div class="row"><dt>Degree</dt><dd>B.A. International Business, Advanced English Programme, 2020 - 2024</dd></div>
-          <div class="row"><dt>Award</dt><dd>Young Researcher Award, UEH 2023</dd></div>
           <div class="row"><dt>Quantitative courses</dt><dd>Mathematical Methods for Business and Economics, Business Statistics and Statistical Inference, Management Information Systems</dd></div>
         </dl>
       </div>
@@ -388,6 +402,15 @@
           <div class="row"><dt>Modelling</dt><dd>Pandas, scikit-learn, K-Means clustering, regression</dd></div>
           <div class="row"><dt>Dashboards</dt><dd>Power BI (DAX), Tableau, Chart.js</dd></div>
           <div class="row"><dt>Methods</dt><dd>Segmentation, cohort and funnel analysis, churn and retention, A/B-style tests</dd></div>
+        </dl>
+      </div>
+      <div class="skill awards">
+        <h3>Awards</h3>
+        <dl>
+          <div class="row"><dt>Home Credit · Young Talent Program</dt><dd>Gold Champion, CEO Award Project</dd></div>
+          <div class="row"><dt>VACL Youth Prize 2021</dt><dd>1st Prize, national marketing case competition</dd></div>
+          <div class="row"><dt>ACI Youth Leadership Summit 2025</dt><dd>Top 20, regional leadership programme</dd></div>
+          <div class="row"><dt>UEH 2023</dt><dd>Young Researcher Award</dd></div>
         </dl>
       </div>
     </div>
