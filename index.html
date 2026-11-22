@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=20261122g" />
+<link rel="stylesheet" href="style.css?v=20261122h" />
 </head>
 <body data-theme="light">
 
@@ -426,11 +426,20 @@
       </div>
 
       <div class="b-card">
-        <div class="b-media slides">
-          <img src="images/volunteer/care-home.jpg" alt="Ngoc pushing an elderly resident's wheelchair at a care home" loading="lazy">
-          <img src="images/volunteer/free-meals.jpg" alt="Volunteers at a free vegetarian meal kitchen in District 11" loading="lazy">
-          <img src="images/volunteer/shelter.jpg" alt="The entrance of Mai Am Thien Duyen shelter in Cu Chi" loading="lazy">
-          <img src="images/volunteer/care-home-show.jpg" alt="A music show for residents at Vinh Son nursing home" loading="lazy">
+        <div class="b-media slider" role="region" aria-roledescription="carousel" aria-label="Volunteering photos">
+          <div class="track" tabindex="0">
+            <img src="images/volunteer/care-home.jpg" alt="Ngoc pushing an elderly resident's wheelchair at a care home" loading="lazy">
+            <img src="images/volunteer/free-meals.jpg" alt="Volunteers at a free vegetarian meal kitchen in District 11" loading="lazy">
+            <img src="images/volunteer/shelter.jpg" alt="The entrance of Mai Am Thien Duyen shelter in Cu Chi" loading="lazy">
+            <img src="images/volunteer/care-home-show.jpg" alt="A music show for residents at Vinh Son nursing home" loading="lazy">
+          </div>
+          <button type="button" class="sl-btn prev" aria-label="Previous photo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3.5 5.5 8l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button type="button" class="sl-btn next" aria-label="Next photo">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3.5 10.5 8 6 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="sl-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
         </div>
         <div class="body">
           <h3>Volunteering</h3>
@@ -466,6 +475,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261122"></script>
+<script src="script.js?v=20261122h"></script>
 </body>
 </html>

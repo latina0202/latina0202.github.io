@@ -149,6 +149,36 @@
     });
   });
 
+  // -------- Photo sliders (Volunteering) --------
+  document.querySelectorAll('.slider').forEach((slider) => {
+    const track = slider.querySelector('.track');
+    const prev = slider.querySelector('.prev');
+    const next = slider.querySelector('.next');
+    const dots = [...slider.querySelectorAll('.sl-dots i')];
+    const count = track.children.length;
+    const current = () => Math.round(track.scrollLeft / Math.max(track.clientWidth, 1));
+    const update = () => {
+      const i = current();
+      dots.forEach((d, k) => d.classList.toggle('on', k === i));
+      prev.disabled = i <= 0;
+      next.disabled = i >= count - 1;
+    };
+    const go = (step) => track.scrollBy({ left: step * track.clientWidth });
+    prev.addEventListener('click', () => go(-1));
+    next.addEventListener('click', () => go(1));
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    });
+    let raf = 0;
+    track.addEventListener('scroll', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(update);
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
   // -------- Year in footer --------
   document.getElementById('year').textContent = new Date().getFullYear();
 
