@@ -27,7 +27,7 @@ The Resume page shows the new file within a few minutes. No code changes needed.
 - **Hero** - intro, three photos
 - **Experience** - journey timeline (AIESEC, Home Credit, Sea Group) and each role in detail
 - **Career Inspiration** - data science for healthcare, and the questions behind it
-- **Projects** - Spotify genre classification, MoMo cash loan, AIESEC video, NAVI
+- **Projects** - Spotify popularity prediction, MoMo cash loan, AIESEC video, NAVI
 - **Education** - UEH, tools, awards
 - **Beyond work** - guitar, trekking, volunteering
 - **Contact** - email, LinkedIn, GitHub, resume

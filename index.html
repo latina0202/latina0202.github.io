@@ -285,33 +285,31 @@
 
       <article class="proj">
         <div class="thumb chart-thumb">
-          <svg viewBox="0 0 640 360" role="img" aria-labelledby="spotChartT spotChartD">
-            <title id="spotChartT">Genre accuracy by input</title>
-            <desc id="spotChartD">Accuracy on held-out tracks across six genres: audio features 51.7%, lyrics 48.8%, both combined 58.9%. Random guessing would score 16.7%.</desc>
-            <text class="cap" x="24" y="44">Accuracy on held-out tracks, 6 genres</text>
-            <line class="base" x1="150" y1="92" x2="150" y2="280"/>
-            <line class="chance" x1="255" y1="92" x2="255" y2="280"/>
-            <text class="chance-lab" x="255" y="306" text-anchor="middle">guessing: 16.7%</text>
-            <g class="b-audio"><title>Audio: 51.7% accuracy</title><text class="lab" x="140" y="131" text-anchor="end">Audio</text><path class="bar" d="M150,108 H471 Q475,108 475,112 V140 Q475,144 471,144 H150 Z"/><text class="val" x="485" y="131">51.7%</text></g>
-            <g class="b-lyrics"><title>Lyrics: 48.8% accuracy</title><text class="lab" x="140" y="191" text-anchor="end">Lyrics</text><path class="bar" d="M150,168 H453 Q457,168 457,172 V200 Q457,204 453,204 H150 Z"/><text class="val" x="467" y="191">48.8%</text></g>
-            <g class="b-both"><title>Both: 58.9% accuracy</title><text class="lab" x="140" y="251" text-anchor="end">Both</text><path class="bar" d="M150,228 H516 Q520,228 520,232 V260 Q520,264 516,264 H150 Z"/><text class="val" x="530" y="251">58.9%</text></g>
+          <svg viewBox="0 0 640 360" role="img" aria-labelledby="popChartT popChartD">
+            <title id="popChartT">What drove the popularity model</title>
+            <desc id="popChartD">Share of the random forest's feature importance: release year about 72%, all 13 audio features combined about 28%.</desc>
+            <text class="cap" x="24" y="44">What the model leaned on (feature importance)</text>
+            <line class="base" x1="220" y1="98" x2="220" y2="268"/>
+            <g class="b-both"><title>Release year: about 72%</title><text class="lab" x="206" y="135" text-anchor="end">Release year</text><path class="bar" d="M220,108 H475 Q479,108 479,112 V146 Q479,150 475,150 H220 Z"/><text class="val" x="489" y="135">72%</text></g>
+            <g class="b-audio"><title>13 audio features combined: about 28%</title><text class="lab" x="206" y="215" text-anchor="end">13 audio</text><text class="lab" x="206" y="241" text-anchor="end">features</text><path class="bar" d="M220,196 H317 Q321,196 321,200 V234 Q321,238 317,238 H220 Z"/><text class="val" x="331" y="227">28%</text></g>
+            <text class="chance-lab" x="24" y="318">Random forest, 142,552 tracks</text>
           </svg>
         </div>
         <div class="body">
           <span class="eyebrow">Machine learning</span>
-          <h3>Sound or lyrics: which one predicts genre?</h3>
+          <h3>What a high score can hide</h3>
           <p>
-            I compared audio features, lyrics and both combined across 15,405 Spotify
-            tracks in six genres. Combined won, so sound and words carry different signals.
-            Latin was the weak spot, with too few tracks to learn from.
+            I predicted Spotify popularity for 142,552 tracks from their sound. A random
+            forest explained 71.5% of the variation, but release year did most of the work,
+            not the music. A good score did not mean the model learned what I expected.
           </p>
           <div class="figs">
-            <div><div class="v">58.9%</div><div class="k">Combined accuracy</div></div>
-            <div><div class="v">+7-9pt</div><div class="k">Over either one alone</div></div>
+            <div><div class="v">0.715</div><div class="k">R², random forest</div></div>
+            <div><div class="v">0.681</div><div class="k">R², linear baseline</div></div>
           </div>
-          <div class="tags"><span>Python</span><span>scikit-learn</span><span>Multimodal ML</span></div>
+          <div class="tags"><span>Python</span><span>scikit-learn</span><span>Random forest</span></div>
           <div class="acts">
-            <a href="https://github.com/latina0202/music-genre-multimodal-classification" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-go">View code on GitHub</a>
+            <a href="https://github.com/latina0202/spotify-popularity-prediction" target="_blank" rel="noopener" class="btn btn-primary btn-sm btn-go">View code on GitHub</a>
           </div>
         </div>
       </article>
