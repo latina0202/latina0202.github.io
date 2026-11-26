@@ -32,4 +32,5 @@ The Resume page shows the new file within a few minutes. No code changes needed.
 - **Beyond work** - guitar, trekking, volunteering
 - **Contact** - email, LinkedIn, GitHub, resume
 
-Plain HTML, CSS and JavaScript (`index.html`, `style.css`, `script.js`). No build step.
+Plain HTML, CSS and JavaScript. No build step. `style.css` holds the base layout;
+`bento.css` loads after it and sets the current look (colours, type, tiles).

@@ -24,8 +24,9 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="style.css?v=20261122z" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css?v=20261126c" />
+<link rel="stylesheet" href="bento.css?v=20261126c" />
 </head>
 <body data-theme="light">
 
@@ -80,11 +81,10 @@
 
 <!-- HERO -->
 <section class="hero" id="s-hero">
-  <div class="container hero-grid rise">
-    <div>
+  <div class="container rise">
+    <div class="hero-text">
       <span class="eyebrow">Product Growth Analyst · Sea Group</span>
       <h1>Ngoc Duong</h1>
-      <div class="hero-now">Currently: <span class="typing" id="typing"></span></div>
       <p class="hero-lead">
         I come from Quảng Ngãi, a rural province on Vietnam's central coast.
         Curious about how the world works, I use data to understand people and make
@@ -98,7 +98,8 @@
         <span>Ho Chi Minh City, Vietnam</span><i>/</i><span>Open to opportunities in the Bay Area</span>
       </div>
     </div>
-    <div class="hero-media">
+    <div class="hero-bento">
+  <div class="hero-media">
       <figure class="f-main">
         <div class="shot"><img src="images/home-credit-gold.jpg?v=2" alt="Ngoc holding the Gold Champion board for the CEO Award Project at Home Credit's Home Racer graduation" loading="eager"></div>
       </figure>
@@ -108,6 +109,18 @@
       <figure class="f-bottom">
         <div class="shot"><img src="images/taxua-summit.jpg?v=3" alt="Ngoc at the Ta Xua summit marker, 2,865 m" loading="lazy"></div>
       </figure>
+    </div>
+      <div class="hero-tiles">
+        <div class="tile tile-now">
+          <span class="tile-k">Currently</span>
+          <p class="tile-v"><span class="typing" id="typing"></span></p>
+        </div>
+        <a class="tile tile-next" href="#next">
+          <span class="tile-k">Career Inspiration</span>
+          <p class="tile-v">Data science for healthcare</p>
+          <span class="tile-foot">Where I'm going &rarr;</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -119,7 +132,8 @@
     <h2 class="section-title">What the numbers reveal about people</h2>
     <p class="section-dek">Each step gave me a bigger dataset and a harder question. Open any role for detail.</p>
 
-    <ol class="journey">
+    <div class="path">
+      <ol class="journey path-stops">
       <li class="j-step">
         <div class="j-when">2021 - 2024</div>
         <div class="j-role"><b>AIESEC</b>Branch Vice President</div>
@@ -135,7 +149,8 @@
         <div class="j-role"><b>Sea Group</b>Product Growth Analyst</div>
         <p>Own a credit product's results, and test what drives people's behaviour.</p>
       </li>
-    </ol>
+      </ol>
+    </div>
 
     <div class="rail">
 
@@ -336,7 +351,7 @@
           <a class="play" href="https://youtu.be/IusfXn7Y5To" target="_blank" rel="noopener"
              data-yt="IusfXn7Y5To" data-title="AIESEC in Vietnam: Visible Impacts"
              aria-label="Play the video: AIESEC in Vietnam, Visible Impacts">
-            <img src="images/global-talent.jpg" alt="" loading="lazy">
+            <img src="images/global-talent.jpg?v=2" alt="" loading="lazy">
             <span class="play-btn" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 20 20"><path d="M6 3.8v12.4L16 10z" fill="currentColor"/></svg>
             </span>
@@ -357,9 +372,8 @@
         </div>
       </article>
 
-    </div>
 
-    <article class="proj-lead after-grid text-only">
+    <article class="proj-lead text-only">
       <div>
         <span class="eyebrow">AI product</span>
         <h3>NAVI: one ticker, a whole investment desk</h3>
@@ -376,6 +390,8 @@
         </div>
       </div>
     </article>
+    </div>
+
   </div>
 </section>
 
@@ -513,6 +529,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=20261122x"></script>
+<script src="script.js?v=20261126c"></script>
 </body>
 </html>
