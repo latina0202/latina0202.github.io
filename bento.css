@@ -214,7 +214,7 @@ footer .mono { font-family: 'Geist Mono', ui-monospace, monospace; }
 /* NAVI as the dark tile, in both themes */
 .proj-grid > .proj-lead.text-only {
   margin: 0;
-  display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
+  display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 22px;
   padding: 30px;
   background: #111614; border-color: #111614; color: #F3F5F4;
 }
