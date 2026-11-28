@@ -199,7 +199,7 @@
   // -------- Resume link --------
   // The Resume page (resume.html) shows this file. To use a new resume with a
   // different name, upload the PDF to the repo and change this one line.
-  const RESUME_FILE = 'Ngoc_Duong_Huynh_Resume.pdf?v=20261128';
+  const RESUME_FILE = 'Ngoc_Duong_Huynh_Resume.pdf?v=20261128b';
   window.RESUME_FILE = RESUME_FILE;
   document.querySelectorAll('a[data-resume-file]').forEach((a) => { a.href = RESUME_FILE; });
 
